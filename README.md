@@ -216,7 +216,7 @@ Nevertheless, a holistic view of the available data shows that returning custome
 
 ## Strategic Recommendations
 
-The data supports taking action now. During the scaling period, marketing spend increased by 253%, while Net Sales grew by only 23%. Blended MER declined from 4.62x to 1.62x, and blended ROAS fell from 4.37x to 1.69x.
+During the scaling period, marketing spend increased by 253%, while Net Sales grew by only 23%. Blended MER declined from 4.62x to 1.62x, and blended ROAS fell from 4.37x to 1.69x.
 
 These results indicate that the business is generating revenue less efficiently at its current level of marketing investment. While further analysis can help refine budget allocation, the current performance supports reducing overall paid media spend and reassessing channel investment—rather than continuing to scale at the same pace.
 
@@ -245,7 +245,7 @@ The decline in blended efficiency suggests that the current investment level is 
 
   Google Ads and Meta also experienced substantial ROAS declines. No channel should be assumed to be immune from the broader efficiency problem.
 
-**Immediate actions:**
+**Recommended actions:**
 
 * Reduce overall paid media spend rather than continuing the prior scaling trajectory
 * Prioritize reductions in TikTok investment, given its 1.16x scaling-period ROAS and greatest percent decline in ROAS.
@@ -483,16 +483,15 @@ These limitations inform the recommended next steps and help distinguish observe
 
 ## 📦 Project Deliverables
 
-This repository provides a complete, production-grade analytics package encompassing strategic planning, dimensional engineering, metric definitions, and executive presentation layers:
+This repository provides an analytics package encompassing strategic planning, dimensional engineering, metric definitions, and executive presentation layers:
 
 | Deliverable Artifact | Format / Location | Description |
 | :--- | :--- | :--- |
 | **Interactive Executive Dashboard** | [`/model/ecommerce_marketing_analytics.pbix`](model/) | 3-page interactive Power BI report covering Executive Commercial Health, Channel Attribution & Ad Efficiency, and Customer Cohorts & Product Economics. |
-| **BI Measurement Plan & Traceability Matrix** | [`/docs/bi_measurement_plan.md`](docs/bi_measurement_plan.md) | Structured requirements blueprint linking business user stories, metric lifecycles, and data-grain mappings built using the [BI Measurement Planner](https://github.com/your-username/bi-measurement-planner). |
+| **JSON Measurement Spec** | [`/docs/bi_measurement_plan.md`](docs/bi_measurement_plan.md) | Structured requirements blueprint linking business user stories, metric lifecycles, and data-grain mappings built using the [BI Measurement Planner](https://github.com/your-username/bi-measurement-planner). |
 | **Kimball Dimensional Model Architecture** | [`/assets/data_model.png`](assets/data_model.png) | Fact Constellation (Galaxy Schema) specification connecting 3 fact tables across 4 conformed dimensions via clean 1:N single-direction relationships. |
-| **Production DAX Metric Library** | [`/dax/measures_library.dax`](dax/measures_library.dax) | Centralized, documented DAX script containing all business calculations (MER, ROAS, Marginal MER, Attribution Match Rate, and Cohort logic) with divide-by-zero safeguards. |
-| **Data Contract & ETL Specifications** | [`/docs/etl_specifications.md`](docs/etl_specifications.md) | Power Query transformation documentation. |
-| **Executive Presentation Deck** | [`/docs/executive_briefing.pdf`](docs/executive_briefing.pdf) | C-suite briefing summarizing performance decay diagnostics, organic cannibalization risks, and capital reallocation recommendations. |
+| **Data Dictionary** | [`/dax/measures_library.dax`](dax/measures_library.dax) | Centralized, documented DAX script containing all business calculations (MER, ROAS, Marginal MER, Attribution Match Rate, and Cohort logic) with divide-by-zero safeguards. |
+| **Executive Presentation Deck** | [`/docs/executive_briefing.pdf`](docs/executive_briefing.pdf) | Slide deck briefing summarizing performance decay diagnostics, organic cannibalization risks, and capital reallocation recommendations. |
 
 ---
 
@@ -500,7 +499,7 @@ This repository provides a complete, production-grade analytics package encompas
 
 Apex Gear Co.'s scaling period generated 23% Net Sales growth alongside a substantial increase in marketing investment. However, blended MER and ROAS declined considerably, and reported ROAS fell across Google Ads, Meta, and TikTok.
 
-The current performance supports reducing overall paid media spend and reassessing channel investment—rather than continuing to scale at the same pace. The next phase of analysis should focus on understanding the quality and incrementality of growth—not simply increasing or decreasing spend based on blended performance.
+The recommendation is to reduce overall paid media spend and reassess channel investment—rather than continuing to scale at the same pace. The next phase of analysis should focus on understanding the quality and incrementality of growth—not simply increasing or decreasing spend based on blended performance.
 
 A campaign-level acquisition and incrementality audit, supported by stronger customer-history validation and contribution-margin measurement, would provide a more reliable basis for future budget allocation.
 
