@@ -26,37 +26,6 @@ The analysis combines sales, marketing performance, and web traffic data in Powe
 
 ---
 
-## BI Requirements Engineering & Measurement Planning
-
-Before building ETL pipelines or writing DAX, a formal **BI Measurement Plan** was developed to bridge commercial business requirements with technical schema design, using the [BI Measurement Planner](https://github.com/alejandra-badia/bi-measurement-planner) framework. By applying this structured planning framework upfront, business questions were systematically translated into user stories, technical entity-grain requirements, and deterministic mathematical definitions prior to implementation. This prevented metric ambiguity, eliminated redundant transformations, and ensured direct lineage from executive questions to transactional data fields.
-
-### 1. Stakeholder User Stories
-Business needs were scoped into role-based analytical user stories within the planner:
-* **Chief Marketing Officer (CMO):** *"I need to compare top-line store sales against platform-reported ad revenue across baseline and scaling periods, so I can diagnose attribution overlap and prevent double-counting across networks."*
-* **Head of Performance Marketing:** *"I need granular channel metrics (CPC, CTR, Add-to-Cart Intent, and Channel ROAS) across Google, Meta, and TikTok, so I can identify which acquisition channels are experiencing media fatigue."*
-* **Director of E-Commerce / Finance:** *"I need to track realized Net Sales, checkout discount penetration, and returning customer purchase share, so I can ensure promotional campaigns aren't eroding unit contribution margin."*
-
-### 2. Business Metric Lifecycle & Process Flow
-To avoid metric drift and governance discrepancies, each KPI followed the lifecycle defined in the **BI Measurement Planner**:
-1. **Business Problem & Hypothesis Formulation:** Define commercial intent (e.g., verifying whether media scaling cannibalized baseline organic demand).
-2. **Grain & Entity Mapping:** Isolate source tables, primary/foreign keys, and data granularity across Shopify, GA4, and Ad networks.
-3. **DAX Mathematical Specification:** Document formal formulas, boundary cases, and divide-by-zero safeguards (`DIVIDE(..., 0)`).
-4. **Data Verification & Audit:** Reconcile aggregated Power BI measures against raw transactional exports.
-
-### 3. Requirements & Traceability Matrix (Excerpt)
-
-| Strategic Theme | Core Metric / KPI | Reporting Grain | Source Table(s) | Key Fields Required | Target Decision / Action |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Media Efficiency** | Blended MER | Monthly / Period | `fact_sales_line_items`, `fact_marketing_performance` | `gross_amount`, `discount_amount`, `returns`, `spend` | Determine macro budget scaling viability |
-| **Attribution Audit** | Attribution Match Rate | Channel / Period | `fact_marketing_performance`, `fact_sales_line_items` | `platform_reported_revenue`, `gross_amount` | Identify self-reported attribution overlap |
-| **Channel Quality** | ATC Rate (%) | Daily / Channel | `fact_web_traffic` | `sessions`, `add_to_carts` | Diagnose intent degradation per platform |
-| **Pricing Integrity** | Checkout Discount Rate | Order / Customer | `fact_sales_line_items` | `discount_amount`, `gross_amount` | Monitor margin dilution across buyer types |
-| **Customer Retention**| Repeat Purchase Share | Customer / Period | `dim_customers`, `fact_sales_line_items` | `customer_key`, `observed_lifetime_orders` | Rebalance budget toward owned CRM/email channels |
-
-> 🔗 *Explore the full governance methodology, template blueprints, and measurement workflows in the [BI Measurement Planner Repository](https://github.com/alejandra-badia/bi-measurement-planner).*
-
----
-
 ## Analysis Period
 
 The analysis compares two six-month periods:
@@ -100,6 +69,37 @@ The increase in traffic and ATC activity suggests that the business generated mo
 
 **5. Customer cohort findings require careful interpretation.**
 Approximately 99% of purchases in the scaling period were attributed to returning customers under the available first-observed-order classification. However, only 12 customers were classified as new during this period. Because complete pre-baseline customer history was unavailable, this result should not be interpreted as a definitive measure of true new-customer acquisition or retention. However, it does demonstrate that sales are highly reliant on returning customers.
+
+---
+
+## BI Requirements Engineering & Measurement Planning
+
+Before building ETL pipelines or writing DAX, a formal **BI Measurement Plan** was developed to bridge commercial business requirements with technical schema design, using the [BI Measurement Planner](https://github.com/alejandra-badia/bi-measurement-planner) framework. By applying this structured planning framework upfront, business questions were systematically translated into user stories, technical entity-grain requirements, and deterministic mathematical definitions prior to implementation. This prevented metric ambiguity, eliminated redundant transformations, and ensured direct lineage from executive questions to transactional data fields.
+
+### 1. Stakeholder User Stories
+Business needs were scoped into role-based analytical user stories within the planner:
+* **Chief Marketing Officer (CMO):** *"I need to compare top-line store sales against platform-reported ad revenue across baseline and scaling periods, so I can diagnose attribution overlap and prevent double-counting across networks."*
+* **Head of Performance Marketing:** *"I need granular channel metrics (CPC, CTR, Add-to-Cart Intent, and Channel ROAS) across Google, Meta, and TikTok, so I can identify which acquisition channels are experiencing media fatigue."*
+* **Director of E-Commerce / Finance:** *"I need to track realized Net Sales, checkout discount penetration, and returning customer purchase share, so I can ensure promotional campaigns aren't eroding unit contribution margin."*
+
+### 2. Business Metric Lifecycle & Process Flow
+To avoid metric drift and governance discrepancies, each KPI followed the lifecycle defined in the **BI Measurement Planner**:
+1. **Business Problem & Hypothesis Formulation:** Define commercial intent (e.g., verifying whether media scaling cannibalized baseline organic demand).
+2. **Grain & Entity Mapping:** Isolate source tables, primary/foreign keys, and data granularity across Shopify, GA4, and Ad networks.
+3. **DAX Mathematical Specification:** Document formal formulas, boundary cases, and divide-by-zero safeguards (`DIVIDE(..., 0)`).
+4. **Data Verification & Audit:** Reconcile aggregated Power BI measures against raw transactional exports.
+
+### 3. Requirements & Traceability Matrix (Excerpt)
+
+| Strategic Theme | Core Metric / KPI | Reporting Grain | Source Table(s) | Key Fields Required | Target Decision / Action |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Media Efficiency** | Blended MER | Monthly / Period | `fact_sales_line_items`, `fact_marketing_performance` | `gross_amount`, `discount_amount`, `returns`, `spend` | Determine macro budget scaling viability |
+| **Attribution Audit** | Attribution Match Rate | Channel / Period | `fact_marketing_performance`, `fact_sales_line_items` | `platform_reported_revenue`, `gross_amount` | Identify self-reported attribution overlap |
+| **Channel Quality** | ATC Rate (%) | Daily / Channel | `fact_web_traffic` | `sessions`, `add_to_carts` | Diagnose intent degradation per platform |
+| **Pricing Integrity** | Checkout Discount Rate | Order / Customer | `fact_sales_line_items` | `discount_amount`, `gross_amount` | Monitor margin dilution across buyer types |
+| **Customer Retention**| Repeat Purchase Share | Customer / Period | `dim_customers`, `fact_sales_line_items` | `customer_key`, `observed_lifetime_orders` | Rebalance budget toward owned CRM/email channels |
+
+> 🔗 *Explore the full governance methodology, template blueprints, and measurement workflows in the [BI Measurement Planner Repository](https://github.com/alejandra-badia/bi-measurement-planner).*
 
 ---
 
