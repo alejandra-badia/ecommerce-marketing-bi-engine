@@ -473,7 +473,7 @@ These limitations inform the recommended next steps and help distinguish observe
 
 Apex Gear Co.'s scaling period generated 23% Net Sales growth alongside a substantial increase in marketing investment. However, blended MER and ROAS declined considerably, and reported ROAS fell across Google Ads, Meta, and TikTok.
 
-The results suggest that the next phase of analysis should focus on understanding the quality and incrementality of growth—not simply increasing or decreasing spend based on blended performance.
+The current performance supports reducing overall paid media spend and reassessing channel investment—rather than continuing to scale at the same pace. The next phase of analysis should focus on understanding the quality and incrementality of growth—not simply increasing or decreasing spend based on blended performance.
 
 A campaign-level acquisition and incrementality audit, supported by stronger customer-history validation and contribution-margin measurement, would provide a more reliable basis for future budget allocation.
 
