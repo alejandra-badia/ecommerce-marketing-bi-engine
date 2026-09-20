@@ -26,6 +26,32 @@ The analysis combines sales, marketing performance, and web traffic data in Powe
 
 ---
 
+## BI Requirements Engineering & Measurement Planning
+
+Before building ETL pipelines or writing DAX, a formal **BI Measurement Plan** was developed to bridge commercial business requirements with technical schema design. This prevented metric ambiguity, eliminated redundant transformations, and ensured direct lineage from executive questions to transactional data fields.
+
+### 1. Stakeholder User Stories
+Business needs were decomposed into role-based analytical user stories:
+* **Chief Marketing Officer (CMO):** *"I need to compare top-line store sales against platform-reported ad revenue across baseline and scaling periods, so I can diagnose attribution overlap and prevent double-counting across networks."*
+* **Head of Performance Marketing:** *"I need granular channel metrics (CPC, CTR, Add-to-Cart Intent, and Channel ROAS) across Google, Meta, and TikTok, so I can identify which acquisition channels are experiencing media fatigue."*
+* **Director of E-Commerce / Finance:** *"I need to track realized Net Sales, checkout discount penetration, and returning customer purchase share, so I can ensure promotional campaigns aren't eroding unit contribution margin."*
+
+### 2. Business Metric Lifecycle & Process Flow
+To avoid KPI fragmentation across departments, every metric went through a standardized definition process:
+[Business Problem Definition] → [Hypothesis Formulation] (e.g., Media scale is cannibalizing organic baseline demand) → [Input Metric Mapping]   (Identify source tables, required fields, and granularity) → [DAX Formula Design] (Define deterministic mathematical logic & handle zero-division) → [Verification & Audit]   (Validate against raw store transactions & ad platform logs)
+
+### 3. Requirements & Traceability Matrix (Excerpt)
+
+| Strategic Theme | Core Metric / KPI | Reporting Grain | Source System & Table | Key Fields Required | Target Decision / Action |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Media Efficiency** | Blended MER | Monthly / Period | Shopify Sales (`fact_sales_line_items`) & Ad Extracts (`fact_marketing_performance`) | `gross_amount`, `discount_amount`, `returns`, `spend` | Determine macro budget scaling viability |
+| **Attribution Audit** | Attribution Match Rate | Channel / Period | Ad Performance (`fact_marketing_performance`) & Sales (`fact_sales_line_items`) | `platform_reported_revenue`, `gross_amount` | Identify self-reported attribution overlap |
+| **Channel Quality** | ATC Rate (%) | Daily / Channel | GA4 Telemetry (`fact_web_traffic`) | `sessions`, `add_to_carts` | Diagnose intent degradation per platform |
+| **Pricing Integrity** | Checkout Discount Rate | Order / Customer | Shopify Sales (`fact_sales_line_items`) | `discount_amount`, `gross_amount` | Monitor margin dilution across buyer types |
+| **Customer Retention**| Repeat Purchase Share | Customer / Period | Customer Master (`dim_customers`) & Sales Line Items | `customer_key`, `observed_lifetime_orders` | Rebalance budget toward owned CRM/email channels |
+
+---
+
 ## Analysis Period
 
 The analysis compares two six-month periods:
@@ -200,7 +226,7 @@ The decline in blended efficiency suggests that the current investment level is 
 | Meta       |         4.27x |        1.68x |   -61% |
 | TikTok     |         3.13x |        1.16x |   -63% |
 
-Google Ads and Meta also experienced substantial ROAS declines. No channel should be assumed to be immune from the broader efficiency problem. Marketing scaling 
+  Google Ads and Meta also experienced substantial ROAS declines. No channel should be assumed to be immune from the broader efficiency problem.
 
 **Immediate actions:**
 
