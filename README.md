@@ -142,6 +142,18 @@ The central business concern is not an absence of revenue growth. Rather, **reve
 
 This raises an important question for the next stage of analysis: which campaigns generated incremental revenue and new customers, and which may have captured demand that would have occurred without the additional spend?
 
+### Baseline Seasonality & Stability Audit
+
+When comparing a second-half baseline (July–December 2025) against a first-half scaling period (January–June 2026), a primary analytical concern is whether typical Q4 retail seasonality (Black Friday, Cyber Monday, holiday gifting) artificially inflated baseline performance.
+
+An audit of the daily and monthly transaction pacing revealed an important pattern:
+
+* **Absence of a Holiday Surge:** The November–December 2025 data did not show an abnormal holiday demand spike. Sales and conversion volumes remained relatively flat and consistent with the earlier months of H2 2025.
+* **Fair Baseline Comparability:** Because the baseline period was not distorted by high-volume seasonal peaks, the comparison between Baseline (H2 2025) and Scaling (H1 2026) is structurally sound. The baseline reflects steady-state, organic run-rate demand rather than an unrepeatable holiday anomaly.
+* **Q1 Pacing Context:** Similarly, while January and February 2026 did not show an exaggerated post-holiday hangover drop, ad spend was ramped up substantially from day one. The immediate drop in MER and ROAS in early 2026 is observed to have been driven by the sudden surge in paid media investment rather than seasonal baseline distortion.
+
+**Analytical Implication:** The deterioration in marketing efficiency (MER dropping from 4.62x to 1.62x) cannot be explained away as an artifact of holiday seasonality in the baseline. It represents a genuine decline in capital efficiency under aggressive media scaling.
+
 ### Channel-Level Performance
 
 | Channel    | Baseline ATC Rate | Scaling ATC Rate | Baseline ROAS | Scaling ROAS |
@@ -388,7 +400,7 @@ This structure helps preserve each fact table's grain and reduces the risk of co
 
 ---
 
-## 📐 Core Metrics & Definitions
+## Core Metrics & Definitions
 
 The Power BI report uses DAX measures to evaluate marketing efficiency, sales performance, customer behavior, and website engagement. The following metrics represent the key KPIs and supporting measures used throughout the analysis.
 
@@ -466,6 +478,21 @@ The findings should be interpreted within the limits of the available data and r
 6. **Customer lifecycle measurement:** The current cohort analysis does not independently establish validated retention rates, customer loyalty, or true customer lifetime value.
 
 These limitations inform the recommended next steps and help distinguish observed results from hypotheses requiring further testing.
+
+---
+
+## 📦 Project Deliverables
+
+This repository provides a complete, production-grade analytics package encompassing strategic planning, dimensional engineering, metric definitions, and executive presentation layers:
+
+| Deliverable Artifact | Format / Location | Description |
+| :--- | :--- | :--- |
+| **Interactive Executive Dashboard** | [`/model/ecommerce_marketing_analytics.pbix`](model/) | 3-page interactive Power BI report covering Executive Commercial Health, Channel Attribution & Ad Efficiency, and Customer Cohorts & Product Economics. |
+| **BI Measurement Plan & Traceability Matrix** | [`/docs/bi_measurement_plan.md`](docs/bi_measurement_plan.md) | Structured requirements blueprint linking business user stories, metric lifecycles, and data-grain mappings built using the [BI Measurement Planner](https://github.com/your-username/bi-measurement-planner). |
+| **Kimball Dimensional Model Architecture** | [`/assets/data_model.png`](assets/data_model.png) | Fact Constellation (Galaxy Schema) specification connecting 3 fact tables across 4 conformed dimensions via clean 1:N single-direction relationships. |
+| **Production DAX Metric Library** | [`/dax/measures_library.dax`](dax/measures_library.dax) | Centralized, documented DAX script containing all business calculations (MER, ROAS, Marginal MER, Attribution Match Rate, and Cohort logic) with divide-by-zero safeguards. |
+| **Data Contract & ETL Specifications** | [`/docs/etl_specifications.md`](docs/etl_specifications.md) | Power Query transformation documentation. |
+| **Executive Presentation Deck** | [`/docs/executive_briefing.pdf`](docs/executive_briefing.pdf) | C-suite briefing summarizing performance decay diagnostics, organic cannibalization risks, and capital reallocation recommendations. |
 
 ---
 
