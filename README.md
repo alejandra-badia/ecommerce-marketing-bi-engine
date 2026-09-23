@@ -53,7 +53,10 @@ Marketing investment increased substantially during the scaling period, but reve
 | Checkout Discounts | — | $36,000 | — |
 | Checkout Discount Rate | — | 3.07% | — |
 
-*Note: The scaling-period spend was approximately 3.5 times the baseline spend, equivalent to an increase of approximately 253%.*
+*Notes: 
+The scaling-period spend was approximately 3.5 times the baseline spend, equivalent to an increase of approximately 253%.
+Gross Profit: [Net Sales] - [Total COGS].
+Marketing Profit = [Gross Profit] - [Total Ad Spend].*
 
 ### Key Takeaways
 
@@ -169,7 +172,7 @@ When comparing a second-half baseline (July–December 2025) against a first-hal
 
 An audit of the daily and monthly transaction pacing revealed an important pattern:
 
-* **Absence of a Holiday Surge:** The November–December 2025 data did not show an abnormal holiday demand spike. Sales and conversion volumes remained relatively flat and consistent with the earlier months of H2 2025.
+* **Holiday Surge:** The November–December 2025 data did not show an abnormal holiday demand spike. Sales and conversion volumes remained relatively flat and consistent with the earlier months of H2 2025.
 * **Q1 Pacing Context:** Similarly, January and February 2026 did not appear to have an exaggerated post-holiday hangover drop.
 
 **Analytical Implication:** Although holiday seasonality can affect the data, significant seasonality peaks and troughs were not observed.
@@ -215,7 +218,7 @@ During the scaling period, only 12 customers were classified as new under the av
 
 This is a notable data finding, but it should not be interpreted as definitive evidence of customer loyalty, strong retention, or a lack of acquisition activity.
 
-### Important Data Limitation: Left-Censored Customer History
+### Data Limitation: Left-Censored Customer History
 
 The dataset does not include a complete historical customer record or a separate, comprehensive list of customers active before the baseline period.
 
@@ -226,7 +229,7 @@ As a result:
 * The observed new-customer count may not represent true acquisition volume.
 * The returning-customer share cannot independently establish retention, loyalty, or customer lifetime value.
 
-**The 99% returning-customers share should therefore be treated as an observed dataset pattern—not a validated retention rate or proof that acquisition campaigns are ineffective.**
+**The approximately 99% returning-customer share is an observed dataset pattern and, given the potential misclassification of existing customers as new due to incomplete pre-baseline history, may represent a lower bound on the true returning-customer share. This finding should not be interpreted as a validated retention rate or as evidence that acquisition campaigns are ineffective.**
 
 A more reliable LTV and retention analysis would require complete customer purchase history, a validated acquisition date, and consistent customer-level transaction records.
 
@@ -427,7 +430,7 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
 | Metric | Definition | Analytical Purpose |
 | :--- | :--- | :--- |
 | Net Sales | Gross Order Value − Total Discount Amount − Total Return Amount | Measures realized sales after discounts and returns |
-| Total COGS | Sum of line-level costs (`quantity` × conformed product `unit_cost`) | Measures total landed product inventory cost sold |
+| Total COGS | Sum of line-level costs (`quantity` × conformed product `unit_cost`) | Measures total product costs (fulfillment and pick-and-pack costs, payment processing fees, variable shipping subsidies, and other variable costs directly associated with fulfilling customer orders) and is calculated based on units sold and the associated unit cost. |
 | Gross Profit | Net Sales − Total COGS | Measures realized gross dollar profit generated before marketing and operating expenses |
 | Gross Margin % | Gross Profit ÷ Net Sales | Evaluates fundamental product-level pricing power and markup efficiency |
 | Total Ad Spend | Sum of advertising spend across analyzed platforms | Measures paid media investment |
@@ -484,17 +487,18 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
 
 ```dax
 Marketing Efficiency Ratio (MER) = divide([Net Sales],[Total Ad Spend],0)
-MER provides a store-level view of revenue generated relative to total advertising investment.
+
 Attribution Match Rate = DIVIDE([Total Platform Reported Revenue], [Gross Sales], 0)
-A value above 100% indicates that aggregate platform-reported revenue exceeds actual store-level Net Sales and serves as a diagnostic for attribution overlap.
+
 Channel ROAS = divide([Channel Reported Revenue],[Total Ad Spend],0)
-This measure tracks the proportion of gross sales surrendered through discounting.
+
 Net Sales = [Gross Sales]-[Total Discount Amount]-[Total Return Amount]
-Net Sales provides the revenue after subtracting customer returns, price allowances, and sales discounts from its total gross sales.
+
 Gross Profit = [Net Sales] - [Total COGS]
-Gross Profit provides the generated profit after subtracting the Cost of Goods Sold from Net Sales
+
 Marketing Profit = [Gross Profit] - [Total Ad Spend]
-Marketing Profit Margin % = DIVIDE([Marketing Contribution], [Net Sales], 0)
+
+Marketing Profit Margin % = DIVIDE([Marketing Profit], [Net Sales], 0)
 ```
 ### Data Transformation
 |![Table Transformation Folder Organization](assets/tables_folder_oraganization.png) 
@@ -522,10 +526,10 @@ The findings should be interpreted within the limits of the available data and r
 
 1. **Incomplete customer history:** First-observed customer dates may not reflect true acquisition dates, limiting the reliability of new-versus-returning classification and LTV conclusions.
 2. **Platform attribution:** Platform-reported revenue may overlap across channels and should not be interpreted as incremental revenue without further validation.
-3. **Descriptive period comparison:** Differences between the baseline and scaling periods do not establish that marketing spend alone caused the observed changes.
+3. **Descriptive period comparison:** Data preparation, metric validation, order-level integrity checks, and a review of daily and monthly sales pacing were performed to support comparability across the baseline and scaling periods. No significant holiday-seasonality peaks or troughs were observed in the reviewed data. These checks strengthen confidence in the reported period-over-period patterns, but the analysis remains observational and does not isolate marketing spend from all other potential contributors to the changes. Additional historical data would enable comparisons across more periods and seasonal cycles, while further analysis of factors such as pricing, promotions, channel mix, and broader demand trends could help assess alternative explanations for the observed changes.
 4. **Campaign-level detail:** Channel-level results do not identify the specific campaigns, audiences, or placements responsible for the decline in reported efficiency.
-5. **Profitability:** Revenue efficiency is not equivalent to profitability. A complete assessment would require relevant product costs, fulfillment costs, and other contribution-margin inputs.
-6. **Customer lifecycle measurement:** The current cohort analysis does not independently establish validated retention rates, customer loyalty, or true customer lifetime value.
+5. **Profitability scope:** Marketing Profit reflects Net Sales less modeled COGS and advertising spend. It is not a complete measure of company-wide operating profit, as fixed overhead, taxes, and other costs outside the modeled scope may not be included.
+6. **Customer lifecycle measurement:** Incomplete pre-baseline customer history may affect new-versus-returning classification and limits the ability to validate true acquisition dates, cohort-based retention rates, customer loyalty, and customer lifetime value. The observed returning-customer share may represent a lower bound, assuming customer matching and the active-customer denominator are reliable.
 
 These limitations inform the recommended next steps and help distinguish observed results from hypotheses requiring further testing.
 
@@ -546,15 +550,6 @@ This repository provides an analytics package encompassing strategic planning, d
 ---
 
 ## Conclusion
-
-Apex Gear Co.'s scaling period generated 23% Net Sales growth alongside a substantial increase in marketing investment. However, blended MER and ROAS declined considerably, and reported ROAS fell across Google Ads, Meta, and TikTok.
-
-The recommendation is to reduce overall paid media spend and reassess channel investment—rather than continuing to scale at the same pace. The next phase of analysis should focus on understanding the quality and incrementality of growth—not simply increasing or decreasing spend based on blended performance.
-
-A campaign-level acquisition and incrementality audit, supported by stronger customer-history validation and contribution-margin measurement, would provide a more reliable basis for future budget allocation.
-
-**The key takeaway:** Sustainable growth requires understanding not only how much revenue marketing reports, but how much additional customer value it creates—and at what economic cost.
-
 
 Apex Gear Co.'s scaling period generated 23% Net Sales growth alongside a 253% increase in marketing investment. Blended MER and ROAS declined considerably, and reported ROAS fell across Google Ads, Meta, and TikTok.
 
