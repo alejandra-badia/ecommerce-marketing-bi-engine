@@ -1,5 +1,3 @@
-# E-Commerce Marketing & LTV Analytics
-
 **Power BI | DAX | Power Query | Marketing Attribution | E-Commerce Analytics**
 
 A Power BI analytics project examining marketing efficiency, channel attribution, customer purchasing behavior, and customer lifetime value (LTV) for a fictional direct-to-consumer (D2C) e-commerce brand.
@@ -30,10 +28,10 @@ The analysis combines sales, marketing performance, and web traffic data in Powe
 
 The analysis compares two six-month periods:
 
-| Period   | Date Range                 | Description                               |
+| Period | Date Range | Description |
 | -------- | -------------------------- | ----------------------------------------- |
 | Baseline | July 1 – December 31, 2025 | Reference period before the scaling phase |
-| Scaling  | January 1 – June 30, 2026  | Period of increased marketing investment  |
+| Scaling | January 1 – June 30, 2026 | Period of increased marketing investment |
 
 ---
 
@@ -41,15 +39,19 @@ The analysis compares two six-month periods:
 
 Marketing investment increased substantially during the scaling period, but revenue growth did not keep pace.
 
-| KPI                    | Baseline |    Scaling |               Change |
-| ---------------------- | -------: | ---------: | -------------------: |
-| Total Ad Spend         | $199,237 |   $703,530 |                +253% |
-| Net Sales              | $921,337 | $1,137,173 |                 +23% |
-| Blended MER            |    4.62x |      1.62x |                 -65% |
-| Blended ROAS           |    4.37x |      1.69x |                 -61% |
-| Attribution Match Rate |      94% |       101% | +7 percentage points |
-| Checkout Discounts     |        — |    $36,000 |                    — |
-| Checkout Discount Rate |        — |      3.07% |                    — |
+| KPI / Metric | Baseline | Scaling | Change |
+| :--- | ---: | ---: | ---: |
+| Total Ad Spend | $199,237 | $703,530 | +253% |
+| Net Sales | $921,337 | $1,137,173 | +23% |
+| Total COGS | $305,685 | $389,457 | +27% |
+| Gross Profit | $615,652 | $747,716 | +21% |
+| Marketing Profit | $416,415 | $44,186 | -89% |
+| Marketing Profit Margin % | 45.20% | 3.89% | -41.31 percentabe points (-91%) |
+| MER | 4.62x | 1.62x | -65% |
+| ROAS | 4.37x | 1.69x | -61% |
+| Attribution Match Rate | 94% | 101% | +7 percentage points |
+| Checkout Discounts | — | $36,000 | — |
+| Checkout Discount Rate | — | 3.07% | — |
 
 *Note: The scaling-period spend was approximately 3.5 times the baseline spend, equivalent to an increase of approximately 253%.*
 
@@ -58,17 +60,24 @@ Marketing investment increased substantially during the scaling period, but reve
 **1. Revenue increased, but substantially more marketing investment was required.**
 Net Sales grew 23%, while ad spend increased approximately 253%. This divergence coincided with a sharp decline in blended marketing efficiency.
 
-**2. Blended efficiency deteriorated during the scaling period.**
+**2. Blended marketing efficiency deteriorated during the scaling period.**
 MER declined from 4.62x to 1.62x, while blended ROAS declined from 4.37x to 1.69x. These results indicate that the additional marketing investment was associated with lower reported revenue efficiency.
 
 **3. Channel-level ROAS declined across all three platforms.**
 Google Ads, Meta, and TikTok all recorded lower ROAS during the scaling period.
 
-**4. Traffic and Add-to-Cart volume increased, but this did not translate into proportional efficiency gains.**
+**4. Profit remaining after COGS and advertising declined sharply.**
+Gross Profit After Ad Spend fell from approximately $416K to $44K (−89%), while its share of Net Sales declined from 45.20% to 3.89%. Although this measure remained positive during the scaling period, substantially less profit remained after order-related costs and advertising.
+
+**5. Traffic and Add-to-Cart volume increased, but this did not translate into proportional efficiency gains.**
 The increase in traffic and ATC activity suggests that the business generated more engagement. However, this additional engagement growth did not generate a significant increase of ATC, so the ATC rate remained relatively unchanged, and for the TikTok channel, the ATC rate showed a slight decline. 
 
-**5. Customer cohort findings require careful interpretation.**
-Approximately 99% of purchases in the scaling period were attributed to returning customers under the available first-observed-order classification. However, only 12 customers were classified as new during this period. Because complete pre-baseline customer history was unavailable, this result should not be interpreted as a definitive measure of true new-customer acquisition or retention. However, it does demonstrate that sales are highly reliant on returning customers.
+**6. Majority of customers during the marketing campaign scaling period were returning customers.**
+Basis for calculating new and returning customers:
+* A new customer was defined as a customer with an observed first order date during the period being analyzed
+* A returning customer was defined as a customer who already had an observed first order date prior to the period being analyzed
+
+Approximately 99% of customers in the scaling period were attributed to returning customers under the available first-observed-order classification. Only 12 customers were classified as new during this period. Note that since pre-baseline customer history was unavailable customers may be misclassified as new customers, when they could actually be returning customers. Nevertheless, this does not invalidate that at least 99% of customers during the marketing scaling period were returning customers.
 
 ---
 
@@ -93,11 +102,11 @@ To avoid metric drift and governance discrepancies, each KPI followed the lifecy
 
 | Strategic Theme | Core Metric / KPI | Reporting Grain | Source Table(s) | Key Fields Required | Target Decision / Action |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Media Efficiency** | Blended MER | Monthly / Period | `fact_sales_line_items`, `fact_marketing_performance` | `gross_amount`, `discount_amount`, `returns`, `spend` | Determine macro budget scaling viability |
-| **Attribution Audit** | Attribution Match Rate | Channel / Period | `fact_marketing_performance`, `fact_sales_line_items` | `platform_reported_revenue`, `gross_amount` | Identify self-reported attribution overlap |
-| **Channel Quality** | ATC Rate (%) | Daily / Channel | `fact_web_traffic` | `sessions`, `add_to_carts` | Diagnose intent degradation per platform |
-| **Pricing Integrity** | Checkout Discount Rate | Order / Customer | `fact_sales_line_items` | `discount_amount`, `gross_amount` | Monitor margin dilution across buyer types |
-| **Customer Retention**| Repeat Purchase Share | Customer / Period | `dim_customers`, `fact_sales_line_items` | `customer_key`, `observed_lifetime_orders` | Rebalance budget toward owned CRM/email channels |
+| **Media Efficiency** | MER | Store / Period / Monthly | `fact_sales_line_items`, `fact_marketing_performance` | `gross_amount`, `discount_amount`, `returns`, `spend` | Determine macro budget scaling viability |
+| **Attribution Audit** | Attribution Match Rate | Store / Period | `fact_marketing_performance`, `fact_sales_line_items` | `platform_reported_revenue`, `gross_amount` | Identify aggregate self-reported attribution overlap |
+| **Channel Quality** | ATC Rate (%) | Daily / Site-Level | `fact_web_traffic` | `sessions`, `add_to_carts` | Diagnose intent degradation and traffic drop-off |
+| **Pricing Integrity** | Checkout Discount Rate | Order / Line-Item | `fact_sales_line_items` | `discount_amount`, `gross_amount` | Monitor margin dilution and coupon reliance |
+| **Customer Retention**| Returning Customer % | Customer Cohort / Period | `dim_customers` | `customer_key`, `observed_lifetime_orders` | Quantify reliance on returning base vs. new acquisitions |
 
 > 🔗 *Explore the full governance methodology, template blueprints, and measurement workflows in the [BI Measurement Planner Repository](https://github.com/alejandra-badia/bi-measurement-planner).*
 
@@ -142,6 +151,18 @@ The central business concern is not an absence of revenue growth. Rather, **reve
 
 This raises an important question for the next stage of analysis: which campaigns generated incremental revenue and new customers, and which may have captured demand that would have occurred without the additional spend?
 
+### Profitability Impact of Marketing Scale-Up
+To assess performance beyond revenue efficiency, the analysis also evaluates Gross Profit After Ad Spend: Net Sales less COGS and advertising spend.
+
+| KPI                              | Baseline | Scaling |                   Change |
+| -------------------------------- | -------: | ------: | -----------------------: |
+| Marketing Profit       | $416,415 | $44,186 |                   −89% |
+| Marketing Profit Margin %  |   45.20% |   3.89% | −41.31 percentage points (-91%) |
+
+Gross Profit After Ad Spend declined by approximately $372K despite Net Sales increasing by 23%. The share of Net Sales remaining after COGS and advertising also fell substantially, from 45.20% to 3.89%.
+
+This indicates that considerably less profit remained after order-related costs and advertising during the scaling period. While the measure remained positive at approximately $44K, the Marketing Profit deteriorated by 89%.
+
 ### Baseline Seasonality & Stability Audit
 
 When comparing a second-half baseline (July–December 2025) against a first-half scaling period (January–June 2026), a primary analytical concern is whether typical Q4 retail seasonality (Black Friday, Cyber Monday, holiday gifting) artificially inflated baseline performance.
@@ -149,18 +170,17 @@ When comparing a second-half baseline (July–December 2025) against a first-hal
 An audit of the daily and monthly transaction pacing revealed an important pattern:
 
 * **Absence of a Holiday Surge:** The November–December 2025 data did not show an abnormal holiday demand spike. Sales and conversion volumes remained relatively flat and consistent with the earlier months of H2 2025.
-* **Fair Baseline Comparability:** Because the baseline period was not distorted by high-volume seasonal peaks, the comparison between Baseline (H2 2025) and Scaling (H1 2026) is structurally sound. The baseline reflects steady-state, organic run-rate demand rather than an unrepeatable holiday anomaly.
-* **Q1 Pacing Context:** Similarly, while January and February 2026 did not show an exaggerated post-holiday hangover drop, ad spend was ramped up substantially from day one. The immediate drop in MER and ROAS in early 2026 is observed to have been driven by the sudden surge in paid media investment rather than seasonal baseline distortion.
+* **Q1 Pacing Context:** Similarly, January and February 2026 did not appear to have an exaggerated post-holiday hangover drop.
 
-**Analytical Implication:** The deterioration in marketing efficiency (MER dropping from 4.62x to 1.62x) cannot be explained away as an artifact of holiday seasonality in the baseline. It represents a genuine decline in capital efficiency under aggressive media scaling.
+**Analytical Implication:** Although holiday seasonality can affect the data, significant seasonality peaks and troughs were not observed.
 
 ### Channel-Level Performance
 
-| Channel    | Baseline ATC Rate | Scaling ATC Rate | Baseline ROAS | Scaling ROAS |
+| Channel | Baseline ATC Rate | Scaling ATC Rate | Baseline ROAS | Scaling ROAS |
 | ---------- | ----------------: | ---------------: | ------------: | -----------: |
-| Google Ads |             6.37% |            6.46% |         4.84x |        2.19x |
-| Meta       |             6.47% |            6.49% |         4.27x |        1.68x |
-| TikTok     |             6.61% |            6.44% |         3.13x |        1.16x |
+| Google Ads | 6.37% | 6.46% | 4.84x | 2.19x |
+| Meta | 6.47% | 6.49% | 4.27x | 1.68x |
+| TikTok | 6.61% | 6.44% | 3.13x | 1.16x |
 
 ### Channel Observations
 
@@ -191,7 +211,7 @@ The customer analysis examines observed purchasing behavior and the distribution
 
 ### Key Observation
 
-During the scaling period, only 12 customers were classified as new under the available first-observed-order methodology. Approximately 99% of scaling-period purchases were attributed to returning customers.
+During the scaling period, only 12 customers were classified as new under the available first-observed-order methodology. Approximately 99% of scaling-period customers were returning customers.
 
 This is a notable data finding, but it should not be interpreted as definitive evidence of customer loyalty, strong retention, or a lack of acquisition activity.
 
@@ -206,7 +226,7 @@ As a result:
 * The observed new-customer count may not represent true acquisition volume.
 * The returning-customer share cannot independently establish retention, loyalty, or customer lifetime value.
 
-**The 99% returning-purchase share should therefore be treated as an observed dataset pattern—not a validated retention rate or proof that acquisition campaigns are ineffective.**
+**The 99% returning-customers share should therefore be treated as an observed dataset pattern—not a validated retention rate or proof that acquisition campaigns are ineffective.**
 
 A more reliable LTV and retention analysis would require complete customer purchase history, a validated acquisition date, and consistent customer-level transaction records.
 
@@ -218,42 +238,34 @@ Nevertheless, a holistic view of the available data shows that returning custome
 
 During the scaling period, marketing spend increased by 253%, while Net Sales grew by only 23%. Blended MER declined from 4.62x to 1.62x, and blended ROAS fell from 4.37x to 1.69x.
 
-These results indicate that the business is generating revenue less efficiently at its current level of marketing investment. While further analysis can help refine budget allocation, the current performance supports reducing overall paid media spend and reassessing channel investment—rather than continuing to scale at the same pace.
+These results indicate that the business is generating revenue less efficiently at its current level of marketing investment.
 
-### 1. Reduce Marketing Spend and Reassess Channel Allocation
+### 1. Reassess Marketing Spend and Channel Allocation
 
-**Recommendation: Reduce overall paid media investment from scaling-period levels, with an immediate focus on lower-return channels and campaigns.**
+Marketing investment increased approximately 3.5× during the scaling period, while net sales increased approximately 1.23×. This indicates a substantial decline in observed net sales efficiency relative to marketing spend. The decline in blended efficiency suggests that the current investment level is not delivering revenue growth proportionate to the increase in spend.
 
-The current data provides a clear basis for reassessing spend:
+Based on this trend, the recommendation is to reassess further budget increases rather than continuing to scale at the same pace by default. Before committing additional spend, management should review channel-level performance and validate whether incremental investment is generating sufficient contribution margin. A controlled budget test could help determine whether additional spend delivers acceptable incremental returns.
 
-| KPI            | Baseline |    Scaling | Change |
+This analysis identifies a deterioration in observed sales efficiency; it does not independently establish the causal or profit-maximizing effect of marketing spend.
+
+| KPI | Baseline | Scaling | Change |
 | -------------- | -------: | ---------: | -----: |
-| Total Ad Spend | $199,237 |   $703,530 |  +253% |
-| Net Sales      | $921,337 | $1,137,173 |   +23% |
-| Blended MER    |    4.62x |      1.62x |   -65% |
-| Blended ROAS   |    4.37x |      1.69x |   -61% |
+| Total Ad Spend | $199,237 | $703,530 | +253% |
+| Net Sales | $921,337 | $1,137,173 | +23% |
+| Blended MER | 4.62x | 1.62x | -65% |
+| Blended ROAS | 4.37x | 1.69x | -61% |
 
-The decline in blended efficiency suggests that the current investment level is not delivering revenue growth proportionate to the increase in spend.
 
-**TikTok warrants particular scrutiny and a reduction in investment.** Its reported ROAS declined from 3.13x to 1.16x, the lowest scaling-period ROAS among the three analyzed channels. This makes TikTok a clear candidate for budget reduction while its campaign-level contribution is evaluated.
-
-| Channel    | Baseline ROAS | Scaling ROAS | Change |
+| Channel | Baseline ROAS | Scaling ROAS | Change |
 | ---------- | ------------: | -----------: | -----: |
-| Google Ads |         4.84x |        2.19x |   -55% |
-| Meta       |         4.27x |        1.68x |   -61% |
-| TikTok     |         3.13x |        1.16x |   -63% |
-
-  Google Ads and Meta also experienced substantial ROAS declines. No channel should be assumed to be immune from the broader efficiency problem.
+| Google Ads | 4.84x | 2.19x | -55% |
+| Meta | 4.27x | 1.68x | -61% |
+| TikTok | 3.13x | 1.16x | -63% |
 
 **Recommended actions:**
-
-* Reduce overall paid media spend rather than continuing the prior scaling trajectory
-* Prioritize reductions in TikTok investment, given its 1.16x scaling-period ROAS and greatest percent decline in ROAS.
-* Review spend across Meta and Google Ads, identifying campaigns where reductions can be made without unnecessarily sacrificing productive demand capture
-* Monitor Net Sales, MER, ROAS, and customer acquisition as spend is reduced
-* Avoid restoring higher spend levels until performance demonstrates a sustainable improvement
-
-The objective is to bring investment back into closer alignment with demonstrated business returns while identifying where additional spend can create incremental value.
+* Reassess continuing paid marketing spend scaling
+* Review spend across Meta, Google, and TikTok and reassess channel budget allocation
+* Monitor Net Sales, MER, ROAS, and customer acquisition during controlled budget test
 
 ### 2. Audit Campaign-Level Acquisition & Incrementality
 
@@ -261,11 +273,11 @@ Reducing inefficient spend is the immediate priority. The next step is to determ
 
 The current campaign structure includes:
 
-| Platform   | Campaigns                                               |
+| Platform | Campaigns |
 | ---------- | ------------------------------------------------------- |
-| Meta       | Brand Awareness, Prospecting Broad, Retargeting         |
+| Meta | Brand Awareness, Prospecting Broad, Retargeting |
 | Google Ads | Search Brand Core, Non-Brand Outerwear, Performance Max |
-| TikTok     | Spark Influence UGC, TopView, Brand Push                |
+| TikTok | Spark Influence UGC, TopView, Brand Push |
 
 These campaigns serve different roles across awareness, prospecting, retargeting, and demand capture. Platform-level ROAS alone may obscure meaningful differences in their contribution.
 
@@ -282,7 +294,7 @@ These campaigns serve different roles across awareness, prospecting, retargeting
 
 ### 3. Validate Customer History & Build a More Reliable LTV View
 
-Approximately 99% of scaling-period purchases were attributed to returning customers, while only 12 customers were classified as new under the available first-observed-order methodology.
+Approximately 99% of scaling-period customers were returning customers, while only 12 customers were classified as new under the available first-observed-order methodology.
 
 This is a notable signal to investigate alongside the decline in marketing efficiency. However, it does not independently prove that acquisition campaigns are ineffective or that existing customers are being neglected. Incomplete historical customer records may affect the new-versus-returning classification, and existing customers may be repurchasing through natural demand.
 
@@ -327,9 +339,13 @@ The goal is to evaluate growth quality—not revenue alone.
 
 ### Summary
 
-**The immediate recommendation is to reduce paid media spend, prioritize reductions in lower-return investment such as TikTok, and reassess the current scaling strategy.** The decline in MER and ROAS provides a clear basis for action.
-
 Further campaign-level acquisition, incrementality, and customer LTV analysis should then guide how the remaining budget is allocated and where future investment can generate sustainable, incremental growth.
+
+The immediate recommendation is to hold back from further aggressive marketing scaling and reassess the current level of paid media investment. During the scaling period, ad spend increased 253% while Net Sales grew 23%, and Marketing Profit (Gross Profit After Ad Spend) declined by approximately 89%, from $416K to $44K.
+
+These results indicate a substantial deterioration in observed revenue efficiency and profit remaining after COGS and advertising. Management should review the current investment level before committing to further expansion.
+
+The next step is to use campaign-level performance, contribution-margin analysis, and incrementality testing where feasible to refine channel and campaign allocation. The current analysis supports reassessing the pace of scaling, but does not identify a precise profit-maximizing budget or establish which individual channels should be reduced.
 
 ---
 
@@ -343,22 +359,24 @@ This structure supports analysis across sales, marketing performance, and web tr
 
 ### Fact Tables
 
-| Table                        | Description                                                                       |
+| Table | Description |
 | ---------------------------- | --------------------------------------------------------------------------------- |
-| `fact_sales_line_items`      | Sales line-item data used for revenue and product-level analysis                  |
+| `fact_sales_line_items` | Sales line-item data used for revenue and product-level analysis |
 | `fact_marketing_performance` | Marketing performance data used for spend, reported revenue, and channel analysis |
-| `fact_web_traffic`           | Web traffic data used to analyze sessions and engagement metrics                  |
+| `fact_web_traffic` | Web traffic data used to analyze sessions and engagement metrics |
 
 ### Shared Dimensions
 
-| Table           | Description                                             |
+| Table | Description |
 | --------------- | ------------------------------------------------------- |
-| `dim_customers` | Customer attributes and customer-level analysis         |
-| `dim_calendar`  | Date-based analysis across the model                    |
-| `dim_channels`  | Marketing channel attributes                            |
-| `dim_products`  | Product attributes product-level analysis |
+| `dim_customers` | Customer attributes and customer-level analysis |
+| `dim_calendar` | Date-based analysis across the model |
+| `dim_channels` | Marketing channel attributes |
+| `dim_products` | Product attributes product-level analysis |
 
 The shared dimensions provide consistent analytical context across the fact tables. An additional `_Measures` table was used to organize DAX measures and is not a business fact table or dimension.
+
+![Measures Table With Folder Organization](assets/measures_table.png)
 
 ---
 
@@ -406,58 +424,90 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
 
 ### Marketing & Business Performance
 
-| Metric                       | Definition                                                                                | Analytical Purpose                                                                            |
-| ---------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Net Sales                    | Gross Order Value − Total Discount Amount − Total Return Amount                           | Measures realized sales after discounts and returns                                           |
-| Total Ad Spend               | Sum of advertising spend across analyzed platforms                                        | Measures paid media investment                                                                |
-| Blended MER                  | Net Sales ÷ Total Ad Spend                                                                | Evaluates store-level sales relative to advertising investment                                |
-| Blended ROAS                 | Consolidated platform-reported revenue ÷ Total Ad Spend, using the report's measure logic | Evaluates blended reported advertising return                                                 |
-| Channel ROAS                 | Channel Reported Revenue ÷ Total Ad Spend                                                 | Compares reported advertising return at the channel level                                     |
-| Attribution Match Rate       | Total Platform Reported Revenue ÷ Gross Sales                                             | Diagnoses differences between aggregate platform-reported revenue and store-level Gross Sales |
-| Marketing Profit             | Net Sales − Total Ad Spend                                                                | Measures sales remaining after ad spend, before other business costs                          |
-| Incremental Marketing Profit | Scaling-Period Marketing Profit − Baseline Marketing Profit                               | Compares marketing profit between the two periods                                             |
-| Incremental Profit Growth %  | Incremental Marketing Profit ÷ Baseline Marketing Profit                                  | Measures the relative change in marketing profit versus baseline                              |
+| Metric | Definition | Analytical Purpose |
+| :--- | :--- | :--- |
+| Net Sales | Gross Order Value − Total Discount Amount − Total Return Amount | Measures realized sales after discounts and returns |
+| Total COGS | Sum of line-level costs (`quantity` × conformed product `unit_cost`) | Measures total landed product inventory cost sold |
+| Gross Profit | Net Sales − Total COGS | Measures realized gross dollar profit generated before marketing and operating expenses |
+| Gross Margin % | Gross Profit ÷ Net Sales | Evaluates fundamental product-level pricing power and markup efficiency |
+| Total Ad Spend | Sum of advertising spend across analyzed platforms | Measures paid media investment |
+| Blended MER | Net Sales ÷ Total Ad Spend | Evaluates store-level sales relative to advertising investment |
+| Blended ROAS | Consolidated platform-reported revenue ÷ Total Ad Spend, using the report's measure logic | Evaluates blended reported advertising return |
+| Channel ROAS | Channel Reported Revenue ÷ Total Ad Spend | Compares reported advertising return at the channel level |
+| Attribution Match Rate | Total Platform Reported Revenue ÷ Gross Sales | Diagnoses differences between aggregate platform-reported revenue and store-level Gross Sales |
+| Marketing Profit | Gross Profit − Total Ad Spend | Measures realized commercial cash contribution after inventory and acquisition media costs |
+| Marketing Profit Margin % | Marketing Profit ÷ Net Sales | Evaluates retained operating contribution as a percentage of net revenue |
+| Incremental Marketing Profit | Scaling-Period Marketing Profit − Baseline Marketing Profit | Compares commercial marketing profit between the two operational periods |
+| Incremental Profit Growth % | Incremental Marketing Profit ÷ Baseline Marketing Profit | Measures the relative percentage change in commercial profit versus baseline |
 
 ### Customer Acquisition & Lifetime Value
 
-| Metric                        | Definition                                                                     | Analytical Purpose                                                    |
-| ----------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
-| Blended CAC                   | Total Ad Spend ÷ Total New Customers Acquired                                  | Estimates paid media cost per observed new customer                   |
-| Observed Average Customer LTV | Average of observed customer lifetime spend in the available data              | Describes observed customer monetization                              |
-| Total New Customers Acquired  | Distinct count of customers classified as new using first-observed-order logic | Supports observed acquisition analysis                                |
-| Total Returning Customers     | Total Active Customer Base − Total New Customers Acquired                      | Estimates returning customers under the report's classification logic |
-| New Customer Acquisition %    | Total New Customers Acquired ÷ Total Active Customer Base                      | Measures the observed new-customer share                              |
-| Returning Customer %          | Total Returning Customers ÷ Total Active Customer Base                         | Measures the observed returning-customer share                        |
+| Metric | Definition | Analytical Purpose |
+| :--- | :--- | :--- |
+| Blended CAC | Total Ad Spend ÷ Total New Customers Acquired | Estimates paid media cost per observed new customer |
+| Observed Average Customer LTV | Average of observed customer lifetime spend in the available data | Describes observed customer monetization |
+| Total New Customers Acquired | Distinct count of customers classified as new using first-observed-order logic | Supports observed acquisition analysis |
+| Total Returning Customers | Total Active Customer Base − Total New Customers Acquired | Estimates returning customers under the report's classification logic |
+| New Customer Acquisition % | Total New Customers Acquired ÷ Total Active Customer Base | Measures the observed new-customer share |
+| Returning Customer % | Total Returning Customers ÷ Total Active Customer Base | Measures the observed returning-customer share |
 
 ### Traffic, Engagement & Order Metrics
 
-| Metric                    | Definition                                                  | Analytical Purpose                                                        |
-| ------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Click-Through Rate (CTR)  | Total Ad Clicks ÷ Total Ad Impressions                      | Measures the proportion of ad impressions resulting in clicks             |
-| Cost Per Click (CPC)      | Total Ad Spend ÷ Total Ad Clicks                            | Measures average advertising cost per click                               |
-| Total Web Sessions        | Sum of GA4 sessions                                         | Measures website traffic volume                                           |
-| Unique Site Visitors      | Distinct count of visitors, according to available GA4 data | Measures observed audience reach                                          |
-| Total Add-to-Carts        | Sum of Add-to-Cart events                                   | Measures shopping engagement                                              |
-| ATC Rate                  | Add-to-Cart rate, as defined in the report                  | Evaluates the rate of Add-to-Cart activity                                |
-| Average Order Value (AOV) | Average order value, using the report's order-level logic   | Measures average transaction value                                        |
-| Total Orders Count        | Distinct count of `order_id`                                | Measures order volume without counting each line item as a separate order |
-| Total Units Sold          | Sum of units sold                                           | Measures product sales volume                                             |
-| Total Discount Amount     | Sum of discounts recorded in Shopify sales data             | Measures discount value                                                   |
-| Checkout Discount Rate    | Total Discount Amount ÷ Gross Sales                         | Measures discounts relative to Gross Sales                                |
+| Metric | Definition | Analytical Purpose |
+| :--- | :--- | :--- |
+| Click-Through Rate (CTR) | Total Ad Clicks ÷ Total Ad Impressions | Measures the proportion of ad impressions resulting in clicks |
+| Cost Per Click (CPC) | Total Ad Spend ÷ Total Ad Clicks | Measures average advertising cost per click |
+| Total Web Sessions | Sum of GA4 sessions | Measures website traffic volume |
+| Unique Site Visitors | Distinct count of visitors, according to available GA4 data | Measures observed audience reach |
+| Total Add-to-Carts | Sum of Add-to-Cart events | Measures shopping engagement |
+| ATC Rate | Add-to-Cart rate, as defined in the report | Evaluates the rate of Add-to-Cart activity |
+| Average Order Value (AOV) | Average order value, using the report's order-level logic | Measures average transaction value |
+| Total Orders Count | Distinct count of `order_id` | Measures order volume without counting each line item as a separate order |
+| Total Units Sold | Sum of units sold | Measures product sales volume |
+| Total Discount Amount | Sum of discounts recorded in Shopify sales data | Measures discount value |
+| Checkout Discount Rate | Total Discount Amount ÷ Gross Sales | Measures discounts relative to Gross Sales |
 
 ### Metric Interpretation & Limitations
 
 * **MER and ROAS are not interchangeable.** MER uses store-level Net Sales, while ROAS uses platform-reported revenue. Differences in attribution and reporting methodology can cause these metrics to diverge.
 * **Attribution Match Rate above 100% is a diagnostic signal.** It indicates that aggregate platform-reported revenue exceeds store-level Gross Sales. It does not, by itself, establish attribution accuracy, identify the source of overlap, or measure incremental revenue.
-* **Marketing Profit is a simplified measure—not net profit.** It is calculated as Net Sales less Ad Spend and excludes other costs not represented in that calculation, such as product costs, fulfillment, and operating expenses.
+* **COGS uses annual standard costing.** Product costs are held fixed at standard `unit_cost` across both baseline and scaling cohorts, isolating media efficiency and promotional discounting from supplier cost inflation. Includes direct product costs, fulfillment and pick-and-pack costs, payment processing fees, variable shipping subsidies, and other variable costs directly associated with fulfilling customer orders. COGS is calculated based on units sold and the associated unit cost.
 * **Incremental Marketing Profit is a period-over-period comparison.** It does not establish that marketing scaling alone caused the change.
 * **CAC and observed LTV depend on customer classification and history.** Incomplete pre-baseline customer records limit the reliability of true acquisition cost, retention, and lifetime value conclusions.
 * **Discount Rate uses Gross Sales as its denominator.** The report calculates Checkout Discount Rate as Total Discount Amount ÷ Gross Sales.
 
 ---
 
-## 🛠️ Tools & Technologies
+## Technical Implementation
 
+### Sample DAX MEASURES
+
+```dax
+Marketing Efficiency Ratio (MER) = divide([Net Sales],[Total Ad Spend],0)
+MER provides a store-level view of revenue generated relative to total advertising investment.
+Attribution Match Rate = DIVIDE([Total Platform Reported Revenue], [Gross Sales], 0)
+A value above 100% indicates that aggregate platform-reported revenue exceeds actual store-level Net Sales and serves as a diagnostic for attribution overlap.
+Channel ROAS = divide([Channel Reported Revenue],[Total Ad Spend],0)
+This measure tracks the proportion of gross sales surrendered through discounting.
+Net Sales = [Gross Sales]-[Total Discount Amount]-[Total Return Amount]
+Net Sales provides the revenue after subtracting customer returns, price allowances, and sales discounts from its total gross sales.
+Gross Profit = [Net Sales] - [Total COGS]
+Gross Profit provides the generated profit after subtracting the Cost of Goods Sold from Net Sales
+Marketing Profit = [Gross Profit] - [Total Ad Spend]
+Marketing Profit Margin % = DIVIDE([Marketing Contribution], [Net Sales], 0)
+```
+### Data Transformation
+|![Table Transformation Folder Organization](assets/tables_folder_oraganization.png) 
+
+|![Channel Marketing Performance Tables](assets/merged_marketing_performance_data.png) | ![Merged Marketing Performance Data](assets/merged_marketing_performance_data.png)|
+
+| ![Original Customer Dimensions Table](assets/dim_customers.png) | ![Transformed Dimesions Table](assets/dim_customers_tranformed.png) |
+
+### Validation Examples
+
+---
+
+## Tools & Technologies
 * **Power BI** — Interactive dashboards, data modeling, DAX measures, drill-through navigation, and cross-page analysis
 * **DAX** — KPI calculations, time-period comparisons, and business metric logic
 * **Dimensional Modeling** — Fact constellation / galaxy schema with shared dimensions
@@ -481,14 +531,14 @@ These limitations inform the recommended next steps and help distinguish observe
 
 ---
 
-## 📦 Project Deliverables
+## Project Deliverables
 
 This repository provides an analytics package encompassing strategic planning, dimensional engineering, metric definitions, and executive presentation layers:
 
 | Deliverable Artifact | Format / Location | Description |
 | :--- | :--- | :--- |
 | **Interactive Executive Dashboard** | [`/model/ecommerce_marketing_analytics.pbix`](model/) | 3-page interactive Power BI report covering Executive Commercial Health, Channel Attribution & Ad Efficiency, and Customer Cohorts & Product Economics. |
-| **JSON Measurement Spec** | [`/docs/bi_measurement_plan.md`](docs/bi_measurement_plan.md) | Structured requirements blueprint linking business user stories, metric lifecycles, and data-grain mappings built using the [BI Measurement Planner](https://github.com/your-username/bi-measurement-planner). |
+| **JSON Measurement Spec** | [`/docs/bi_measurement_plan.md`](docs/bi_measurement_plan.md) | Structured requirements blueprint linking business user stories, metric lifecycles, and data-grain mappings built using the [BI Measurement Planner](https://github.com/alejandra-badia/bi-measurement-planner). |
 | **Kimball Dimensional Model Architecture** | [`/assets/data_model.png`](assets/data_model.png) | Fact Constellation (Galaxy Schema) specification connecting 3 fact tables across 4 conformed dimensions via clean 1:N single-direction relationships. |
 | **Data Dictionary** | [`/dax/measures_library.dax`](dax/measures_library.dax) | Centralized, documented DAX script containing all business calculations (MER, ROAS, Marginal MER, Attribution Match Rate, and Cohort logic) with divide-by-zero safeguards. |
 | **Executive Presentation Deck** | [`/docs/executive_briefing.pdf`](docs/executive_briefing.pdf) | Slide deck briefing summarizing performance decay diagnostics, organic cannibalization risks, and capital reallocation recommendations. |
@@ -504,3 +554,12 @@ The recommendation is to reduce overall paid media spend and reassess channel in
 A campaign-level acquisition and incrementality audit, supported by stronger customer-history validation and contribution-margin measurement, would provide a more reliable basis for future budget allocation.
 
 **The key takeaway:** Sustainable growth requires understanding not only how much revenue marketing reports, but how much additional customer value it creates—and at what economic cost.
+
+
+Apex Gear Co.'s scaling period generated 23% Net Sales growth alongside a 253% increase in marketing investment. Blended MER and ROAS declined considerably, and reported ROAS fell across Google Ads, Meta, and TikTok.
+
+Gross Profit After Ad Spend declined approximately 89.4%, from $416K to $44K, while its share of Net Sales fell from 45.20% to 3.89%. Although the measure remained positive during the scaling period, substantially less profit remained after COGS and advertising.
+
+The recommendation is to hold back from further aggressive scaling and reassess the current level of marketing investment. Campaign-level contribution analysis and incrementality testing can then help guide future budget allocation. The period comparison is descriptive and does not isolate the causal impact of marketing spend.
+
+**The key takeaway:** Sustainable growth requires evaluating not only revenue and platform-reported returns, but also marketing efficiency, return on ad spend, and marketing profit (the profit remaining after order-related costs and advertising)—and whether additional investment generates sufficient incremental value.
