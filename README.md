@@ -156,7 +156,7 @@ The central business concern is not an absence of revenue growth. Rather, **reve
 This raises an important question for the next stage of analysis: which campaigns generated incremental revenue and new customers, and which may have captured demand that would have occurred without the additional spend?
 
 ### Profitability Impact of Marketing Scale-Up
-To assess performance beyond revenue efficiency, the analysis also evaluates Gross Profit After Ad Spend: Net Sales less COGS and advertising spend.
+To assess performance beyond revenue efficiency, the analysis also evaluates Marketing Profit (Gross Profit After Ad Spend): Net Sales less COGS and advertising spend.
 
 | KPI                              | Baseline | Scaling |                   Change |
 | -------------------------------- | -------: | ------: | -----------------------: |
@@ -487,11 +487,11 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
 ### Sample DAX MEASURES
 
 ```dax
-Marketing Efficiency Ratio (MER) = divide([Net Sales],[Total Ad Spend],0)
+Marketing Efficiency Ratio (MER) = DIVIDE([Net Sales],[Total Ad Spend],0)
 
 Attribution Match Rate = DIVIDE([Total Platform Reported Revenue], [Gross Sales], 0)
 
-Channel ROAS = divide([Channel Reported Revenue],[Total Ad Spend],0)
+Channel ROAS = DIVIDE([Channel Reported Revenue],[Total Ad Spend],0)
 
 Net Sales = [Gross Sales]-[Total Discount Amount]-[Total Return Amount]
 
@@ -560,7 +560,7 @@ This repository provides an analytics package encompassing strategic planning, d
 
 Apex Gear Co.'s scaling period generated 23% Net Sales growth alongside a 253% increase in marketing investment. Blended MER and ROAS declined considerably, and reported ROAS fell across Google Ads, Meta, and TikTok.
 
-Gross Profit After Ad Spend declined approximately 89.4%, from $416K to $44K, while its share of Net Sales fell from 45.20% to 3.89%. Although the measure remained positive during the scaling period, substantially less profit remained after COGS and advertising.
+Marketing Profit (Gross Profit After Ad Spend) declined approximately 89.4%, from $416K to $44K, while its share of Net Sales fell from 45.20% to 3.89%. Although the measure remained positive during the scaling period, substantially less profit remained after COGS and advertising.
 
 The recommendation is to hold back from further aggressive scaling and reassess the current level of marketing investment. Campaign-level contribution analysis and incrementality testing can then help guide future budget allocation. The period comparison is descriptive and does not isolate the causal impact of marketing spend.
 
