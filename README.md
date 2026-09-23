@@ -56,7 +56,8 @@ Marketing investment increased substantially during the scaling period, but reve
 *Notes: 
 The scaling-period spend was approximately 3.5 times the baseline spend, equivalent to an increase of approximately 253%.
 Gross Profit: [Net Sales] - [Total COGS].
-Marketing Profit = [Gross Profit] - [Total Ad Spend].*
+Marketing Profit = [Gross Profit] - [Total Ad Spend].
+MER and Blended MER are used interchangeably throughout this report to refer to total store Net Sales divided by total ad spend.*
 
 ### Key Takeaways
 
@@ -70,7 +71,7 @@ MER declined from 4.62x to 1.62x, while blended ROAS declined from 4.37x to 1.69
 Google Ads, Meta, and TikTok all recorded lower ROAS during the scaling period.
 
 **4. Profit remaining after COGS and advertising declined sharply.**
-Gross Profit After Ad Spend fell from approximately $416K to $44K (−89%), while its share of Net Sales declined from 45.20% to 3.89%. Although this measure remained positive during the scaling period, substantially less profit remained after order-related costs and advertising.
+Marketing Profit (Gross Profit After Ad Spend) fell from approximately $416K to $44K (−89%), while its share of Net Sales declined from 45.20% to 3.89%. Although this measure remained positive during the scaling period, substantially less profit remained after order-related costs and advertising.
 
 **5. Traffic and Add-to-Cart volume increased, but this did not translate into proportional efficiency gains.**
 Traffic and Add-to-Cart (ATC) volume increased during the scaling period, but ATC activity did not grow proportionally to sessions. As a result, the overall ATC rate remained relatively unchanged, with TikTok showing a slight decline. Higher traffic volume therefore did not translate into a meaningful improvement in the rate of shopping-cart engagement.
@@ -510,10 +511,10 @@ Marketing Profit Margin % = DIVIDE([Marketing Profit], [Net Sales], 0)
 ### Validation Examples
 The following checks were used to assess data integrity and metric consistency before interpreting the results:
 
-Order-level integrity: Reviewed order-level records and calculated fields to support consistent aggregation across reporting periods.
-Metric validation: Checked the calculation logic for Gross Sales, discounts, Net Sales, COGS, Ad Spend, and Marketing Profit to ensure the reported metrics followed their documented definitions.
-Period-level consistency: Reviewed daily and monthly sales and advertising-spend trends to identify unexpected gaps, spikes, or inconsistencies that could affect the Baseline vs. Scaling comparison.
-Seasonality review: Examined sales pacing across the analysis period. No significant holiday peaks or troughs were observed in the available data.
+* **Order-level integrity:** Reviewed order-level records and calculated fields to support consistent aggregation across reporting periods.
+* **Metric validation:** Checked the calculation logic for Gross Sales, discounts, Net Sales, COGS, Ad Spend, and Marketing Profit to ensure the reported metrics followed their documented definitions.
+* **Period-level consistency:** Reviewed daily and monthly sales and advertising-spend trends to identify unexpected gaps, spikes, or inconsistencies that could affect the Baseline vs. Scaling comparison.
+* **Seasonality review:** Examined sales pacing across the analysis period. No significant holiday peaks or troughs were observed in the available data.
 
 ---
 
