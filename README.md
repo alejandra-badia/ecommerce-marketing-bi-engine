@@ -46,7 +46,7 @@ Marketing investment increased substantially during the scaling period, but reve
 | Total COGS | $305,685 | $389,457 | +27% |
 | Gross Profit | $615,652 | $747,716 | +21% |
 | Marketing Profit | $416,415 | $44,186 | -89% |
-| Marketing Profit Margin % | 45.20% | 3.89% | -41.31 percentabe points (-91%) |
+| Marketing Profit Margin % | 45.20% | 3.89% | -41.31 percentage points (-91%) |
 | MER | 4.62x | 1.62x | -65% |
 | ROAS | 4.37x | 1.69x | -61% |
 | Attribution Match Rate | 94% | 101% | +7 percentage points |
@@ -73,14 +73,14 @@ Google Ads, Meta, and TikTok all recorded lower ROAS during the scaling period.
 Gross Profit After Ad Spend fell from approximately $416K to $44K (−89%), while its share of Net Sales declined from 45.20% to 3.89%. Although this measure remained positive during the scaling period, substantially less profit remained after order-related costs and advertising.
 
 **5. Traffic and Add-to-Cart volume increased, but this did not translate into proportional efficiency gains.**
-The increase in traffic and ATC activity suggests that the business generated more engagement. However, this additional engagement growth did not generate a significant increase of ATC, so the ATC rate remained relatively unchanged, and for the TikTok channel, the ATC rate showed a slight decline. 
+Traffic and Add-to-Cart (ATC) volume increased during the scaling period, but ATC activity did not grow proportionally to sessions. As a result, the overall ATC rate remained relatively unchanged, with TikTok showing a slight decline. Higher traffic volume therefore did not translate into a meaningful improvement in the rate of shopping-cart engagement.
 
 **6. Majority of customers during the marketing campaign scaling period were returning customers.**
 Basis for calculating new and returning customers:
 * A new customer was defined as a customer with an observed first order date during the period being analyzed
 * A returning customer was defined as a customer who already had an observed first order date prior to the period being analyzed
 
-Approximately 99% of customers in the scaling period were attributed to returning customers under the available first-observed-order classification. Only 12 customers were classified as new during this period. Note that since pre-baseline customer history was unavailable customers may be misclassified as new customers, when they could actually be returning customers. Nevertheless, this does not invalidate that at least 99% of customers during the marketing scaling period were returning customers.
+Approximately 99% of scaling-period customers were classified as returning customers under the available first-observed-order methodology. Because incomplete pre-baseline history may cause some existing customers to be classified as new, the observed returning-customer share may represent a lower bound on the true share, assuming customer matching and the active-customer denominator are reliable. Only 12 customers were classified as new during this period. This should not be interpreted as a validated retention rate.
 
 ---
 
@@ -172,7 +172,7 @@ When comparing a second-half baseline (July–December 2025) against a first-hal
 
 An audit of the daily and monthly transaction pacing revealed an important pattern:
 
-* **Holiday Surge:** The November–December 2025 data did not show an abnormal holiday demand spike. Sales and conversion volumes remained relatively flat and consistent with the earlier months of H2 2025.
+* **No Abnormal Holiday Surge Observed:** The November–December 2025 data did not show an abnormal holiday demand spike. Sales and conversion volumes remained relatively flat and consistent with the earlier months of H2 2025.
 * **Q1 Pacing Context:** Similarly, January and February 2026 did not appear to have an exaggerated post-holiday hangover drop.
 
 **Analytical Implication:** Although holiday seasonality can affect the data, significant seasonality peaks and troughs were not observed.
@@ -430,7 +430,7 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
 | Metric | Definition | Analytical Purpose |
 | :--- | :--- | :--- |
 | Net Sales | Gross Order Value − Total Discount Amount − Total Return Amount | Measures realized sales after discounts and returns |
-| Total COGS | Sum of line-level costs (`quantity` × conformed product `unit_cost`) | Measures total product costs (fulfillment and pick-and-pack costs, payment processing fees, variable shipping subsidies, and other variable costs directly associated with fulfilling customer orders) and is calculated based on units sold and the associated unit cost. |
+| Total COGS | Sum of line-level costs (`quantity` × conformed product `unit_cost`) | Measures modeled product and order-level variable costs associated with sales |
 | Gross Profit | Net Sales − Total COGS | Measures realized gross dollar profit generated before marketing and operating expenses |
 | Gross Margin % | Gross Profit ÷ Net Sales | Evaluates fundamental product-level pricing power and markup efficiency |
 | Total Ad Spend | Sum of advertising spend across analyzed platforms | Measures paid media investment |
@@ -438,7 +438,7 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
 | Blended ROAS | Consolidated platform-reported revenue ÷ Total Ad Spend, using the report's measure logic | Evaluates blended reported advertising return |
 | Channel ROAS | Channel Reported Revenue ÷ Total Ad Spend | Compares reported advertising return at the channel level |
 | Attribution Match Rate | Total Platform Reported Revenue ÷ Gross Sales | Diagnoses differences between aggregate platform-reported revenue and store-level Gross Sales |
-| Marketing Profit | Gross Profit − Total Ad Spend | Measures realized commercial cash contribution after inventory and acquisition media costs |
+| Marketing Profit | Gross Profit − Total Ad Spend | Measures profit remaining after modeled COGS and advertising spend |
 | Marketing Profit Margin % | Marketing Profit ÷ Net Sales | Evaluates retained operating contribution as a percentage of net revenue |
 | Incremental Marketing Profit | Scaling-Period Marketing Profit − Baseline Marketing Profit | Compares commercial marketing profit between the two operational periods |
 | Incremental Profit Growth % | Incremental Marketing Profit ÷ Baseline Marketing Profit | Measures the relative percentage change in commercial profit versus baseline |
@@ -508,6 +508,12 @@ Marketing Profit Margin % = DIVIDE([Marketing Profit], [Net Sales], 0)
 | ![Original Customer Dimensions Table](assets/dim_customers.png) | ![Transformed Dimesions Table](assets/dim_customers_tranformed.png) |
 
 ### Validation Examples
+The following checks were used to assess data integrity and metric consistency before interpreting the results:
+
+Order-level integrity: Reviewed order-level records and calculated fields to support consistent aggregation across reporting periods.
+Metric validation: Checked the calculation logic for Gross Sales, discounts, Net Sales, COGS, Ad Spend, and Marketing Profit to ensure the reported metrics followed their documented definitions.
+Period-level consistency: Reviewed daily and monthly sales and advertising-spend trends to identify unexpected gaps, spikes, or inconsistencies that could affect the Baseline vs. Scaling comparison.
+Seasonality review: Examined sales pacing across the analysis period. No significant holiday peaks or troughs were observed in the available data.
 
 ---
 
