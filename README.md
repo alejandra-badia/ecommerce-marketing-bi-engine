@@ -124,19 +124,19 @@ The Power BI report is organized into three analytical views.
 
 A consolidated view of business performance across the baseline and scaling periods, highlighting sales growth, marketing investment, blended efficiency, and key business KPIs.
 
-![Executive Overview](assets/page1_executive_overview.png)
+![Executive Overview](assets/screenshots/_page_1_Executive_Marketing_Efficiency.png)
 
 ### Page 2 — Channel Attribution
 
 A channel-level comparison of marketing performance, including reported revenue, ROAS, and Add-to-Cart rates across Google Ads, Meta, and TikTok.
 
-![Channel Attribution](assets/page2_channel_attribution.png)
+![Channel Attribution](assets/screenshots/_page_2_Paid_Acquisition_and_Funnel.png)
 
 ### Page 3 — Customer & Product Economics
 
 An exploration of observed customer purchasing behavior, cohort composition, and product-level economics to support further investigation into customer value and commercial performance.
 
-![Customer & Product Economics](assets/page3_customer_product_economics.png)
+![Customer & Product Economics](assets/_page_3_Cohort_and_Product_Performance.png)
 
 ---
 
@@ -398,7 +398,7 @@ Several data preparation and modeling practices were used to support analytical 
 
 ### Customer Key Standardization
 
-A SHA-256-based customer key mapping process was used to standardize customer identifiers across relevant data sources.
+A customer key mapping process was used to standardize customer identifiers across relevant data sources. The email customer identifiers were replaced with customer keys, with the emails completely removed from fact tables to protect customer identities.
 
 This supports consistent customer-level analysis while avoiding the use of raw customer identifiers in the analytical model.
 
