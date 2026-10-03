@@ -499,15 +499,15 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
     <th colspan="2">Data Transformation & Query Append Layer</th>
   </tr>
   <tr>
-    <td width="20%" >
+    <td>
       <img src="assets/screenshots/data_cleaning_table_organization.png" alt="data cleaning table organization"><br><br>
       <b>Folder Architecture</b><br>
-      <sub>Data cleaning folder organization.</sub>
+      <sub>Tables were organized into folder during data cleaning.</sub>
     </td>
-    <td width="80%" valign="bottom">
+    <td valign="bottom">
       <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table"><br><br>
-      <b>Fact Marketing Append</b><br>
-      <sub>The fact_marketing_performance table built as an appended query from cleaned Google, Meta, and TikTok ad tables.</sub>
+      <b>Fact Marketing Table</b><br>
+      <sub>The fact_marketing_performance table was built as an appended query from cleaned Google, Meta, and TikTok ad tables.</sub>
     </td>
   </tr>
 </table>
