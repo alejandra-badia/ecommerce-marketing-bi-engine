@@ -506,7 +506,7 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
       <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table">
     </td>
   </tr>
-  <tr style="border-top: hidden;>
+  <tr style="border-top: none;>
     <td valign="top">
       <b>Folder Architecture</b><br>
       <sub>Data cleaning folder organization implemented for clear fact and dimension table generation.</sub>
