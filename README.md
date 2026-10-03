@@ -499,12 +499,12 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
     <th colspan="2">Data Transformation & Query Append Layer</th>
   </tr>
   <tr>
-    <td width="30%" valign="top">
+    <td>
       <img src="assets/screenshots/data_cleaning_table_organization.png" alt="data cleaning table organization"><br><br>
       <b>Folder Architecture</b><br>
       <sub>Data cleaning folder organization.</sub>
     </td>
-    <td width="70%" valign="bottom">
+    <td valign="bottom">
       <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table"><br><br>
       <b>Fact Marketing Append</b><br>
       <sub>The fact_marketing_performance table built as an appended query from cleaned Google, Meta, and TikTok ad tables.</sub>
@@ -519,17 +519,17 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
     <th colspan="3">Data Cleaning Workflow: Customer Key Mapping</th>
   </tr>
   <tr>
-    <td width="33.3%" valign="top">
+    <td>
       <img src="assets/screenshots/customer_key_for_sales_fact_table.png" alt="Customer Email Encoding"><br><br>
       <b>1. Email Encoding</b><br>
       <sub>Customer emails from sales line-item records were encoded to protect user privacy.</sub>
     </td>
-    <td width="33.3%" valign="top">
+    <td>
       <img src="assets/screenshots/customer_key_map_data_cleaning.png" alt="Customer Key Map Generation"><br><br>
       <b>2. Key Map Generation</b><br>
       <sub>A clean bridge/key map table generated from unique encoded hashes to assign persistent surrogate keys.</sub>
     </td>
-    <td width="33.3%" valign="top">
+    <td>
       <img src="assets/screenshots/dim_customers.png" alt="Customer Dimension Table"><br><br>
       <b>3. Dimension Finalization</b><br>
       <sub>The optimized dim_customers table deployed with unique keys and pre-calculated behavioral metrics.</sub>
