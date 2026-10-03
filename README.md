@@ -1,3 +1,5 @@
+# Apex Gear Co. — E-Commerce Marketing Performance & Capital Allocation Engine
+
 **Power BI | DAX | Power Query | Marketing Attribution | E-Commerce Analytics**
 > 📄 **Quick Links:** [View Dashboard PDF](docs/dashboard_report_export.pdf) · [View Slide Deck](docs/executive_briefing.pdf) · [Inspect DAX Measures](scripts/dax/) · [Data Dictionary](data/dictionary/data_dictionary.md)
 
