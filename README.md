@@ -496,37 +496,43 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
 
 <table>
   <tr>
-    <th>Table Transformation Folder Organization</th>
-    <th>Append Queries Example: fact_marketing_performance table</th>
+    <th colspan="2">Data Transformation & Query Append Layer</th>
   </tr>
   <tr>
-    <td>
-      <img src="assets/screenshots/data_cleaning_table_organization.png" alt="data cleaning table organization"><br>
-      <sub>Data Cleaning Folder Organization for fact and dimension table generation.</sub>
+    <td width="30%" valign="top">
+      <img src="assets/screenshots/data_cleaning_table_organization.png" alt="data cleaning table organization"><br><br>
+      <b>Folder Architecture</b><br>
+      <sub>Data cleaning folder organization implemented for clear fact and dimension table generation.</sub>
     </td>
-    <td>
-      <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table"><br>
-      <sub>The fact_marketing_performance table is an appended query from cleaned google ads, meta ads, and TikTok ads tables.</sub>
+    <td width="70%" valign="top">
+      <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table"><br><br>
+      <b>Fact Marketing Append</b><br>
+      <sub>The fact_marketing_performance table built as an appended query from cleaned Google, Meta, and TikTok ad tables.</sub>
     </td>
   </tr>
 </table>
 
+<br>
+
 <table>
   <tr>
-    <th colspan="3">Data Cleaning Example: Customer Key Map</th>
+    <th colspan="3">Data Cleaning Workflow: Customer Key Mapping</th>
   </tr>
   <tr>
-    <td>
-      <img src="assets/screenshots/customer_key_for_sales_fact_table.png" alt="Customer Email Encoding"><br>
-      <sub>Customer emails from sales line item data were encoded and replaced with customer keys to ensure unique customer identifiers that maintain customer privacy.</sub>
+    <td width="33.3%" valign="top">
+      <img src="assets/screenshots/customer_key_for_sales_fact_table.png" alt="Customer Email Encoding"><br><br>
+      <b>1. Email Encoding</b><br>
+      <sub>Customer emails from sales line-item records were encoded to protect user privacy.</sub>
     </td>
-    <td>
-      <img src="assets/screenshots/customer_key_map_data_cleaning.png" alt="Customer Key Map Generation"><br>
-      <sub>Key map was generated from encoded emails, with unique customer key identifiers.</sub>
+    <td width="33.3%" valign="top">
+      <img src="assets/screenshots/customer_key_map_data_cleaning.png" alt="Customer Key Map Generation"><br><br>
+      <b>2. Key Map Generation</b><br>
+      <sub>A clean bridge/key map table generated from unique encoded hashes to assign persistent surrogate keys.</sub>
     </td>
-    <td>
-      <img src="assets/screenshots/dim_customers.png" alt="Customer Dimension Table"><br>
-      <sub>Customer Dimension Table created with unique customer keys and calculated data from sales table.</sub>
+    <td width="33.3%" valign="top">
+      <img src="assets/screenshots/dim_customers.png" alt="Customer Dimension Table"><br><br>
+      <b>3. Dimension Finalization</b><br>
+      <sub>The optimized dim_customers table deployed with unique keys and pre-calculated behavioral metrics.</sub>
     </td>
   </tr>
 </table>
@@ -549,26 +555,27 @@ Marketing Profit = [Gross Profit] - [Total Ad Spend]
 Marketing Profit Margin % = DIVIDE([Marketing Profit], [Net Sales], 0)
 ```
 
-### UI/UX 
+### UI/UX & Interactive Features
 
 <table>
   <tr>
-    <th>Interactive Filter Panel</th>
-    <th>Contextual Tooltips</th>
-    <th>Granular Drill-Through</th>
+    <th colspan="3">Advanced Reporting Interface & Analytical Features</th>
   </tr>
   <tr>
-    <td>
-      <img src="assets/screenshots/filter_panel.png" alt="Filter Panel"><br>
-      <sub>Utilizes bookmarks and selection panels to toggle visibility, saving space while maintaining slicer capabilities.</sub>
+    <td width="33.3%" valign="top">
+      <img src="assets/screenshots/filter_panel.png" alt="Filter Panel"><br><br>
+      <b>Interactive Filter Panel</b><br>
+      <sub>Utilizes bookmarks and selection panels to toggle visibility, saving valuable report real estate while maintaining deep slicing capabilities.</sub>
     </td>
-    <td>
-      <img src="assets/screenshots/custom_kpi_bar_tooltip.png" alt="Custom KPI Bar Tooltip"><br>
-      <sub>Custom KPI bar tooltip to provide period-over-period comparison for each KPI for the baseline and scaled marketing periods.</sub>
+    <td width="33.3%" valign="top">
+      <img src="assets/screenshots/custom_kpi_bar_tooltip.png" alt="Custom KPI Bar Tooltip"><br><br>
+      <b>Contextual Tooltips</b><br>
+      <sub>Custom KPI bar tooltips engineered to provide dynamic period-over-period comparisons for each core metric across baseline and scaling phases.</sub>
     </td>
-    <td>
-      <img src="assets/screenshots/channel_drill_through.png" alt="Channel Drill Through"><br>
-      <sub>Provides dynamic page filtering, allowing users to dive into campaign and ad level details.</sub>
+    <td width="33.3%" valign="top">
+      <img src="assets/screenshots/channel_drill_through.png" alt="Channel Drill Through"><br><br>
+      <b>Granular Drill-Through</b><br>
+      <sub>Provides dynamic page-level filtering, allowing executive users to seamlessly dive from channels into campaign and ad-level performance details.</sub>
     </td>
   </tr>
 </table>
