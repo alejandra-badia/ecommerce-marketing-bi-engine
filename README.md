@@ -498,28 +498,29 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
   <tr>
     <th colspan="2">Data Transformation & Query Append Layer</th>
   </tr>
-  <!-- Row 1: Images perfectly centered vertically against each other -->
   <tr>
-    <td width="30%" valign="middle" align="center">
-      <img src="assets/screenshots/data_cleaning_table_organization.png" alt="data cleaning table organization">
-    </td>
-    <td width="70%" valign="middle" align="center">
-      <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table">
-    </td>
-  </tr>
-  <!-- Row 2: Text block captions cleanly aligned across the bottom -->
-  <tr>
-    <td valign="top">
+    <!-- Column 1: Tall image naturally pushes height, text sits at base -->
+    <td width="30%" valign="top">
+      <div align="center">
+        <img src="assets/screenshots/data_cleaning_table_organization.png" alt="data cleaning table organization">
+      </div>
+      <br>
       <b>Folder Architecture</b><br>
       <sub>Data cleaning folder organization implemented for clear fact and dimension table generation.</sub>
     </td>
-    <td valign="top">
+    <!-- Column 2: Short image is vertically centered using an inner table, text stays at bottom -->
+    <td width="70%" valign="bottom">
+      <table width="100%" height="100%" style="border:none; background:none;">
+        <tr style="border:none; background:none;"><td align="center" valign="middle" style="border:none; padding: 20px 0;">
+          <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table">
+        </td></tr>
+      </table>
+      <br>
       <b>Fact Marketing Append</b><br>
       <sub>The fact_marketing_performance table built as an appended query from cleaned Google, Meta, and TikTok ad tables.</sub>
     </td>
   </tr>
 </table>
-
 <br>
 
 <table>
