@@ -492,6 +492,45 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
 
 ## Technical Implementation
 
+### Data Transformation & Power Query (ETL)
+
+<table>
+  <tr>
+    <th>Table Transformation Folder Organization</th>
+    <th>Append Queries Example: fact_marketing_performance table</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="assets/screenshots/data_cleaning_table_organization.png" alt="data cleaning table organization"><br>
+      <sub>Data Cleaning Folder Organization for fact and dimension table generation.</sub>
+    </td>
+    <td>
+      <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table"><br>
+      <sub>The fact_marketing_performance table is an appended query from cleaned google ads, meta ads, and TikTok ads tables.</sub>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Data Cleaning Example: Customer Key Map</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="assets/screenshots/customer_key_for_sales_fact_table.png" alt="Customer Email Encoding"><br>
+      <sub>Customer emails from sales line item data were encoded and replaced with customer keys to ensure unique customer identifiers that maintain customer privacy.</sub>
+    </td>
+    <td>
+      <img src="assets/screenshots/customer_key_map_data_cleaning.png" alt="Customer Key Map Generation"><br>
+      <sub>Key map was generated from encoded emails, with unique customer key identifiers.</sub>
+    </td>
+    <td>
+      <img src="assets/screenshots/dim_customers.png" alt="Customer Dimension Table"><br>
+      <sub>Customer Dimension Table created with unique customer keys and calculated data from sales table.</sub>
+    </td>
+  </tr>
+</table>
+
 ### Sample DAX MEASURES
 
 ```dax
@@ -509,12 +548,33 @@ Marketing Profit = [Gross Profit] - [Total Ad Spend]
 
 Marketing Profit Margin % = DIVIDE([Marketing Profit], [Net Sales], 0)
 ```
-### Data Transformation
-|![Table Transformation Folder Organization](assets/tables_folder_oraganization.png) 
 
-|![Channel Marketing Performance Tables](assets/merged_marketing_performance_data.png) | ![Merged Marketing Performance Data](assets/merged_marketing_performance_data.png)|
+### UI/UX 
 
-| ![Original Customer Dimensions Table](assets/dim_customers.png) | ![Transformed Dimesions Table](assets/dim_customers_tranformed.png) |
+<table>
+  <tr>
+    <th>Interactive Filter Panel</th>
+    <th>Contextual Tooltips</th>
+    <th>Granular Drill-Through</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="assets/screenshots/filter_panel.png" alt="Filter Panel"><br>
+      <sub>Utilizes bookmarks and selection panels to toggle visibility, saving valuable report real estate while maintaining slicer capabilities.</sub>
+    </td>
+    <td>
+      <img src="assets/screenshots/custom_kpi_bar_tooltip.png" alt="Custom KPI Bar Tooltip"><br>
+      <sub>Custom KPI bar tooltip to provide period-over-period comparison for each KPI.</sub>
+    </td>
+    <td>
+      <img src="assets/screenshots/channel_drill_through.png" alt="Channel Drill Through"><br>
+      <sub>Provides dynamic page filtering, allowing users to right-click a marketing channel and seamlessly dive into campaign and ad level details.</sub>
+    </td>
+  </tr>
+</table>
+
+Additionally, custom Figma layout templates were utilized as Power BI canvas backgrounds to eliminate shape-rendering overhead, streamline visual hierarchy, and deliver an intuitive, executive-ready dashboard interface.
+
 
 ### Validation Examples
 The following checks were used to assess data integrity and metric consistency before interpreting the results:
