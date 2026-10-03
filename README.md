@@ -1,4 +1,5 @@
 **Power BI | DAX | Power Query | Marketing Attribution | E-Commerce Analytics**
+> 📄 **Quick Links:** [View Dashboard PDF](docs/dashboard_report_export.pdf) · [View Slide Deck](docs/executive_briefing.pdf) · [Inspect DAX Measures](scripts/dax/) · [Data Dictionary](data/dictionary/data_dictionary.md)
 
 A Power BI analytics project examining marketing efficiency, channel attribution, customer purchasing behavior, and customer lifetime value (LTV) for a fictional direct-to-consumer (D2C) e-commerce brand.
 
@@ -624,12 +625,13 @@ This repository provides an analytics package encompassing strategic planning, d
 | Deliverable Artifact | Format / Location | Description |
 | :--- | :--- | :--- |
 | **Interactive Executive Dashboard** | [`pbix/marketing_analytics_engine.pbix`](pbix/marketing_analytics_engine.pbix) | 3-page interactive Power BI report covering Executive Commercial Health, Channel Attribution & Ad Efficiency, and Customer Cohorts & Product Economics. |
+| **Static Dashboard Export** | [`docs/dashboard_report_export.pdf`](docs/dashboard_report_export.pdf) | High-resolution multi-page PDF export of all dashboard views for instant browser review without requiring Power BI Desktop. |
+| **Executive Presentation Deck** | [`docs/executive_briefing.pdf`](docs/executive_briefing.pdf) | Strategic slide deck briefing summarizing performance decay diagnostics, organic cannibalization risks, and capital reallocation recommendations. |
 | **JSON Measurement Spec** | [`docs/bi_measurement_plan.json`](docs/bi_measurement_plan.json) | Structured requirements blueprint linking business user stories, metric lifecycles, and data-grain mappings built using the [BI Measurement Planner](https://github.com/alejandra-badia/bi-measurement-planner). |
-| **Kimball Dimensional Model Architecture** | [`assets/model/data_model.png`](assets/model/data_model.png) | Fact Constellation (Galaxy Schema) specification connecting 3 fact tables across 4 conformed dimensions via clean 1:N single-direction relationships. |
+| **Kimball Dimensional Model Architecture** | [`assets/diagrams/data_model.png`](assets/diagrams/data_model.png) | Fact Constellation (Galaxy Schema) specification connecting 3 fact tables across 4 conformed dimensions via clean 1:N single-direction relationships. |
 | **DAX Scripts** | [`scripts/dax/`](scripts/dax/) | Centralized, modular DAX script files covering financial, attribution, and cohort calculations formatted with `VAR`/`RETURN` syntax and divide-by-zero safeguards. |
 | **Power Query Scripts** | [`scripts/power_query/`](scripts/power_query/) | Centralized, documented Power Query scripts containing all the data cleaning and staging steps taken to generate the fact and dimension tables. |
 | **Data Dictionary & Spec** | [`data/dictionary/data_dictionary.md`](data/dictionary/data_dictionary.md) | End-to-end specification document generated from the BI Measurement Planner, defining process workflows, base metrics, executive KPIs, shared dimensions, and field-level ETL cleaning contracts. |
-| **Executive Presentation Deck** | [`docs/executive_briefing.pdf`](docs/executive_briefing.pdf) | Strategic slide deck briefing summarizing performance decay diagnostics, organic cannibalization risks, and capital reallocation recommendations. |
 
 ---
 
