@@ -1,6 +1,6 @@
 # Apex Gear Co. — E-Commerce Marketing BI Engine
 **Power BI | DAX | Power Query | Marketing Attribution | E-Commerce Analytics**
-**Quick Links:** [View Dashboard PDF](docs/dashboard_report_export.pdf) · [View Slide Deck](docs/executive_briefing.pdf) · [Inspect DAX Measures](scripts/dax/) · [Data Dictionary](data/dictionary/data_dictionary.md)
+<br>**Quick Links:** [View Dashboard PDF](docs/dashboard_report_export.pdf) · [View Slide Deck](docs/executive_briefing.pdf) · [Inspect DAX Measures](scripts/dax/) · [Data Dictionary](data/dictionary/data_dictionary.md)
 
 A Power BI analytics project examining marketing efficiency, channel attribution, customer purchasing behavior, and customer lifetime value (LTV) for a fictional direct-to-consumer (D2C) e-commerce brand.
 
