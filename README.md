@@ -494,22 +494,28 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
 
 ### Data Transformation & Power Query (ETL)
 
-<table>
-  <tr>
-    <th colspan="2">Data Transformation & Query Append Layer</th>
-  </tr>
-  <tr>
-    <td width="30%" valign="top">
-      <img src="assets/screenshots/data_cleaning_table_organization.png" alt="data cleaning table organization"><br><br>
-      <b>Folder Architecture</b><br>
-      <sub>Data cleaning folder organization implemented for clear fact and dimension table generation.</sub>
-    </td>
-    <td width="70%">
-      <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table"><br><br>
-      <span valign="bottom"><b>Fact Marketing Append</b><br>
-      <sub>The fact_marketing_performance table built as an appended query from cleaned Google, Meta, and TikTok ad tables.</sub></span>span>
-    </td>
-  </tr>
+<table> 
+  <tr> 
+    <th colspan="2">Data Transformation & Query Append Layer</th> 
+  </tr> 
+  <tr> 
+    <td width="30%" valign="top"> 
+      <img src="assets/screenshots/data_cleaning_table_organization.png" alt="data cleaning table organization"><br><br> 
+      <b>Folder Architecture</b><br> 
+      <sub>Data cleaning folder organization implemented for clear fact and dimension table generation.</sub> 
+    </td> 
+    <td width="70%" valign="top"> 
+      <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+        <div>
+          <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table">
+        </div>
+        <div style="margin-top: auto; padding-top: 16px;">
+          <b>Fact Marketing Append</b><br> 
+          <sub>The fact_marketing_performance table built as an appended query from cleaned Google, Meta, and TikTok ad tables.</sub>
+        </div>
+      </div>
+    </td> 
+  </tr> 
 </table>
 
 <br>
