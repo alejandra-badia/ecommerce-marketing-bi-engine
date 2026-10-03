@@ -1,0 +1,25 @@
+/* =========================================================================
+  E-Commerce Marketing & LTV Analytics
+  
+  01 Base Sales and Revenue DAX Measures
+   ========================================================================= */
+
+Attribution Match Rate = DIVIDE([Total Platform Reported Revenue], [Gross Sales], 0)
+
+Average Order Value (AOV) = DIVIDE([Net Sales],[Total Orders Count],0)
+
+Discount Rate % = DIVIDE([Total Discount Amount], [Gross Sales], 0)
+
+Gross Sales = sum(fact_sales_line_items[gross_amount])
+
+Reported vs Actual Revenue Delta = [Total Platform Reported Revenue] - [Gross Sales]
+
+Reported vs Actual Revenue Delta = [Total Platform Reported Revenue] - [Gross Sales]
+
+Total Discount Amount = sum(fact_sales_line_items[discount_amount])
+
+Total Orders Count = DISTINCTCOUNT(fact_sales_line_items[order_id])
+
+Total Return Amount = 0
+
+Total Units Sold = SUM(fact_sales_line_items[quantity])

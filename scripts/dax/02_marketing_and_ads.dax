@@ -1,0 +1,17 @@
+/* =========================================================================
+  E-Commerce Marketing & LTV Analytics
+  
+  02 Marketing & Ads DAX Measures
+   ========================================================================= */
+
+Channel Reported Revenue = sum(fact_marketing_performance[platform_reported_revenue])
+
+Total Ad Clicks = sum(fact_marketing_performance[clicks]) 
+
+Total Ad Impressions = SUM(fact_marketing_performance[impressions])
+
+Total Ad Spend = SUM(fact_marketing_performance[spend_usd])
+
+Total Add-to-Carts = sum(fact_web_traffic[atc])
+
+Total Platform Reported Revenue = SUM(fact_marketing_performance[platform_reported_revenue])

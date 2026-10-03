@@ -1,0 +1,9 @@
+/* =========================================================================
+  E-Commerce Marketing & LTV Analytics
+  
+  06 Waterfall Values DAX Measures
+   ========================================================================= */
+
+Discount Waterfall Value = VAR CurrentStep = SELECTEDVALUE(_discount_waterfall_structure[StepOrder])RETURN SWITCH(CurrentStep,1, [Gross Sales],2, -1 * [Total Discount Amount],BLANK())
+
+Profit Waterfall Value = VAR CurrentStep = SELECTEDVALUE(_profit_waterfall_structure[StepOrder]) RETURN SWITCH(CurrentStep,1, [Net Sales],2, -1 * [Total COGS],3, -1 * [Total Ad Spend],BLANK())

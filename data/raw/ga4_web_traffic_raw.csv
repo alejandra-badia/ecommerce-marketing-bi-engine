@@ -1,0 +1,1826 @@
+event_date,sessionSourceMedium,sessionDefaultChannelGroup,deviceCategory,sessions,totalUsers,addToCarts
+20250701,google / cpc,Paid Search,desktop,849,734,42
+20250701,facebook / cpc,Paid Social,mobile,420,366,26
+20250701,tiktok / cpc,Paid Social,desktop,424,323,26
+20250701,google / organic,Organic Search,desktop,436,359,34
+20250701,(direct) / (none),Direct,mobile,536,405,25
+20250702,google / cpc,Paid Search,mobile,870,754,38
+20250702,facebook / cpc,Paid Social,desktop,512,449,34
+20250702,tiktok / cpc,Paid Social,tablet,749,623,65
+20250702,google / organic,Organic Search,mobile,806,631,40
+20250702,(direct) / (none),Direct,mobile,555,466,33
+20250703,google / cpc,Paid Search,mobile,496,414,23
+20250703,facebook / cpc,Paid Social,desktop,692,547,31
+20250703,tiktok / cpc,Paid Social,tablet,722,547,29
+20250703,google / organic,Organic Search,mobile,580,449,44
+20250703,(direct) / (none),Direct,mobile,661,506,42
+20250704,google / cpc,Paid Search,desktop,612,496,38
+20250704,facebook / cpc,Paid Social,desktop,865,747,70
+20250704,tiktok / cpc,Paid Social,mobile,846,669,52
+20250704,google / organic,Organic Search,mobile,738,648,30
+20250704,(direct) / (none),Direct,mobile,414,312,21
+20250705,google / cpc,Paid Search,desktop,595,449,36
+20250705,facebook / cpc,Paid Social,desktop,752,603,49
+20250705,tiktok / cpc,Paid Social,mobile,526,400,45
+20250705,google / organic,Organic Search,mobile,678,518,46
+20250705,(direct) / (none),Direct,desktop,758,612,55
+20250706,google / cpc,Paid Search,mobile,554,416,22
+20250706,facebook / cpc,Paid Social,mobile,542,474,25
+20250706,tiktok / cpc,Paid Social,mobile,638,503,29
+20250706,google / organic,Organic Search,mobile,809,647,41
+20250706,(direct) / (none),Direct,desktop,640,539,48
+20250707,google / cpc,Paid Search,desktop,551,465,42
+20250707,facebook / cpc,Paid Social,mobile,685,570,55
+20250707,tiktok / cpc,Paid Social,mobile,413,349,28
+20250707,google / organic,Organic Search,mobile,815,635,52
+20250707,(direct) / (none),Direct,mobile,595,506,32
+20250708,google / cpc,Paid Search,mobile,573,503,51
+20250708,facebook / cpc,Paid Social,desktop,674,519,51
+20250708,tiktok / cpc,Paid Social,mobile,469,410,40
+20250708,google / organic,Organic Search,mobile,831,683,67
+20250708,(direct) / (none),Direct,mobile,648,504,50
+20250709,google / cpc,Paid Search,desktop,511,411,35
+20250709,facebook / cpc,Paid Social,mobile,582,498,31
+20250709,tiktok / cpc,Paid Social,mobile,854,667,71
+20250709,google / organic,Organic Search,desktop,429,366,33
+20250709,(direct) / (none),Direct,mobile,566,478,47
+20250710,google / cpc,Paid Search,mobile,445,339,21
+20250710,facebook / cpc,Paid Social,mobile,815,657,49
+20250710,tiktok / cpc,Paid Social,desktop,462,350,39
+20250710,google / organic,Organic Search,mobile,877,763,76
+20250710,(direct) / (none),Direct,mobile,766,662,59
+20250711,google / cpc,Paid Search,desktop,412,330,28
+20250711,facebook / cpc,Paid Social,mobile,717,608,61
+20250711,tiktok / cpc,Paid Social,tablet,781,634,54
+20250711,google / organic,Organic Search,mobile,746,567,30
+20250711,(direct) / (none),Direct,mobile,429,361,26
+20250712,google / cpc,Paid Search,desktop,457,379,37
+20250712,facebook / cpc,Paid Social,mobile,784,678,42
+20250712,tiktok / cpc,Paid Social,mobile,835,679,42
+20250712,google / organic,Organic Search,tablet,534,408,44
+20250712,(direct) / (none),Direct,mobile,739,582,50
+20250713,google / cpc,Paid Search,mobile,740,588,46
+20250713,facebook / cpc,Paid Social,mobile,536,425,29
+20250713,tiktok / cpc,Paid Social,desktop,403,331,32
+20250713,google / organic,Organic Search,mobile,890,780,65
+20250713,(direct) / (none),Direct,desktop,694,606,62
+20250714,google / cpc,Paid Search,desktop,830,668,33
+20250714,facebook / cpc,Paid Social,mobile,548,462,46
+20250714,tiktok / cpc,Paid Social,tablet,673,591,56
+20250714,google / organic,Organic Search,desktop,667,521,51
+20250714,(direct) / (none),Direct,mobile,580,442,51
+20250715,google / cpc,Paid Search,desktop,825,667,46
+20250715,facebook / cpc,Paid Social,mobile,710,554,52
+20250715,tiktok / cpc,Paid Social,mobile,807,622,47
+20250715,google / organic,Organic Search,desktop,755,617,56
+20250715,(direct) / (none),Direct,mobile,681,518,31
+20250716,google / cpc,Paid Search,mobile,525,456,42
+20250716,facebook / cpc,Paid Social,mobile,604,478,28
+20250716,tiktok / cpc,Paid Social,desktop,703,539,29
+20250716,google / organic,Organic Search,mobile,817,702,46
+20250716,(direct) / (none),Direct,tablet,812,662,69
+20250717,google / cpc,Paid Search,desktop,820,629,56
+20250717,facebook / cpc,Paid Social,mobile,612,495,51
+20250717,tiktok / cpc,Paid Social,desktop,576,465,30
+20250717,google / organic,Organic Search,mobile,494,395,35
+20250717,(direct) / (none),Direct,desktop,763,612,31
+20250718,google / cpc,Paid Search,mobile,484,380,22
+20250718,facebook / cpc,Paid Social,mobile,675,556,40
+20250718,tiktok / cpc,Paid Social,desktop,870,683,42
+20250718,google / organic,Organic Search,desktop,403,304,29
+20250718,(direct) / (none),Direct,mobile,881,665,78
+20250719,google / cpc,Paid Search,mobile,839,736,56
+20250719,facebook / cpc,Paid Social,mobile,555,463,24
+20250719,tiktok / cpc,Paid Social,mobile,798,607,36
+20250719,google / organic,Organic Search,tablet,761,656,47
+20250719,(direct) / (none),Direct,mobile,570,496,46
+20250720,google / cpc,Paid Search,mobile,447,347,31
+20250720,facebook / cpc,Paid Social,mobile,506,439,43
+20250720,tiktok / cpc,Paid Social,tablet,846,697,70
+20250720,google / organic,Organic Search,mobile,602,491,44
+20250720,(direct) / (none),Direct,mobile,750,606,41
+20250721,google / cpc,Paid Search,mobile,653,492,57
+20250721,facebook / cpc,Paid Social,desktop,885,726,45
+20250721,tiktok / cpc,Paid Social,mobile,495,384,24
+20250721,google / organic,Organic Search,desktop,438,376,27
+20250721,(direct) / (none),Direct,desktop,815,688,73
+20250722,google / cpc,Paid Search,mobile,473,364,25
+20250722,facebook / cpc,Paid Social,mobile,758,657,57
+20250722,tiktok / cpc,Paid Social,mobile,829,709,51
+20250722,google / organic,Organic Search,mobile,565,465,28
+20250722,(direct) / (none),Direct,mobile,882,735,76
+20250723,google / cpc,Paid Search,mobile,667,535,45
+20250723,facebook / cpc,Paid Social,mobile,789,639,47
+20250723,tiktok / cpc,Paid Social,desktop,834,677,71
+20250723,google / organic,Organic Search,desktop,717,588,29
+20250723,(direct) / (none),Direct,mobile,889,734,60
+20250724,google / cpc,Paid Search,mobile,423,321,23
+20250724,facebook / cpc,Paid Social,desktop,548,442,28
+20250724,tiktok / cpc,Paid Social,desktop,885,691,41
+20250724,google / organic,Organic Search,mobile,737,635,42
+20250724,(direct) / (none),Direct,mobile,672,568,49
+20250725,google / cpc,Paid Search,mobile,587,442,26
+20250725,facebook / cpc,Paid Social,mobile,478,411,37
+20250725,tiktok / cpc,Paid Social,desktop,740,648,64
+20250725,google / organic,Organic Search,tablet,499,391,40
+20250725,(direct) / (none),Direct,mobile,700,556,54
+20250726,google / cpc,Paid Search,mobile,701,595,40
+20250726,facebook / cpc,Paid Social,mobile,589,453,33
+20250726,tiktok / cpc,Paid Social,desktop,899,705,80
+20250726,google / organic,Organic Search,mobile,455,388,32
+20250726,(direct) / (none),Direct,mobile,465,355,21
+20250727,google / cpc,Paid Search,mobile,717,541,57
+20250727,facebook / cpc,Paid Social,desktop,792,655,69
+20250727,tiktok / cpc,Paid Social,mobile,548,425,34
+20250727,google / organic,Organic Search,mobile,719,540,33
+20250727,(direct) / (none),Direct,mobile,512,412,44
+20250728,google / cpc,Paid Search,mobile,645,533,35
+20250728,facebook / cpc,Paid Social,mobile,854,727,69
+20250728,tiktok / cpc,Paid Social,mobile,769,639,51
+20250728,google / organic,Organic Search,mobile,460,381,27
+20250728,(direct) / (none),Direct,mobile,643,528,37
+20250729,google / cpc,Paid Search,desktop,455,361,32
+20250729,facebook / cpc,Paid Social,mobile,458,384,19
+20250729,tiktok / cpc,Paid Social,desktop,454,388,30
+20250729,google / organic,Organic Search,mobile,613,503,37
+20250729,(direct) / (none),Direct,desktop,674,586,48
+20250730,google / cpc,Paid Search,mobile,824,664,57
+20250730,facebook / cpc,Paid Social,desktop,576,435,50
+20250730,tiktok / cpc,Paid Social,mobile,727,621,34
+20250730,google / organic,Organic Search,mobile,617,540,40
+20250730,(direct) / (none),Direct,mobile,404,343,17
+20250731,google / cpc,Paid Search,desktop,892,777,75
+20250731,facebook / cpc,Paid Social,tablet,512,425,33
+20250731,tiktok / cpc,Paid Social,mobile,642,553,41
+20250731,google / organic,Organic Search,mobile,521,436,23
+20250731,(direct) / (none),Direct,mobile,589,454,37
+20250801,google / cpc,Paid Search,mobile,583,496,37
+20250801,facebook / cpc,Paid Social,mobile,896,701,73
+20250801,tiktok / cpc,Paid Social,mobile,876,768,39
+20250801,google / organic,Organic Search,mobile,748,564,52
+20250801,(direct) / (none),Direct,mobile,844,669,75
+20250802,google / cpc,Paid Search,mobile,883,673,65
+20250802,facebook / cpc,Paid Social,mobile,812,620,33
+20250802,tiktok / cpc,Paid Social,desktop,784,588,61
+20250802,google / organic,Organic Search,desktop,720,612,48
+20250802,(direct) / (none),Direct,tablet,831,658,56
+20250803,google / cpc,Paid Search,mobile,838,718,74
+20250803,facebook / cpc,Paid Social,mobile,473,381,36
+20250803,tiktok / cpc,Paid Social,mobile,464,350,26
+20250803,google / organic,Organic Search,desktop,855,704,41
+20250803,(direct) / (none),Direct,mobile,494,415,27
+20250804,google / cpc,Paid Search,desktop,560,479,39
+20250804,facebook / cpc,Paid Social,mobile,767,623,68
+20250804,tiktok / cpc,Paid Social,mobile,773,678,39
+20250804,google / organic,Organic Search,mobile,661,520,29
+20250804,(direct) / (none),Direct,desktop,890,714,63
+20250805,google / cpc,Paid Search,mobile,889,696,75
+20250805,facebook / cpc,Paid Social,mobile,673,542,59
+20250805,tiktok / cpc,Paid Social,mobile,746,616,42
+20250805,google / organic,Organic Search,mobile,782,687,66
+20250805,(direct) / (none),Direct,mobile,751,580,57
+20250806,google / cpc,Paid Search,mobile,505,436,41
+20250806,facebook / cpc,Paid Social,mobile,799,621,48
+20250806,tiktok / cpc,Paid Social,tablet,404,350,34
+20250806,google / organic,Organic Search,mobile,804,617,55
+20250806,(direct) / (none),Direct,desktop,467,366,32
+20250807,google / cpc,Paid Search,tablet,653,506,46
+20250807,facebook / cpc,Paid Social,desktop,737,561,36
+20250807,tiktok / cpc,Paid Social,desktop,400,309,26
+20250807,google / organic,Organic Search,desktop,430,376,24
+20250807,(direct) / (none),Direct,desktop,848,708,53
+20250808,google / cpc,Paid Search,mobile,559,427,22
+20250808,facebook / cpc,Paid Social,mobile,641,535,53
+20250808,tiktok / cpc,Paid Social,mobile,441,385,28
+20250808,google / organic,Organic Search,mobile,821,698,38
+20250808,(direct) / (none),Direct,mobile,621,500,32
+20250809,google / cpc,Paid Search,desktop,664,550,31
+20250809,facebook / cpc,Paid Social,tablet,504,405,39
+20250809,tiktok / cpc,Paid Social,mobile,660,529,38
+20250809,google / organic,Organic Search,desktop,735,640,61
+20250809,(direct) / (none),Direct,mobile,597,488,50
+20250810,google / cpc,Paid Search,mobile,889,677,47
+20250810,facebook / cpc,Paid Social,mobile,711,552,55
+20250810,tiktok / cpc,Paid Social,tablet,547,458,36
+20250810,google / organic,Organic Search,desktop,704,588,58
+20250810,(direct) / (none),Direct,mobile,588,485,45
+20250811,google / cpc,Paid Search,mobile,669,521,51
+20250811,facebook / cpc,Paid Social,mobile,464,366,31
+20250811,tiktok / cpc,Paid Social,tablet,802,606,40
+20250811,google / organic,Organic Search,mobile,468,358,31
+20250811,(direct) / (none),Direct,mobile,525,460,24
+20250812,google / cpc,Paid Search,desktop,698,600,52
+20250812,facebook / cpc,Paid Social,mobile,588,515,36
+20250812,tiktok / cpc,Paid Social,mobile,620,486,42
+20250812,google / organic,Organic Search,desktop,880,719,72
+20250812,(direct) / (none),Direct,mobile,854,645,72
+20250813,google / cpc,Paid Search,mobile,830,656,48
+20250813,facebook / cpc,Paid Social,desktop,631,488,32
+20250813,tiktok / cpc,Paid Social,mobile,777,634,37
+20250813,google / organic,Organic Search,tablet,696,522,45
+20250813,(direct) / (none),Direct,desktop,518,416,32
+20250814,google / cpc,Paid Search,mobile,821,617,66
+20250814,facebook / cpc,Paid Social,desktop,419,333,18
+20250814,tiktok / cpc,Paid Social,desktop,637,501,30
+20250814,google / organic,Organic Search,mobile,839,699,66
+20250814,(direct) / (none),Direct,mobile,681,530,31
+20250815,google / cpc,Paid Search,mobile,611,494,30
+20250815,facebook / cpc,Paid Social,mobile,494,391,36
+20250815,tiktok / cpc,Paid Social,mobile,696,560,29
+20250815,google / organic,Organic Search,mobile,606,519,50
+20250815,(direct) / (none),Direct,mobile,691,559,28
+20250816,google / cpc,Paid Search,desktop,465,352,23
+20250816,facebook / cpc,Paid Social,mobile,642,524,48
+20250816,tiktok / cpc,Paid Social,desktop,455,345,40
+20250816,google / organic,Organic Search,desktop,452,387,29
+20250816,(direct) / (none),Direct,desktop,845,635,41
+20250817,google / cpc,Paid Search,mobile,837,729,42
+20250817,facebook / cpc,Paid Social,mobile,565,438,47
+20250817,tiktok / cpc,Paid Social,mobile,557,437,30
+20250817,google / organic,Organic Search,tablet,538,433,34
+20250817,(direct) / (none),Direct,mobile,582,484,49
+20250818,google / cpc,Paid Search,mobile,733,611,44
+20250818,facebook / cpc,Paid Social,mobile,801,687,71
+20250818,tiktok / cpc,Paid Social,desktop,429,332,21
+20250818,google / organic,Organic Search,mobile,729,600,43
+20250818,(direct) / (none),Direct,mobile,572,478,43
+20250819,google / cpc,Paid Search,mobile,483,418,35
+20250819,facebook / cpc,Paid Social,mobile,779,606,41
+20250819,tiktok / cpc,Paid Social,mobile,748,590,47
+20250819,google / organic,Organic Search,mobile,646,525,30
+20250819,(direct) / (none),Direct,mobile,588,516,32
+20250820,google / cpc,Paid Search,mobile,820,682,68
+20250820,facebook / cpc,Paid Social,desktop,689,551,41
+20250820,tiktok / cpc,Paid Social,desktop,850,680,67
+20250820,google / organic,Organic Search,desktop,852,738,39
+20250820,(direct) / (none),Direct,mobile,842,720,38
+20250821,google / cpc,Paid Search,mobile,494,380,28
+20250821,facebook / cpc,Paid Social,mobile,674,513,32
+20250821,tiktok / cpc,Paid Social,mobile,654,554,53
+20250821,google / organic,Organic Search,mobile,495,412,36
+20250821,(direct) / (none),Direct,mobile,668,563,56
+20250822,google / cpc,Paid Search,mobile,846,681,37
+20250822,facebook / cpc,Paid Social,desktop,511,414,40
+20250822,tiktok / cpc,Paid Social,mobile,432,339,27
+20250822,google / organic,Organic Search,mobile,755,578,44
+20250822,(direct) / (none),Direct,desktop,800,693,66
+20250823,google / cpc,Paid Search,desktop,442,341,19
+20250823,facebook / cpc,Paid Social,desktop,537,471,35
+20250823,tiktok / cpc,Paid Social,desktop,420,323,30
+20250823,google / organic,Organic Search,mobile,809,666,61
+20250823,(direct) / (none),Direct,desktop,435,339,25
+20250824,google / cpc,Paid Search,mobile,856,650,46
+20250824,facebook / cpc,Paid Social,desktop,495,375,33
+20250824,tiktok / cpc,Paid Social,mobile,621,479,51
+20250824,google / organic,Organic Search,desktop,804,681,48
+20250824,(direct) / (none),Direct,mobile,791,609,33
+20250825,google / cpc,Paid Search,desktop,676,521,33
+20250825,facebook / cpc,Paid Social,mobile,887,732,38
+20250825,tiktok / cpc,Paid Social,mobile,836,676,45
+20250825,google / organic,Organic Search,mobile,578,502,37
+20250825,(direct) / (none),Direct,desktop,433,339,30
+20250826,google / cpc,Paid Search,mobile,623,510,53
+20250826,facebook / cpc,Paid Social,mobile,442,375,24
+20250826,tiktok / cpc,Paid Social,mobile,580,480,39
+20250826,google / organic,Organic Search,mobile,787,624,61
+20250826,(direct) / (none),Direct,mobile,509,440,24
+20250827,google / cpc,Paid Search,mobile,562,476,33
+20250827,facebook / cpc,Paid Social,mobile,638,509,52
+20250827,tiktok / cpc,Paid Social,mobile,554,464,33
+20250827,google / organic,Organic Search,desktop,619,543,42
+20250827,(direct) / (none),Direct,desktop,627,520,29
+20250828,google / cpc,Paid Search,mobile,457,359,35
+20250828,facebook / cpc,Paid Social,mobile,505,428,38
+20250828,tiktok / cpc,Paid Social,mobile,442,341,35
+20250828,google / organic,Organic Search,mobile,701,562,39
+20250828,(direct) / (none),Direct,mobile,606,497,27
+20250829,google / cpc,Paid Search,mobile,450,340,29
+20250829,facebook / cpc,Paid Social,desktop,603,496,26
+20250829,tiktok / cpc,Paid Social,desktop,639,481,41
+20250829,google / organic,Organic Search,mobile,489,419,33
+20250829,(direct) / (none),Direct,desktop,602,482,40
+20250830,google / cpc,Paid Search,mobile,504,394,31
+20250830,facebook / cpc,Paid Social,desktop,484,421,37
+20250830,tiktok / cpc,Paid Social,mobile,405,333,31
+20250830,google / organic,Organic Search,desktop,765,598,34
+20250830,(direct) / (none),Direct,desktop,853,641,38
+20250831,google / cpc,Paid Search,desktop,752,580,32
+20250831,facebook / cpc,Paid Social,desktop,544,455,39
+20250831,tiktok / cpc,Paid Social,mobile,625,495,29
+20250831,google / organic,Organic Search,mobile,620,508,38
+20250831,(direct) / (none),Direct,mobile,738,613,64
+20250901,google / cpc,Paid Search,mobile,625,535,43
+20250901,facebook / cpc,Paid Social,mobile,421,336,26
+20250901,tiktok / cpc,Paid Social,mobile,645,545,45
+20250901,google / organic,Organic Search,mobile,775,649,65
+20250901,(direct) / (none),Direct,desktop,595,447,35
+20250902,google / cpc,Paid Search,mobile,846,742,53
+20250902,facebook / cpc,Paid Social,mobile,661,579,31
+20250902,tiktok / cpc,Paid Social,desktop,662,532,58
+20250902,google / organic,Organic Search,mobile,570,455,33
+20250902,(direct) / (none),Direct,mobile,496,375,37
+20250903,google / cpc,Paid Search,desktop,583,449,40
+20250903,facebook / cpc,Paid Social,mobile,522,424,36
+20250903,tiktok / cpc,Paid Social,mobile,513,391,30
+20250903,google / organic,Organic Search,tablet,594,453,47
+20250903,(direct) / (none),Direct,mobile,448,347,27
+20250904,google / cpc,Paid Search,desktop,895,688,63
+20250904,facebook / cpc,Paid Social,desktop,571,451,27
+20250904,tiktok / cpc,Paid Social,mobile,595,454,34
+20250904,google / organic,Organic Search,mobile,517,429,31
+20250904,(direct) / (none),Direct,mobile,555,482,33
+20250905,google / cpc,Paid Search,desktop,459,375,23
+20250905,facebook / cpc,Paid Social,mobile,595,457,37
+20250905,tiktok / cpc,Paid Social,mobile,784,603,50
+20250905,google / organic,Organic Search,desktop,429,334,25
+20250905,(direct) / (none),Direct,mobile,658,523,37
+20250906,google / cpc,Paid Search,mobile,598,497,37
+20250906,facebook / cpc,Paid Social,desktop,805,701,71
+20250906,tiktok / cpc,Paid Social,mobile,874,714,69
+20250906,google / organic,Organic Search,mobile,698,571,56
+20250906,(direct) / (none),Direct,mobile,426,368,24
+20250907,google / cpc,Paid Search,desktop,699,572,47
+20250907,facebook / cpc,Paid Social,desktop,800,656,40
+20250907,tiktok / cpc,Paid Social,tablet,497,428,39
+20250907,google / organic,Organic Search,mobile,672,511,38
+20250907,(direct) / (none),Direct,mobile,487,374,21
+20250908,google / cpc,Paid Search,mobile,897,692,79
+20250908,facebook / cpc,Paid Social,mobile,897,722,74
+20250908,tiktok / cpc,Paid Social,mobile,835,627,70
+20250908,google / organic,Organic Search,mobile,862,662,73
+20250908,(direct) / (none),Direct,desktop,424,349,34
+20250909,google / cpc,Paid Search,mobile,869,688,59
+20250909,facebook / cpc,Paid Social,mobile,895,684,73
+20250909,tiktok / cpc,Paid Social,desktop,459,366,30
+20250909,google / organic,Organic Search,mobile,620,535,31
+20250909,(direct) / (none),Direct,mobile,849,664,59
+20250910,google / cpc,Paid Search,desktop,615,502,44
+20250910,facebook / cpc,Paid Social,mobile,488,421,38
+20250910,tiktok / cpc,Paid Social,mobile,719,565,41
+20250910,google / organic,Organic Search,mobile,827,638,44
+20250910,(direct) / (none),Direct,mobile,446,380,33
+20250911,google / cpc,Paid Search,mobile,635,501,42
+20250911,facebook / cpc,Paid Social,mobile,476,368,33
+20250911,tiktok / cpc,Paid Social,mobile,879,729,48
+20250911,google / organic,Organic Search,mobile,489,374,37
+20250911,(direct) / (none),Direct,mobile,501,440,20
+20250912,google / cpc,Paid Search,mobile,495,382,35
+20250912,facebook / cpc,Paid Social,mobile,742,597,56
+20250912,tiktok / cpc,Paid Social,desktop,510,445,23
+20250912,google / organic,Organic Search,desktop,895,708,79
+20250912,(direct) / (none),Direct,mobile,464,386,19
+20250913,google / cpc,Paid Search,mobile,686,530,44
+20250913,facebook / cpc,Paid Social,mobile,887,763,38
+20250913,tiktok / cpc,Paid Social,mobile,593,445,37
+20250913,google / organic,Organic Search,mobile,601,493,49
+20250913,(direct) / (none),Direct,desktop,432,345,37
+20250914,google / cpc,Paid Search,mobile,659,579,42
+20250914,facebook / cpc,Paid Social,mobile,607,456,53
+20250914,tiktok / cpc,Paid Social,desktop,649,506,54
+20250914,google / organic,Organic Search,mobile,872,672,42
+20250914,(direct) / (none),Direct,mobile,580,498,35
+20250915,google / cpc,Paid Search,mobile,440,366,36
+20250915,facebook / cpc,Paid Social,desktop,462,361,31
+20250915,tiktok / cpc,Paid Social,mobile,545,476,40
+20250915,google / organic,Organic Search,desktop,485,391,25
+20250915,(direct) / (none),Direct,mobile,742,581,40
+20250916,google / cpc,Paid Search,mobile,821,647,46
+20250916,facebook / cpc,Paid Social,mobile,754,618,46
+20250916,tiktok / cpc,Paid Social,tablet,432,354,29
+20250916,google / organic,Organic Search,mobile,429,368,26
+20250916,(direct) / (none),Direct,desktop,670,575,31
+20250917,google / cpc,Paid Search,tablet,836,727,50
+20250917,facebook / cpc,Paid Social,desktop,837,643,49
+20250917,tiktok / cpc,Paid Social,mobile,459,346,37
+20250917,google / organic,Organic Search,desktop,703,542,33
+20250917,(direct) / (none),Direct,mobile,632,503,44
+20250918,google / cpc,Paid Search,mobile,570,455,37
+20250918,facebook / cpc,Paid Social,mobile,775,668,38
+20250918,tiktok / cpc,Paid Social,mobile,627,492,55
+20250918,google / organic,Organic Search,mobile,594,510,51
+20250918,(direct) / (none),Direct,mobile,546,470,45
+20250919,google / cpc,Paid Search,tablet,524,393,29
+20250919,facebook / cpc,Paid Social,mobile,709,586,38
+20250919,tiktok / cpc,Paid Social,desktop,419,323,18
+20250919,google / organic,Organic Search,tablet,711,603,36
+20250919,(direct) / (none),Direct,mobile,812,657,40
+20250920,google / cpc,Paid Search,mobile,837,711,49
+20250920,facebook / cpc,Paid Social,tablet,528,422,45
+20250920,tiktok / cpc,Paid Social,mobile,476,358,20
+20250920,google / organic,Organic Search,mobile,637,513,44
+20250920,(direct) / (none),Direct,desktop,600,465,43
+20250921,google / cpc,Paid Search,mobile,710,592,29
+20250921,facebook / cpc,Paid Social,mobile,728,593,42
+20250921,tiktok / cpc,Paid Social,mobile,606,498,45
+20250921,google / organic,Organic Search,mobile,653,521,44
+20250921,(direct) / (none),Direct,desktop,468,390,42
+20250922,google / cpc,Paid Search,mobile,892,762,46
+20250922,facebook / cpc,Paid Social,mobile,540,424,31
+20250922,tiktok / cpc,Paid Social,mobile,478,392,31
+20250922,google / organic,Organic Search,desktop,486,407,41
+20250922,(direct) / (none),Direct,mobile,571,428,32
+20250923,google / cpc,Paid Search,mobile,897,727,59
+20250923,facebook / cpc,Paid Social,mobile,414,318,27
+20250923,tiktok / cpc,Paid Social,desktop,406,315,27
+20250923,google / organic,Organic Search,mobile,766,613,37
+20250923,(direct) / (none),Direct,desktop,412,339,30
+20250924,google / cpc,Paid Search,mobile,551,469,29
+20250924,facebook / cpc,Paid Social,mobile,562,452,30
+20250924,tiktok / cpc,Paid Social,desktop,437,347,29
+20250924,google / organic,Organic Search,mobile,636,518,52
+20250924,(direct) / (none),Direct,mobile,658,527,58
+20250925,google / cpc,Paid Search,mobile,602,479,26
+20250925,facebook / cpc,Paid Social,tablet,725,551,40
+20250925,tiktok / cpc,Paid Social,mobile,864,686,42
+20250925,google / organic,Organic Search,mobile,512,390,28
+20250925,(direct) / (none),Direct,desktop,894,777,63
+20250926,google / cpc,Paid Search,mobile,454,393,20
+20250926,facebook / cpc,Paid Social,mobile,792,613,68
+20250926,tiktok / cpc,Paid Social,desktop,561,436,28
+20250926,google / organic,Organic Search,tablet,670,533,41
+20250926,(direct) / (none),Direct,mobile,537,463,21
+20250927,google / cpc,Paid Search,mobile,624,501,47
+20250927,facebook / cpc,Paid Social,mobile,550,473,38
+20250927,tiktok / cpc,Paid Social,desktop,429,323,31
+20250927,google / organic,Organic Search,desktop,896,703,53
+20250927,(direct) / (none),Direct,mobile,576,449,25
+20250928,google / cpc,Paid Search,mobile,416,333,23
+20250928,facebook / cpc,Paid Social,mobile,524,404,36
+20250928,tiktok / cpc,Paid Social,mobile,899,711,80
+20250928,google / organic,Organic Search,mobile,481,373,25
+20250928,(direct) / (none),Direct,mobile,629,549,29
+20250929,google / cpc,Paid Search,desktop,509,403,37
+20250929,facebook / cpc,Paid Social,mobile,430,336,31
+20250929,tiktok / cpc,Paid Social,mobile,665,581,55
+20250929,google / organic,Organic Search,mobile,615,538,28
+20250929,(direct) / (none),Direct,desktop,786,621,52
+20250930,google / cpc,Paid Search,mobile,668,579,32
+20250930,facebook / cpc,Paid Social,mobile,520,431,26
+20250930,tiktok / cpc,Paid Social,mobile,413,348,16
+20250930,google / organic,Organic Search,mobile,592,462,39
+20250930,(direct) / (none),Direct,desktop,783,652,33
+20251001,google / cpc,Paid Search,mobile,855,749,65
+20251001,facebook / cpc,Paid Social,desktop,420,346,30
+20251001,tiktok / cpc,Paid Social,mobile,512,439,36
+20251001,google / organic,Organic Search,mobile,403,311,25
+20251001,(direct) / (none),Direct,mobile,612,483,38
+20251002,google / cpc,Paid Search,mobile,403,314,18
+20251002,facebook / cpc,Paid Social,mobile,536,435,45
+20251002,tiktok / cpc,Paid Social,mobile,441,350,30
+20251002,google / organic,Organic Search,mobile,627,497,42
+20251002,(direct) / (none),Direct,mobile,498,394,43
+20251003,google / cpc,Paid Search,mobile,598,499,25
+20251003,facebook / cpc,Paid Social,mobile,876,741,72
+20251003,tiktok / cpc,Paid Social,mobile,569,449,29
+20251003,google / organic,Organic Search,mobile,567,447,41
+20251003,(direct) / (none),Direct,mobile,594,488,32
+20251004,google / cpc,Paid Search,mobile,755,615,64
+20251004,facebook / cpc,Paid Social,mobile,458,394,20
+20251004,tiktok / cpc,Paid Social,desktop,653,492,58
+20251004,google / organic,Organic Search,mobile,495,386,31
+20251004,(direct) / (none),Direct,mobile,705,562,39
+20251005,google / cpc,Paid Search,mobile,652,551,26
+20251005,facebook / cpc,Paid Social,mobile,774,666,40
+20251005,tiktok / cpc,Paid Social,desktop,673,579,34
+20251005,google / organic,Organic Search,desktop,678,593,48
+20251005,(direct) / (none),Direct,mobile,463,379,33
+20251006,google / cpc,Paid Search,mobile,650,525,36
+20251006,facebook / cpc,Paid Social,desktop,895,752,65
+20251006,tiktok / cpc,Paid Social,desktop,750,594,38
+20251006,google / organic,Organic Search,desktop,892,752,60
+20251006,(direct) / (none),Direct,tablet,631,477,25
+20251007,google / cpc,Paid Search,mobile,414,343,30
+20251007,facebook / cpc,Paid Social,desktop,891,708,64
+20251007,tiktok / cpc,Paid Social,mobile,699,556,61
+20251007,google / organic,Organic Search,desktop,563,424,26
+20251007,(direct) / (none),Direct,desktop,657,554,43
+20251008,google / cpc,Paid Search,mobile,568,481,49
+20251008,facebook / cpc,Paid Social,mobile,465,365,35
+20251008,tiktok / cpc,Paid Social,mobile,665,528,52
+20251008,google / organic,Organic Search,desktop,840,691,42
+20251008,(direct) / (none),Direct,tablet,535,437,31
+20251009,google / cpc,Paid Search,desktop,490,398,26
+20251009,facebook / cpc,Paid Social,desktop,572,457,44
+20251009,tiktok / cpc,Paid Social,mobile,597,448,46
+20251009,google / organic,Organic Search,mobile,545,449,44
+20251009,(direct) / (none),Direct,mobile,431,323,22
+20251010,google / cpc,Paid Search,mobile,732,589,59
+20251010,facebook / cpc,Paid Social,mobile,559,457,30
+20251010,tiktok / cpc,Paid Social,desktop,434,335,25
+20251010,google / organic,Organic Search,mobile,510,405,25
+20251010,(direct) / (none),Direct,mobile,659,514,40
+20251011,google / cpc,Paid Search,mobile,604,531,35
+20251011,facebook / cpc,Paid Social,desktop,464,349,20
+20251011,tiktok / cpc,Paid Social,mobile,405,313,32
+20251011,google / organic,Organic Search,desktop,866,718,38
+20251011,(direct) / (none),Direct,mobile,571,444,30
+20251012,google / cpc,Paid Search,mobile,591,476,48
+20251012,facebook / cpc,Paid Social,mobile,462,387,38
+20251012,tiktok / cpc,Paid Social,mobile,576,501,25
+20251012,google / organic,Organic Search,mobile,527,443,27
+20251012,(direct) / (none),Direct,desktop,723,603,48
+20251013,google / cpc,Paid Search,mobile,653,557,36
+20251013,facebook / cpc,Paid Social,mobile,609,524,30
+20251013,tiktok / cpc,Paid Social,mobile,806,609,54
+20251013,google / organic,Organic Search,mobile,418,366,37
+20251013,(direct) / (none),Direct,desktop,479,374,22
+20251014,google / cpc,Paid Search,desktop,856,720,39
+20251014,facebook / cpc,Paid Social,desktop,463,380,20
+20251014,tiktok / cpc,Paid Social,tablet,627,480,55
+20251014,google / organic,Organic Search,desktop,813,636,47
+20251014,(direct) / (none),Direct,mobile,613,480,25
+20251015,google / cpc,Paid Search,mobile,607,459,51
+20251015,facebook / cpc,Paid Social,desktop,762,642,35
+20251015,tiktok / cpc,Paid Social,mobile,445,339,25
+20251015,google / organic,Organic Search,mobile,481,406,40
+20251015,(direct) / (none),Direct,mobile,884,684,68
+20251016,google / cpc,Paid Search,desktop,775,621,53
+20251016,facebook / cpc,Paid Social,mobile,516,424,31
+20251016,tiktok / cpc,Paid Social,desktop,865,674,45
+20251016,google / organic,Organic Search,desktop,635,488,26
+20251016,(direct) / (none),Direct,mobile,474,395,34
+20251017,google / cpc,Paid Search,desktop,695,564,61
+20251017,facebook / cpc,Paid Social,desktop,807,698,49
+20251017,tiktok / cpc,Paid Social,desktop,477,376,19
+20251017,google / organic,Organic Search,desktop,568,437,23
+20251017,(direct) / (none),Direct,desktop,722,581,62
+20251018,google / cpc,Paid Search,mobile,568,433,42
+20251018,facebook / cpc,Paid Social,mobile,492,372,42
+20251018,tiktok / cpc,Paid Social,mobile,887,678,75
+20251018,google / organic,Organic Search,desktop,816,627,48
+20251018,(direct) / (none),Direct,mobile,849,670,71
+20251019,google / cpc,Paid Search,mobile,642,508,29
+20251019,facebook / cpc,Paid Social,mobile,795,681,71
+20251019,tiktok / cpc,Paid Social,mobile,451,340,28
+20251019,google / organic,Organic Search,desktop,847,700,70
+20251019,(direct) / (none),Direct,desktop,717,584,30
+20251020,google / cpc,Paid Search,mobile,830,667,56
+20251020,facebook / cpc,Paid Social,desktop,750,626,54
+20251020,tiktok / cpc,Paid Social,mobile,846,712,45
+20251020,google / organic,Organic Search,mobile,538,439,34
+20251020,(direct) / (none),Direct,mobile,634,506,31
+20251021,google / cpc,Paid Search,desktop,635,529,41
+20251021,facebook / cpc,Paid Social,mobile,427,328,35
+20251021,tiktok / cpc,Paid Social,mobile,575,475,50
+20251021,google / organic,Organic Search,desktop,556,444,31
+20251021,(direct) / (none),Direct,desktop,406,317,28
+20251022,google / cpc,Paid Search,mobile,825,674,55
+20251022,facebook / cpc,Paid Social,mobile,728,630,60
+20251022,tiktok / cpc,Paid Social,desktop,790,684,68
+20251022,google / organic,Organic Search,desktop,485,398,28
+20251022,(direct) / (none),Direct,desktop,408,352,26
+20251023,google / cpc,Paid Search,desktop,689,592,45
+20251023,facebook / cpc,Paid Social,mobile,422,337,16
+20251023,tiktok / cpc,Paid Social,mobile,471,401,30
+20251023,google / organic,Organic Search,mobile,717,630,49
+20251023,(direct) / (none),Direct,mobile,558,487,30
+20251024,google / cpc,Paid Search,desktop,734,622,32
+20251024,facebook / cpc,Paid Social,mobile,794,647,50
+20251024,tiktok / cpc,Paid Social,mobile,654,566,58
+20251024,google / organic,Organic Search,desktop,557,447,26
+20251024,(direct) / (none),Direct,mobile,508,401,26
+20251025,google / cpc,Paid Search,mobile,650,554,36
+20251025,facebook / cpc,Paid Social,mobile,457,351,37
+20251025,tiktok / cpc,Paid Social,tablet,755,659,66
+20251025,google / organic,Organic Search,mobile,799,674,57
+20251025,(direct) / (none),Direct,desktop,616,487,54
+20251026,google / cpc,Paid Search,mobile,893,685,54
+20251026,facebook / cpc,Paid Social,mobile,862,664,72
+20251026,tiktok / cpc,Paid Social,desktop,716,588,52
+20251026,google / organic,Organic Search,desktop,662,523,59
+20251026,(direct) / (none),Direct,mobile,615,471,34
+20251027,google / cpc,Paid Search,mobile,881,689,45
+20251027,facebook / cpc,Paid Social,mobile,494,431,21
+20251027,tiktok / cpc,Paid Social,desktop,566,484,44
+20251027,google / organic,Organic Search,mobile,625,548,49
+20251027,(direct) / (none),Direct,desktop,596,484,24
+20251028,google / cpc,Paid Search,desktop,892,734,71
+20251028,facebook / cpc,Paid Social,mobile,539,421,28
+20251028,tiktok / cpc,Paid Social,desktop,599,493,47
+20251028,google / organic,Organic Search,mobile,882,686,46
+20251028,(direct) / (none),Direct,desktop,829,650,42
+20251029,google / cpc,Paid Search,mobile,884,769,68
+20251029,facebook / cpc,Paid Social,desktop,622,486,44
+20251029,tiktok / cpc,Paid Social,mobile,511,423,25
+20251029,google / organic,Organic Search,desktop,773,671,62
+20251029,(direct) / (none),Direct,mobile,424,318,17
+20251030,google / cpc,Paid Search,mobile,792,607,47
+20251030,facebook / cpc,Paid Social,desktop,442,361,23
+20251030,tiktok / cpc,Paid Social,mobile,465,367,22
+20251030,google / organic,Organic Search,mobile,773,661,35
+20251030,(direct) / (none),Direct,mobile,417,319,20
+20251031,google / cpc,Paid Search,mobile,428,373,21
+20251031,facebook / cpc,Paid Social,mobile,849,690,37
+20251031,tiktok / cpc,Paid Social,mobile,838,629,67
+20251031,google / organic,Organic Search,mobile,568,499,33
+20251031,(direct) / (none),Direct,mobile,767,585,59
+20251101,google / cpc,Paid Search,mobile,402,308,26
+20251101,facebook / cpc,Paid Social,desktop,431,324,32
+20251101,tiktok / cpc,Paid Social,mobile,823,666,54
+20251101,google / organic,Organic Search,mobile,726,619,36
+20251101,(direct) / (none),Direct,mobile,710,558,59
+20251102,google / cpc,Paid Search,desktop,882,719,57
+20251102,facebook / cpc,Paid Social,desktop,596,470,32
+20251102,tiktok / cpc,Paid Social,mobile,646,512,42
+20251102,google / organic,Organic Search,desktop,714,592,44
+20251102,(direct) / (none),Direct,mobile,542,442,39
+20251103,google / cpc,Paid Search,mobile,508,385,33
+20251103,facebook / cpc,Paid Social,mobile,527,414,31
+20251103,tiktok / cpc,Paid Social,mobile,405,338,18
+20251103,google / organic,Organic Search,mobile,581,446,36
+20251103,(direct) / (none),Direct,desktop,611,512,47
+20251104,google / cpc,Paid Search,desktop,746,629,63
+20251104,facebook / cpc,Paid Social,tablet,402,332,18
+20251104,tiktok / cpc,Paid Social,mobile,446,343,20
+20251104,google / organic,Organic Search,mobile,615,528,40
+20251104,(direct) / (none),Direct,mobile,657,536,48
+20251105,google / cpc,Paid Search,mobile,464,399,21
+20251105,facebook / cpc,Paid Social,desktop,515,393,34
+20251105,tiktok / cpc,Paid Social,mobile,800,676,69
+20251105,google / organic,Organic Search,desktop,639,487,36
+20251105,(direct) / (none),Direct,desktop,537,431,47
+20251106,google / cpc,Paid Search,mobile,507,435,35
+20251106,facebook / cpc,Paid Social,mobile,671,521,50
+20251106,tiktok / cpc,Paid Social,desktop,753,582,55
+20251106,google / organic,Organic Search,mobile,543,471,42
+20251106,(direct) / (none),Direct,mobile,753,573,38
+20251107,google / cpc,Paid Search,mobile,477,359,41
+20251107,facebook / cpc,Paid Social,desktop,771,668,69
+20251107,tiktok / cpc,Paid Social,mobile,459,351,34
+20251107,google / organic,Organic Search,mobile,525,399,31
+20251107,(direct) / (none),Direct,desktop,441,359,25
+20251108,google / cpc,Paid Search,desktop,489,368,38
+20251108,facebook / cpc,Paid Social,desktop,595,496,44
+20251108,tiktok / cpc,Paid Social,desktop,865,671,58
+20251108,google / organic,Organic Search,mobile,851,722,61
+20251108,(direct) / (none),Direct,mobile,766,607,30
+20251109,google / cpc,Paid Search,desktop,729,584,32
+20251109,facebook / cpc,Paid Social,mobile,430,376,25
+20251109,tiktok / cpc,Paid Social,mobile,446,342,32
+20251109,google / organic,Organic Search,mobile,836,691,41
+20251109,(direct) / (none),Direct,mobile,782,622,32
+20251110,google / cpc,Paid Search,mobile,744,596,57
+20251110,facebook / cpc,Paid Social,mobile,458,359,32
+20251110,tiktok / cpc,Paid Social,mobile,496,431,29
+20251110,google / organic,Organic Search,desktop,776,662,69
+20251110,(direct) / (none),Direct,mobile,889,696,69
+20251111,google / cpc,Paid Search,tablet,536,441,36
+20251111,facebook / cpc,Paid Social,mobile,425,326,34
+20251111,tiktok / cpc,Paid Social,mobile,588,486,39
+20251111,google / organic,Organic Search,mobile,761,635,31
+20251111,(direct) / (none),Direct,mobile,560,455,36
+20251112,google / cpc,Paid Search,desktop,717,560,49
+20251112,facebook / cpc,Paid Social,mobile,843,726,40
+20251112,tiktok / cpc,Paid Social,mobile,496,373,23
+20251112,google / organic,Organic Search,desktop,778,664,35
+20251112,(direct) / (none),Direct,mobile,437,338,37
+20251113,google / cpc,Paid Search,mobile,535,419,30
+20251113,facebook / cpc,Paid Social,mobile,534,416,43
+20251113,tiktok / cpc,Paid Social,desktop,525,438,24
+20251113,google / organic,Organic Search,mobile,777,680,51
+20251113,(direct) / (none),Direct,mobile,823,713,45
+20251114,google / cpc,Paid Search,mobile,710,606,35
+20251114,facebook / cpc,Paid Social,mobile,699,602,49
+20251114,tiktok / cpc,Paid Social,mobile,608,505,42
+20251114,google / organic,Organic Search,mobile,610,507,37
+20251114,(direct) / (none),Direct,mobile,871,763,44
+20251115,google / cpc,Paid Search,mobile,629,532,34
+20251115,facebook / cpc,Paid Social,mobile,752,568,60
+20251115,tiktok / cpc,Paid Social,desktop,502,439,37
+20251115,google / organic,Organic Search,mobile,667,561,59
+20251115,(direct) / (none),Direct,mobile,785,660,60
+20251116,google / cpc,Paid Search,mobile,831,660,63
+20251116,facebook / cpc,Paid Social,mobile,641,501,51
+20251116,tiktok / cpc,Paid Social,mobile,779,633,47
+20251116,google / organic,Organic Search,mobile,565,444,31
+20251116,(direct) / (none),Direct,mobile,588,476,28
+20251117,google / cpc,Paid Search,mobile,814,649,58
+20251117,facebook / cpc,Paid Social,mobile,422,370,22
+20251117,tiktok / cpc,Paid Social,mobile,670,559,36
+20251117,google / organic,Organic Search,desktop,864,680,45
+20251117,(direct) / (none),Direct,mobile,764,603,42
+20251118,google / cpc,Paid Search,desktop,807,664,46
+20251118,facebook / cpc,Paid Social,mobile,681,530,44
+20251118,tiktok / cpc,Paid Social,mobile,607,507,33
+20251118,google / organic,Organic Search,mobile,760,661,30
+20251118,(direct) / (none),Direct,desktop,457,352,35
+20251119,google / cpc,Paid Search,desktop,866,743,63
+20251119,facebook / cpc,Paid Social,desktop,512,391,22
+20251119,tiktok / cpc,Paid Social,desktop,544,471,30
+20251119,google / organic,Organic Search,mobile,712,614,34
+20251119,(direct) / (none),Direct,desktop,518,443,44
+20251120,google / cpc,Paid Search,mobile,600,522,50
+20251120,facebook / cpc,Paid Social,tablet,877,752,36
+20251120,tiktok / cpc,Paid Social,mobile,403,318,33
+20251120,google / organic,Organic Search,mobile,877,743,69
+20251120,(direct) / (none),Direct,mobile,819,645,58
+20251121,google / cpc,Paid Search,desktop,576,469,36
+20251121,facebook / cpc,Paid Social,desktop,698,529,33
+20251121,tiktok / cpc,Paid Social,mobile,637,522,32
+20251121,google / organic,Organic Search,desktop,539,457,43
+20251121,(direct) / (none),Direct,mobile,539,422,28
+20251122,google / cpc,Paid Search,tablet,796,599,33
+20251122,facebook / cpc,Paid Social,mobile,757,654,64
+20251122,tiktok / cpc,Paid Social,mobile,757,575,36
+20251122,google / organic,Organic Search,mobile,583,490,52
+20251122,(direct) / (none),Direct,mobile,562,468,47
+20251123,google / cpc,Paid Search,mobile,433,325,17
+20251123,facebook / cpc,Paid Social,mobile,682,562,47
+20251123,tiktok / cpc,Paid Social,desktop,581,505,51
+20251123,google / organic,Organic Search,mobile,665,571,55
+20251123,(direct) / (none),Direct,mobile,659,570,54
+20251124,google / cpc,Paid Search,desktop,818,623,50
+20251124,facebook / cpc,Paid Social,mobile,461,371,41
+20251124,tiktok / cpc,Paid Social,tablet,526,423,35
+20251124,google / organic,Organic Search,desktop,766,665,42
+20251124,(direct) / (none),Direct,mobile,721,618,32
+20251125,google / cpc,Paid Search,desktop,639,518,52
+20251125,facebook / cpc,Paid Social,mobile,742,572,60
+20251125,tiktok / cpc,Paid Social,mobile,544,429,35
+20251125,google / organic,Organic Search,desktop,780,668,58
+20251125,(direct) / (none),Direct,desktop,797,617,51
+20251126,google / cpc,Paid Search,mobile,696,542,60
+20251126,facebook / cpc,Paid Social,desktop,440,368,27
+20251126,tiktok / cpc,Paid Social,mobile,734,632,57
+20251126,google / organic,Organic Search,mobile,498,376,25
+20251126,(direct) / (none),Direct,desktop,656,558,51
+20251127,google / cpc,Paid Search,mobile,468,393,36
+20251127,facebook / cpc,Paid Social,mobile,514,428,22
+20251127,tiktok / cpc,Paid Social,desktop,894,728,75
+20251127,google / organic,Organic Search,mobile,709,550,36
+20251127,(direct) / (none),Direct,desktop,884,727,58
+20251128,google / cpc,Paid Search,mobile,870,733,40
+20251128,facebook / cpc,Paid Social,desktop,745,562,43
+20251128,tiktok / cpc,Paid Social,tablet,580,482,40
+20251128,google / organic,Organic Search,mobile,525,402,43
+20251128,(direct) / (none),Direct,mobile,774,595,36
+20251129,google / cpc,Paid Search,tablet,782,610,43
+20251129,facebook / cpc,Paid Social,mobile,582,471,24
+20251129,tiktok / cpc,Paid Social,mobile,606,480,29
+20251129,google / organic,Organic Search,mobile,866,729,63
+20251129,(direct) / (none),Direct,mobile,833,670,41
+20251130,google / cpc,Paid Search,mobile,734,624,58
+20251130,facebook / cpc,Paid Social,tablet,738,562,45
+20251130,tiktok / cpc,Paid Social,mobile,667,538,27
+20251130,google / organic,Organic Search,desktop,600,511,43
+20251130,(direct) / (none),Direct,desktop,709,547,37
+20251201,google / cpc,Paid Search,desktop,622,544,49
+20251201,facebook / cpc,Paid Social,desktop,495,372,24
+20251201,tiktok / cpc,Paid Social,desktop,585,501,48
+20251201,google / organic,Organic Search,desktop,803,653,39
+20251201,(direct) / (none),Direct,desktop,567,447,26
+20251202,google / cpc,Paid Search,mobile,888,772,76
+20251202,facebook / cpc,Paid Social,desktop,402,317,16
+20251202,tiktok / cpc,Paid Social,mobile,726,545,56
+20251202,google / organic,Organic Search,desktop,507,441,21
+20251202,(direct) / (none),Direct,desktop,467,389,25
+20251203,google / cpc,Paid Search,mobile,657,560,43
+20251203,facebook / cpc,Paid Social,desktop,609,466,26
+20251203,tiktok / cpc,Paid Social,mobile,462,379,36
+20251203,google / organic,Organic Search,mobile,678,547,29
+20251203,(direct) / (none),Direct,mobile,700,581,61
+20251204,google / cpc,Paid Search,mobile,856,656,46
+20251204,facebook / cpc,Paid Social,desktop,489,390,38
+20251204,tiktok / cpc,Paid Social,mobile,706,573,34
+20251204,google / organic,Organic Search,desktop,465,402,19
+20251204,(direct) / (none),Direct,mobile,685,517,33
+20251205,google / cpc,Paid Search,mobile,634,529,36
+20251205,facebook / cpc,Paid Social,mobile,668,522,54
+20251205,tiktok / cpc,Paid Social,mobile,837,671,70
+20251205,google / organic,Organic Search,mobile,758,585,35
+20251205,(direct) / (none),Direct,mobile,464,376,41
+20251206,google / cpc,Paid Search,mobile,484,388,33
+20251206,facebook / cpc,Paid Social,desktop,481,408,42
+20251206,tiktok / cpc,Paid Social,desktop,726,624,65
+20251206,google / organic,Organic Search,mobile,532,420,45
+20251206,(direct) / (none),Direct,mobile,421,357,30
+20251207,google / cpc,Paid Search,mobile,459,395,27
+20251207,facebook / cpc,Paid Social,mobile,705,602,33
+20251207,tiktok / cpc,Paid Social,mobile,740,562,50
+20251207,google / organic,Organic Search,desktop,579,484,51
+20251207,(direct) / (none),Direct,mobile,712,611,35
+20251208,google / cpc,Paid Search,mobile,701,558,36
+20251208,facebook / cpc,Paid Social,desktop,746,628,44
+20251208,tiktok / cpc,Paid Social,desktop,557,463,43
+20251208,google / organic,Organic Search,mobile,417,361,17
+20251208,(direct) / (none),Direct,tablet,680,570,58
+20251209,google / cpc,Paid Search,desktop,535,466,38
+20251209,facebook / cpc,Paid Social,mobile,410,317,17
+20251209,tiktok / cpc,Paid Social,mobile,595,459,38
+20251209,google / organic,Organic Search,desktop,660,575,26
+20251209,(direct) / (none),Direct,mobile,651,562,32
+20251210,google / cpc,Paid Search,mobile,773,631,53
+20251210,facebook / cpc,Paid Social,tablet,666,538,44
+20251210,tiktok / cpc,Paid Social,mobile,703,585,55
+20251210,google / organic,Organic Search,desktop,848,703,44
+20251210,(direct) / (none),Direct,mobile,824,716,59
+20251211,google / cpc,Paid Search,mobile,653,513,39
+20251211,facebook / cpc,Paid Social,mobile,500,419,38
+20251211,tiktok / cpc,Paid Social,desktop,466,368,21
+20251211,google / organic,Organic Search,mobile,462,405,31
+20251211,(direct) / (none),Direct,mobile,831,635,49
+20251212,google / cpc,Paid Search,mobile,633,537,44
+20251212,facebook / cpc,Paid Social,desktop,839,645,74
+20251212,tiktok / cpc,Paid Social,desktop,759,611,45
+20251212,google / organic,Organic Search,mobile,511,418,42
+20251212,(direct) / (none),Direct,mobile,549,421,26
+20251213,google / cpc,Paid Search,mobile,810,630,51
+20251213,facebook / cpc,Paid Social,desktop,538,448,48
+20251213,tiktok / cpc,Paid Social,mobile,578,507,28
+20251213,google / organic,Organic Search,desktop,513,441,35
+20251213,(direct) / (none),Direct,desktop,774,636,49
+20251214,google / cpc,Paid Search,mobile,769,588,46
+20251214,facebook / cpc,Paid Social,mobile,759,584,39
+20251214,tiktok / cpc,Paid Social,mobile,878,691,53
+20251214,google / organic,Organic Search,desktop,678,564,44
+20251214,(direct) / (none),Direct,desktop,631,473,40
+20251215,google / cpc,Paid Search,tablet,899,715,36
+20251215,facebook / cpc,Paid Social,desktop,796,677,51
+20251215,tiktok / cpc,Paid Social,mobile,459,384,21
+20251215,google / organic,Organic Search,mobile,657,536,37
+20251215,(direct) / (none),Direct,mobile,695,580,38
+20251216,google / cpc,Paid Search,mobile,606,469,45
+20251216,facebook / cpc,Paid Social,mobile,527,412,43
+20251216,tiktok / cpc,Paid Social,desktop,747,622,49
+20251216,google / organic,Organic Search,tablet,689,550,57
+20251216,(direct) / (none),Direct,desktop,804,695,56
+20251217,google / cpc,Paid Search,mobile,558,440,48
+20251217,facebook / cpc,Paid Social,desktop,847,712,54
+20251217,tiktok / cpc,Paid Social,mobile,671,505,44
+20251217,google / organic,Organic Search,mobile,571,490,45
+20251217,(direct) / (none),Direct,mobile,892,725,53
+20251218,google / cpc,Paid Search,mobile,816,670,59
+20251218,facebook / cpc,Paid Social,mobile,673,581,33
+20251218,tiktok / cpc,Paid Social,mobile,638,492,26
+20251218,google / organic,Organic Search,mobile,593,504,27
+20251218,(direct) / (none),Direct,mobile,602,453,45
+20251219,google / cpc,Paid Search,mobile,541,471,29
+20251219,facebook / cpc,Paid Social,desktop,627,548,36
+20251219,tiktok / cpc,Paid Social,desktop,674,539,55
+20251219,google / organic,Organic Search,mobile,532,419,24
+20251219,(direct) / (none),Direct,mobile,705,613,34
+20251220,google / cpc,Paid Search,desktop,541,431,31
+20251220,facebook / cpc,Paid Social,mobile,840,689,53
+20251220,tiktok / cpc,Paid Social,desktop,594,520,42
+20251220,google / organic,Organic Search,mobile,855,675,57
+20251220,(direct) / (none),Direct,desktop,511,387,44
+20251221,google / cpc,Paid Search,mobile,660,547,29
+20251221,facebook / cpc,Paid Social,desktop,671,556,36
+20251221,tiktok / cpc,Paid Social,desktop,552,451,47
+20251221,google / organic,Organic Search,mobile,644,491,56
+20251221,(direct) / (none),Direct,mobile,584,479,23
+20251222,google / cpc,Paid Search,mobile,518,401,23
+20251222,facebook / cpc,Paid Social,mobile,760,628,61
+20251222,tiktok / cpc,Paid Social,desktop,443,381,38
+20251222,google / organic,Organic Search,mobile,674,514,60
+20251222,(direct) / (none),Direct,mobile,557,453,46
+20251223,google / cpc,Paid Search,mobile,851,723,56
+20251223,facebook / cpc,Paid Social,desktop,776,632,41
+20251223,tiktok / cpc,Paid Social,desktop,525,394,31
+20251223,google / organic,Organic Search,desktop,822,670,55
+20251223,(direct) / (none),Direct,desktop,593,449,49
+20251224,google / cpc,Paid Search,tablet,857,688,63
+20251224,facebook / cpc,Paid Social,desktop,427,356,32
+20251224,tiktok / cpc,Paid Social,desktop,476,412,41
+20251224,google / organic,Organic Search,desktop,423,324,25
+20251224,(direct) / (none),Direct,desktop,860,705,38
+20251225,google / cpc,Paid Search,mobile,458,370,34
+20251225,facebook / cpc,Paid Social,mobile,429,333,35
+20251225,tiktok / cpc,Paid Social,mobile,534,427,45
+20251225,google / organic,Organic Search,mobile,468,400,40
+20251225,(direct) / (none),Direct,mobile,545,425,22
+20251226,google / cpc,Paid Search,mobile,879,736,77
+20251226,facebook / cpc,Paid Social,tablet,669,512,28
+20251226,tiktok / cpc,Paid Social,mobile,540,436,33
+20251226,google / organic,Organic Search,desktop,770,599,49
+20251226,(direct) / (none),Direct,mobile,539,425,29
+20251227,google / cpc,Paid Search,desktop,739,600,47
+20251227,facebook / cpc,Paid Social,mobile,472,403,29
+20251227,tiktok / cpc,Paid Social,desktop,518,406,31
+20251227,google / organic,Organic Search,mobile,813,653,63
+20251227,(direct) / (none),Direct,mobile,895,774,65
+20251228,google / cpc,Paid Search,desktop,662,546,52
+20251228,facebook / cpc,Paid Social,mobile,764,604,38
+20251228,tiktok / cpc,Paid Social,desktop,447,383,34
+20251228,google / organic,Organic Search,mobile,440,381,28
+20251228,(direct) / (none),Direct,desktop,756,634,52
+20251229,google / cpc,Paid Search,mobile,562,450,31
+20251229,facebook / cpc,Paid Social,desktop,409,345,17
+20251229,tiktok / cpc,Paid Social,mobile,470,371,36
+20251229,google / organic,Organic Search,desktop,608,488,36
+20251229,(direct) / (none),Direct,mobile,816,633,66
+20251230,google / cpc,Paid Search,desktop,729,611,30
+20251230,facebook / cpc,Paid Social,desktop,552,434,24
+20251230,tiktok / cpc,Paid Social,mobile,681,589,42
+20251230,google / organic,Organic Search,mobile,498,386,26
+20251230,(direct) / (none),Direct,mobile,839,639,66
+20251231,google / cpc,Paid Search,mobile,799,633,47
+20251231,facebook / cpc,Paid Social,mobile,679,546,31
+20251231,tiktok / cpc,Paid Social,mobile,499,386,36
+20251231,google / organic,Organic Search,mobile,433,350,28
+20251231,(direct) / (none),Direct,mobile,899,687,78
+20260101,google / cpc,Paid Search,mobile,913,756,54
+20260101,facebook / cpc,Paid Social,mobile,1108,927,62
+20260101,tiktok / cpc,Paid Social,desktop,1163,983,99
+20260101,google / organic,Organic Search,mobile,1319,1031,90
+20260101,(direct) / (none),Direct,mobile,1001,810,46
+20260102,google / cpc,Paid Search,mobile,1781,1470,152
+20260102,facebook / cpc,Paid Social,desktop,1493,1133,130
+20260102,tiktok / cpc,Paid Social,mobile,1076,903,62
+20260102,google / organic,Organic Search,mobile,1110,861,51
+20260102,(direct) / (none),Direct,mobile,1173,1014,100
+20260103,google / cpc,Paid Search,mobile,1380,1116,75
+20260103,facebook / cpc,Paid Social,mobile,1048,845,77
+20260103,tiktok / cpc,Paid Social,desktop,1189,1002,100
+20260103,google / organic,Organic Search,desktop,1259,1007,82
+20260103,(direct) / (none),Direct,mobile,1582,1379,111
+20260104,google / cpc,Paid Search,mobile,1061,855,60
+20260104,facebook / cpc,Paid Social,desktop,948,741,80
+20260104,tiktok / cpc,Paid Social,mobile,1703,1313,71
+20260104,google / organic,Organic Search,mobile,1708,1470,99
+20260104,(direct) / (none),Direct,tablet,989,775,56
+20260105,google / cpc,Paid Search,mobile,1770,1453,145
+20260105,facebook / cpc,Paid Social,desktop,1002,851,73
+20260105,tiktok / cpc,Paid Social,mobile,1696,1377,114
+20260105,google / organic,Organic Search,mobile,800,678,58
+20260105,(direct) / (none),Direct,mobile,1003,856,60
+20260106,google / cpc,Paid Search,mobile,1077,912,73
+20260106,facebook / cpc,Paid Social,mobile,1738,1471,117
+20260106,tiktok / cpc,Paid Social,mobile,1013,826,50
+20260106,google / organic,Organic Search,mobile,1586,1393,84
+20260106,(direct) / (none),Direct,desktop,1431,1231,93
+20260107,google / cpc,Paid Search,mobile,1334,1157,99
+20260107,facebook / cpc,Paid Social,mobile,1214,923,95
+20260107,tiktok / cpc,Paid Social,mobile,1351,1068,72
+20260107,google / organic,Organic Search,desktop,809,645,58
+20260107,(direct) / (none),Direct,desktop,1666,1407,123
+20260108,google / cpc,Paid Search,desktop,901,720,57
+20260108,facebook / cpc,Paid Social,desktop,1290,1130,71
+20260108,tiktok / cpc,Paid Social,mobile,1737,1447,131
+20260108,google / organic,Organic Search,desktop,1670,1354,122
+20260108,(direct) / (none),Direct,mobile,1701,1468,134
+20260109,google / cpc,Paid Search,mobile,1229,1040,59
+20260109,facebook / cpc,Paid Social,mobile,1199,1003,62
+20260109,tiktok / cpc,Paid Social,mobile,800,611,46
+20260109,google / organic,Organic Search,mobile,1403,1070,104
+20260109,(direct) / (none),Direct,mobile,1257,1022,73
+20260110,google / cpc,Paid Search,mobile,1595,1243,112
+20260110,facebook / cpc,Paid Social,mobile,1238,964,66
+20260110,tiktok / cpc,Paid Social,desktop,1457,1107,86
+20260110,google / organic,Organic Search,desktop,925,798,58
+20260110,(direct) / (none),Direct,mobile,1309,998,105
+20260111,google / cpc,Paid Search,mobile,1713,1411,120
+20260111,facebook / cpc,Paid Social,mobile,1701,1376,102
+20260111,tiktok / cpc,Paid Social,desktop,1582,1378,138
+20260111,google / organic,Organic Search,mobile,998,751,63
+20260111,(direct) / (none),Direct,desktop,1346,1107,112
+20260112,google / cpc,Paid Search,mobile,1249,957,79
+20260112,facebook / cpc,Paid Social,desktop,1450,1231,111
+20260112,tiktok / cpc,Paid Social,mobile,1741,1364,149
+20260112,google / organic,Organic Search,mobile,1124,973,48
+20260112,(direct) / (none),Direct,mobile,1132,909,51
+20260113,google / cpc,Paid Search,mobile,1309,1014,70
+20260113,facebook / cpc,Paid Social,desktop,1346,1045,101
+20260113,tiktok / cpc,Paid Social,mobile,1664,1461,142
+20260113,google / organic,Organic Search,mobile,905,755,66
+20260113,(direct) / (none),Direct,desktop,874,686,70
+20260114,google / cpc,Paid Search,mobile,1163,890,100
+20260114,facebook / cpc,Paid Social,desktop,1191,1047,89
+20260114,tiktok / cpc,Paid Social,mobile,945,754,41
+20260114,google / organic,Organic Search,mobile,969,846,48
+20260114,(direct) / (none),Direct,mobile,1742,1403,105
+20260115,google / cpc,Paid Search,mobile,852,675,52
+20260115,facebook / cpc,Paid Social,mobile,876,694,40
+20260115,tiktok / cpc,Paid Social,mobile,1202,908,59
+20260115,google / organic,Organic Search,mobile,965,767,86
+20260115,(direct) / (none),Direct,desktop,1350,1066,118
+20260116,google / cpc,Paid Search,mobile,1007,790,78
+20260116,facebook / cpc,Paid Social,desktop,1023,782,49
+20260116,tiktok / cpc,Paid Social,mobile,1753,1317,129
+20260116,google / organic,Organic Search,mobile,924,785,70
+20260116,(direct) / (none),Direct,mobile,1076,817,58
+20260117,google / cpc,Paid Search,mobile,1180,1005,99
+20260117,facebook / cpc,Paid Social,mobile,1612,1251,108
+20260117,tiktok / cpc,Paid Social,mobile,867,652,52
+20260117,google / organic,Organic Search,desktop,963,772,76
+20260117,(direct) / (none),Direct,desktop,994,816,45
+20260118,google / cpc,Paid Search,mobile,1683,1449,72
+20260118,facebook / cpc,Paid Social,mobile,1631,1267,89
+20260118,tiktok / cpc,Paid Social,desktop,1065,855,88
+20260118,google / organic,Organic Search,tablet,1646,1442,104
+20260118,(direct) / (none),Direct,desktop,1139,876,65
+20260119,google / cpc,Paid Search,mobile,1266,1019,83
+20260119,facebook / cpc,Paid Social,mobile,1587,1285,71
+20260119,tiktok / cpc,Paid Social,tablet,841,737,66
+20260119,google / organic,Organic Search,mobile,852,749,57
+20260119,(direct) / (none),Direct,mobile,1262,1063,77
+20260120,google / cpc,Paid Search,mobile,920,721,73
+20260120,facebook / cpc,Paid Social,mobile,815,645,56
+20260120,tiktok / cpc,Paid Social,desktop,1404,1170,120
+20260120,google / organic,Organic Search,mobile,1114,971,76
+20260120,(direct) / (none),Direct,mobile,804,689,55
+20260121,google / cpc,Paid Search,mobile,862,682,41
+20260121,facebook / cpc,Paid Social,mobile,1482,1156,65
+20260121,tiktok / cpc,Paid Social,mobile,1282,1120,110
+20260121,google / organic,Organic Search,desktop,1463,1189,88
+20260121,(direct) / (none),Direct,mobile,1750,1352,95
+20260122,google / cpc,Paid Search,mobile,1276,1109,79
+20260122,facebook / cpc,Paid Social,mobile,1756,1485,105
+20260122,tiktok / cpc,Paid Social,desktop,1048,921,60
+20260122,google / organic,Organic Search,mobile,1315,1139,108
+20260122,(direct) / (none),Direct,mobile,1603,1389,81
+20260123,google / cpc,Paid Search,mobile,1486,1275,83
+20260123,facebook / cpc,Paid Social,mobile,1608,1285,116
+20260123,tiktok / cpc,Paid Social,mobile,1788,1422,110
+20260123,google / organic,Organic Search,mobile,1007,885,75
+20260123,(direct) / (none),Direct,desktop,1674,1316,91
+20260124,google / cpc,Paid Search,mobile,1400,1092,109
+20260124,facebook / cpc,Paid Social,mobile,1318,1103,77
+20260124,tiktok / cpc,Paid Social,mobile,1522,1186,102
+20260124,google / organic,Organic Search,mobile,1451,1272,93
+20260124,(direct) / (none),Direct,mobile,1776,1376,152
+20260125,google / cpc,Paid Search,mobile,993,852,41
+20260125,facebook / cpc,Paid Social,mobile,1148,872,86
+20260125,tiktok / cpc,Paid Social,tablet,1270,977,59
+20260125,google / organic,Organic Search,mobile,1742,1395,118
+20260125,(direct) / (none),Direct,desktop,865,699,38
+20260126,google / cpc,Paid Search,desktop,1417,1231,83
+20260126,facebook / cpc,Paid Social,mobile,896,696,63
+20260126,tiktok / cpc,Paid Social,mobile,1134,981,48
+20260126,google / organic,Organic Search,mobile,1053,924,85
+20260126,(direct) / (none),Direct,mobile,1294,1046,52
+20260127,google / cpc,Paid Search,mobile,1340,1087,106
+20260127,facebook / cpc,Paid Social,desktop,916,691,66
+20260127,tiktok / cpc,Paid Social,desktop,1796,1563,91
+20260127,google / organic,Organic Search,desktop,1728,1368,70
+20260127,(direct) / (none),Direct,desktop,1514,1313,123
+20260128,google / cpc,Paid Search,mobile,1461,1184,124
+20260128,facebook / cpc,Paid Social,mobile,1495,1183,70
+20260128,tiktok / cpc,Paid Social,desktop,1043,840,60
+20260128,google / organic,Organic Search,mobile,972,790,49
+20260128,(direct) / (none),Direct,desktop,1057,908,52
+20260129,google / cpc,Paid Search,mobile,960,774,79
+20260129,facebook / cpc,Paid Social,mobile,1477,1167,114
+20260129,tiktok / cpc,Paid Social,mobile,820,674,33
+20260129,google / organic,Organic Search,mobile,1058,814,63
+20260129,(direct) / (none),Direct,mobile,849,675,67
+20260130,google / cpc,Paid Search,mobile,1341,1129,116
+20260130,facebook / cpc,Paid Social,desktop,875,664,64
+20260130,tiktok / cpc,Paid Social,mobile,1709,1418,152
+20260130,google / organic,Organic Search,mobile,1704,1470,101
+20260130,(direct) / (none),Direct,mobile,1050,792,78
+20260131,google / cpc,Paid Search,desktop,1107,930,76
+20260131,facebook / cpc,Paid Social,mobile,1292,1045,73
+20260131,tiktok / cpc,Paid Social,mobile,1148,1002,46
+20260131,google / organic,Organic Search,mobile,1495,1167,133
+20260131,(direct) / (none),Direct,mobile,1573,1362,81
+20260201,google / cpc,Paid Search,mobile,1534,1286,103
+20260201,facebook / cpc,Paid Social,desktop,1504,1201,128
+20260201,tiktok / cpc,Paid Social,mobile,1324,1102,112
+20260201,google / organic,Organic Search,mobile,1264,1097,100
+20260201,(direct) / (none),Direct,mobile,1177,976,51
+20260202,google / cpc,Paid Search,mobile,1025,886,58
+20260202,facebook / cpc,Paid Social,mobile,1324,1024,93
+20260202,tiktok / cpc,Paid Social,mobile,1048,798,51
+20260202,google / organic,Organic Search,mobile,990,852,43
+20260202,(direct) / (none),Direct,mobile,1554,1274,116
+20260203,google / cpc,Paid Search,desktop,851,683,50
+20260203,facebook / cpc,Paid Social,mobile,1150,907,81
+20260203,tiktok / cpc,Paid Social,mobile,1406,1230,104
+20260203,google / organic,Organic Search,mobile,845,731,49
+20260203,(direct) / (none),Direct,mobile,1707,1364,109
+20260204,google / cpc,Paid Search,mobile,1751,1337,101
+20260204,facebook / cpc,Paid Social,mobile,1067,864,47
+20260204,tiktok / cpc,Paid Social,tablet,1016,869,55
+20260204,google / organic,Organic Search,desktop,1544,1356,89
+20260204,(direct) / (none),Direct,mobile,1794,1529,92
+20260205,google / cpc,Paid Search,mobile,1198,980,78
+20260205,facebook / cpc,Paid Social,mobile,1675,1428,105
+20260205,tiktok / cpc,Paid Social,desktop,1247,1081,67
+20260205,google / organic,Organic Search,desktop,1765,1551,95
+20260205,(direct) / (none),Direct,desktop,1421,1074,109
+20260206,google / cpc,Paid Search,desktop,1468,1281,110
+20260206,facebook / cpc,Paid Social,mobile,1775,1517,114
+20260206,tiktok / cpc,Paid Social,desktop,1202,1048,73
+20260206,google / organic,Organic Search,desktop,1354,1177,114
+20260206,(direct) / (none),Direct,mobile,843,654,46
+20260207,google / cpc,Paid Search,mobile,1062,826,56
+20260207,facebook / cpc,Paid Social,desktop,1571,1215,137
+20260207,tiktok / cpc,Paid Social,desktop,965,833,66
+20260207,google / organic,Organic Search,mobile,1282,1071,112
+20260207,(direct) / (none),Direct,desktop,882,737,70
+20260208,google / cpc,Paid Search,mobile,1609,1397,96
+20260208,facebook / cpc,Paid Social,mobile,1132,865,61
+20260208,tiktok / cpc,Paid Social,mobile,1623,1233,65
+20260208,google / organic,Organic Search,desktop,1185,982,89
+20260208,(direct) / (none),Direct,mobile,1441,1160,66
+20260209,google / cpc,Paid Search,mobile,929,786,46
+20260209,facebook / cpc,Paid Social,mobile,937,716,41
+20260209,tiktok / cpc,Paid Social,desktop,1681,1306,133
+20260209,google / organic,Organic Search,desktop,1272,1032,113
+20260209,(direct) / (none),Direct,desktop,856,672,49
+20260210,google / cpc,Paid Search,mobile,1360,1115,85
+20260210,facebook / cpc,Paid Social,desktop,1001,807,61
+20260210,tiktok / cpc,Paid Social,mobile,1745,1419,143
+20260210,google / organic,Organic Search,desktop,1580,1310,132
+20260210,(direct) / (none),Direct,mobile,855,682,71
+20260211,google / cpc,Paid Search,mobile,1522,1275,91
+20260211,facebook / cpc,Paid Social,mobile,1027,854,49
+20260211,tiktok / cpc,Paid Social,desktop,1302,1054,80
+20260211,google / organic,Organic Search,mobile,817,656,54
+20260211,(direct) / (none),Direct,mobile,1528,1309,76
+20260212,google / cpc,Paid Search,desktop,1666,1257,130
+20260212,facebook / cpc,Paid Social,mobile,1354,1143,71
+20260212,tiktok / cpc,Paid Social,mobile,1315,1124,76
+20260212,google / organic,Organic Search,mobile,992,758,63
+20260212,(direct) / (none),Direct,mobile,1487,1284,97
+20260213,google / cpc,Paid Search,mobile,1008,837,43
+20260213,facebook / cpc,Paid Social,mobile,1690,1356,122
+20260213,tiktok / cpc,Paid Social,mobile,1412,1208,78
+20260213,google / organic,Organic Search,mobile,1633,1408,65
+20260213,(direct) / (none),Direct,desktop,1754,1316,136
+20260214,google / cpc,Paid Search,mobile,975,806,46
+20260214,facebook / cpc,Paid Social,desktop,983,852,48
+20260214,tiktok / cpc,Paid Social,mobile,875,730,47
+20260214,google / organic,Organic Search,mobile,1615,1390,121
+20260214,(direct) / (none),Direct,mobile,1544,1258,115
+20260215,google / cpc,Paid Search,mobile,1369,1031,69
+20260215,facebook / cpc,Paid Social,mobile,1184,1034,53
+20260215,tiktok / cpc,Paid Social,mobile,1703,1294,148
+20260215,google / organic,Organic Search,mobile,1101,911,72
+20260215,(direct) / (none),Direct,desktop,1328,1126,77
+20260216,google / cpc,Paid Search,desktop,1321,1112,68
+20260216,facebook / cpc,Paid Social,mobile,1677,1458,71
+20260216,tiktok / cpc,Paid Social,mobile,1008,831,42
+20260216,google / organic,Organic Search,mobile,1193,1016,102
+20260216,(direct) / (none),Direct,mobile,1496,1238,102
+20260217,google / cpc,Paid Search,mobile,1631,1295,100
+20260217,facebook / cpc,Paid Social,desktop,1641,1345,123
+20260217,tiktok / cpc,Paid Social,mobile,1470,1251,105
+20260217,google / organic,Organic Search,mobile,985,767,43
+20260217,(direct) / (none),Direct,desktop,1642,1298,97
+20260218,google / cpc,Paid Search,mobile,1250,1097,90
+20260218,facebook / cpc,Paid Social,mobile,1437,1080,65
+20260218,tiktok / cpc,Paid Social,desktop,1079,902,80
+20260218,google / organic,Organic Search,mobile,1709,1422,120
+20260218,(direct) / (none),Direct,mobile,947,720,74
+20260219,google / cpc,Paid Search,mobile,1048,908,93
+20260219,facebook / cpc,Paid Social,desktop,1433,1118,97
+20260219,tiktok / cpc,Paid Social,mobile,1340,1022,99
+20260219,google / organic,Organic Search,mobile,1784,1429,135
+20260219,(direct) / (none),Direct,desktop,1135,901,99
+20260220,google / cpc,Paid Search,desktop,1790,1408,155
+20260220,facebook / cpc,Paid Social,desktop,1404,1091,81
+20260220,tiktok / cpc,Paid Social,mobile,1170,914,84
+20260220,google / organic,Organic Search,mobile,1672,1377,104
+20260220,(direct) / (none),Direct,mobile,1501,1261,132
+20260221,google / cpc,Paid Search,mobile,1717,1340,78
+20260221,facebook / cpc,Paid Social,desktop,910,761,77
+20260221,tiktok / cpc,Paid Social,mobile,1246,1049,108
+20260221,google / organic,Organic Search,desktop,1778,1380,103
+20260221,(direct) / (none),Direct,mobile,1243,1025,54
+20260222,google / cpc,Paid Search,mobile,1365,1127,106
+20260222,facebook / cpc,Paid Social,mobile,1027,867,56
+20260222,tiktok / cpc,Paid Social,mobile,1479,1241,125
+20260222,google / organic,Organic Search,desktop,1520,1237,132
+20260222,(direct) / (none),Direct,mobile,1715,1334,108
+20260223,google / cpc,Paid Search,desktop,1436,1085,99
+20260223,facebook / cpc,Paid Social,mobile,1449,1139,96
+20260223,tiktok / cpc,Paid Social,desktop,1280,1070,61
+20260223,google / organic,Organic Search,mobile,1635,1255,74
+20260223,(direct) / (none),Direct,mobile,1260,948,81
+20260224,google / cpc,Paid Search,mobile,1097,885,87
+20260224,facebook / cpc,Paid Social,desktop,1315,999,105
+20260224,tiktok / cpc,Paid Social,desktop,1417,1071,120
+20260224,google / organic,Organic Search,mobile,1005,838,67
+20260224,(direct) / (none),Direct,mobile,935,752,69
+20260225,google / cpc,Paid Search,mobile,1612,1255,67
+20260225,facebook / cpc,Paid Social,mobile,1691,1331,91
+20260225,tiktok / cpc,Paid Social,mobile,1068,896,61
+20260225,google / organic,Organic Search,mobile,1084,861,73
+20260225,(direct) / (none),Direct,mobile,1038,857,55
+20260226,google / cpc,Paid Search,mobile,1681,1287,111
+20260226,facebook / cpc,Paid Social,mobile,1786,1414,92
+20260226,tiktok / cpc,Paid Social,mobile,1457,1185,68
+20260226,google / organic,Organic Search,mobile,975,749,48
+20260226,(direct) / (none),Direct,mobile,803,650,33
+20260227,google / cpc,Paid Search,mobile,1022,877,61
+20260227,facebook / cpc,Paid Social,mobile,1702,1299,120
+20260227,tiktok / cpc,Paid Social,mobile,1092,950,56
+20260227,google / organic,Organic Search,tablet,1374,1083,74
+20260227,(direct) / (none),Direct,mobile,1090,864,63
+20260228,google / cpc,Paid Search,mobile,811,660,38
+20260228,facebook / cpc,Paid Social,mobile,1276,962,74
+20260228,tiktok / cpc,Paid Social,desktop,1416,1191,109
+20260228,google / organic,Organic Search,mobile,1076,889,50
+20260228,(direct) / (none),Direct,desktop,837,642,34
+20260301,google / cpc,Paid Search,mobile,1004,853,87
+20260301,facebook / cpc,Paid Social,desktop,1620,1274,81
+20260301,tiktok / cpc,Paid Social,mobile,1209,1026,77
+20260301,google / organic,Organic Search,mobile,1019,885,77
+20260301,(direct) / (none),Direct,mobile,1729,1356,126
+20260302,google / cpc,Paid Search,mobile,1014,795,56
+20260302,facebook / cpc,Paid Social,desktop,1013,876,40
+20260302,tiktok / cpc,Paid Social,mobile,1419,1193,117
+20260302,google / organic,Organic Search,desktop,915,694,64
+20260302,(direct) / (none),Direct,mobile,1712,1477,144
+20260303,google / cpc,Paid Search,mobile,1388,1143,76
+20260303,facebook / cpc,Paid Social,mobile,884,748,58
+20260303,tiktok / cpc,Paid Social,desktop,846,690,68
+20260303,google / organic,Organic Search,desktop,1225,919,84
+20260303,(direct) / (none),Direct,tablet,1540,1305,135
+20260304,google / cpc,Paid Search,tablet,1699,1378,70
+20260304,facebook / cpc,Paid Social,desktop,1684,1305,74
+20260304,tiktok / cpc,Paid Social,mobile,1513,1209,63
+20260304,google / organic,Organic Search,mobile,1497,1179,94
+20260304,(direct) / (none),Direct,tablet,1720,1510,136
+20260305,google / cpc,Paid Search,mobile,1310,1122,59
+20260305,facebook / cpc,Paid Social,mobile,903,729,72
+20260305,tiktok / cpc,Paid Social,mobile,1173,979,56
+20260305,google / organic,Organic Search,desktop,1207,977,60
+20260305,(direct) / (none),Direct,desktop,887,765,69
+20260306,google / cpc,Paid Search,mobile,1667,1425,115
+20260306,facebook / cpc,Paid Social,mobile,1601,1231,109
+20260306,tiktok / cpc,Paid Social,desktop,868,691,62
+20260306,google / organic,Organic Search,tablet,1498,1173,114
+20260306,(direct) / (none),Direct,desktop,1241,1015,88
+20260307,google / cpc,Paid Search,mobile,1376,1161,56
+20260307,facebook / cpc,Paid Social,mobile,1658,1337,68
+20260307,tiktok / cpc,Paid Social,mobile,1344,1154,118
+20260307,google / organic,Organic Search,mobile,1352,1135,59
+20260307,(direct) / (none),Direct,mobile,1462,1212,82
+20260308,google / cpc,Paid Search,desktop,1515,1326,126
+20260308,facebook / cpc,Paid Social,mobile,1498,1231,108
+20260308,tiktok / cpc,Paid Social,mobile,1332,1011,90
+20260308,google / organic,Organic Search,desktop,1444,1268,112
+20260308,(direct) / (none),Direct,mobile,1084,880,81
+20260309,google / cpc,Paid Search,desktop,1691,1330,117
+20260309,facebook / cpc,Paid Social,mobile,1322,1047,99
+20260309,tiktok / cpc,Paid Social,desktop,1594,1276,101
+20260309,google / organic,Organic Search,mobile,1611,1327,73
+20260309,(direct) / (none),Direct,mobile,1760,1498,99
+20260310,google / cpc,Paid Search,desktop,1599,1361,121
+20260310,facebook / cpc,Paid Social,tablet,1033,805,58
+20260310,tiktok / cpc,Paid Social,desktop,888,720,52
+20260310,google / organic,Organic Search,desktop,1264,996,65
+20260310,(direct) / (none),Direct,mobile,912,685,77
+20260311,google / cpc,Paid Search,mobile,1502,1229,126
+20260311,facebook / cpc,Paid Social,desktop,889,717,68
+20260311,tiktok / cpc,Paid Social,mobile,1207,1058,75
+20260311,google / organic,Organic Search,desktop,1098,885,79
+20260311,(direct) / (none),Direct,mobile,1325,1159,80
+20260312,google / cpc,Paid Search,mobile,1506,1318,96
+20260312,facebook / cpc,Paid Social,mobile,1375,1206,65
+20260312,tiktok / cpc,Paid Social,mobile,961,842,65
+20260312,google / organic,Organic Search,mobile,881,741,41
+20260312,(direct) / (none),Direct,mobile,1060,804,55
+20260313,google / cpc,Paid Search,mobile,1677,1398,94
+20260313,facebook / cpc,Paid Social,mobile,1145,921,93
+20260313,tiktok / cpc,Paid Social,mobile,1466,1179,117
+20260313,google / organic,Organic Search,desktop,1588,1325,131
+20260313,(direct) / (none),Direct,desktop,1640,1354,123
+20260314,google / cpc,Paid Search,mobile,1753,1371,85
+20260314,facebook / cpc,Paid Social,mobile,1433,1158,77
+20260314,tiktok / cpc,Paid Social,mobile,1348,1057,62
+20260314,google / organic,Organic Search,mobile,1736,1447,117
+20260314,(direct) / (none),Direct,desktop,1796,1578,132
+20260315,google / cpc,Paid Search,mobile,1280,1078,54
+20260315,facebook / cpc,Paid Social,mobile,1754,1448,146
+20260315,tiktok / cpc,Paid Social,mobile,1127,988,101
+20260315,google / organic,Organic Search,mobile,841,662,62
+20260315,(direct) / (none),Direct,desktop,1652,1356,86
+20260316,google / cpc,Paid Search,mobile,1191,943,86
+20260316,facebook / cpc,Paid Social,desktop,851,694,74
+20260316,tiktok / cpc,Paid Social,mobile,1431,1140,80
+20260316,google / organic,Organic Search,mobile,1141,906,100
+20260316,(direct) / (none),Direct,mobile,825,627,66
+20260317,google / cpc,Paid Search,desktop,1382,1145,78
+20260317,facebook / cpc,Paid Social,desktop,1000,822,45
+20260317,tiktok / cpc,Paid Social,desktop,953,823,83
+20260317,google / organic,Organic Search,mobile,1496,1180,74
+20260317,(direct) / (none),Direct,desktop,1013,809,49
+20260318,google / cpc,Paid Search,mobile,844,638,48
+20260318,facebook / cpc,Paid Social,desktop,969,819,56
+20260318,tiktok / cpc,Paid Social,mobile,1702,1439,75
+20260318,google / organic,Organic Search,desktop,1522,1203,109
+20260318,(direct) / (none),Direct,desktop,1726,1428,85
+20260319,google / cpc,Paid Search,desktop,829,682,35
+20260319,facebook / cpc,Paid Social,desktop,1433,1145,109
+20260319,tiktok / cpc,Paid Social,mobile,1324,1039,102
+20260319,google / organic,Organic Search,mobile,1700,1392,83
+20260319,(direct) / (none),Direct,desktop,903,783,68
+20260320,google / cpc,Paid Search,tablet,1669,1290,120
+20260320,facebook / cpc,Paid Social,mobile,1281,1093,96
+20260320,tiktok / cpc,Paid Social,desktop,1345,1042,108
+20260320,google / organic,Organic Search,mobile,1548,1342,69
+20260320,(direct) / (none),Direct,mobile,1679,1368,122
+20260321,google / cpc,Paid Search,mobile,1169,935,46
+20260321,facebook / cpc,Paid Social,mobile,1180,975,64
+20260321,tiktok / cpc,Paid Social,desktop,1526,1231,121
+20260321,google / organic,Organic Search,mobile,1375,1037,71
+20260321,(direct) / (none),Direct,mobile,1268,1004,53
+20260322,google / cpc,Paid Search,mobile,1682,1469,134
+20260322,facebook / cpc,Paid Social,mobile,1123,955,95
+20260322,tiktok / cpc,Paid Social,desktop,1366,1103,113
+20260322,google / organic,Organic Search,desktop,1576,1220,113
+20260322,(direct) / (none),Direct,mobile,907,692,63
+20260323,google / cpc,Paid Search,mobile,865,688,58
+20260323,facebook / cpc,Paid Social,mobile,1781,1338,126
+20260323,tiktok / cpc,Paid Social,mobile,1246,990,82
+20260323,google / organic,Organic Search,mobile,1363,1053,55
+20260323,(direct) / (none),Direct,tablet,1488,1262,60
+20260324,google / cpc,Paid Search,mobile,1463,1156,125
+20260324,facebook / cpc,Paid Social,mobile,905,719,74
+20260324,tiktok / cpc,Paid Social,desktop,912,687,52
+20260324,google / organic,Organic Search,mobile,970,776,70
+20260324,(direct) / (none),Direct,mobile,1109,857,44
+20260325,google / cpc,Paid Search,mobile,1234,991,75
+20260325,facebook / cpc,Paid Social,desktop,1213,913,94
+20260325,tiktok / cpc,Paid Social,mobile,865,755,37
+20260325,google / organic,Organic Search,desktop,1709,1311,113
+20260325,(direct) / (none),Direct,mobile,1635,1234,120
+20260326,google / cpc,Paid Search,desktop,1274,1053,59
+20260326,facebook / cpc,Paid Social,mobile,1573,1215,95
+20260326,tiktok / cpc,Paid Social,mobile,1043,820,89
+20260326,google / organic,Organic Search,mobile,1631,1346,130
+20260326,(direct) / (none),Direct,mobile,859,678,71
+20260327,google / cpc,Paid Search,desktop,876,679,56
+20260327,facebook / cpc,Paid Social,mobile,1087,850,59
+20260327,tiktok / cpc,Paid Social,tablet,1580,1300,94
+20260327,google / organic,Organic Search,desktop,826,701,49
+20260327,(direct) / (none),Direct,desktop,926,725,48
+20260328,google / cpc,Paid Search,mobile,830,718,43
+20260328,facebook / cpc,Paid Social,mobile,1564,1263,109
+20260328,tiktok / cpc,Paid Social,mobile,1646,1413,103
+20260328,google / organic,Organic Search,desktop,1292,1080,96
+20260328,(direct) / (none),Direct,mobile,885,689,49
+20260329,google / cpc,Paid Search,mobile,1769,1362,132
+20260329,facebook / cpc,Paid Social,mobile,1772,1344,110
+20260329,tiktok / cpc,Paid Social,mobile,1330,1068,109
+20260329,google / organic,Organic Search,mobile,1070,872,81
+20260329,(direct) / (none),Direct,mobile,1328,1112,103
+20260330,google / cpc,Paid Search,mobile,1122,863,88
+20260330,facebook / cpc,Paid Social,mobile,827,695,42
+20260330,tiktok / cpc,Paid Social,desktop,1668,1377,110
+20260330,google / organic,Organic Search,mobile,1357,1078,92
+20260330,(direct) / (none),Direct,desktop,887,684,36
+20260331,google / cpc,Paid Search,mobile,1232,976,75
+20260331,facebook / cpc,Paid Social,mobile,1017,809,77
+20260331,tiktok / cpc,Paid Social,tablet,1587,1269,114
+20260331,google / organic,Organic Search,mobile,1411,1150,71
+20260331,(direct) / (none),Direct,mobile,1127,869,67
+20260401,google / cpc,Paid Search,desktop,1328,1160,96
+20260401,facebook / cpc,Paid Social,mobile,1383,1090,116
+20260401,tiktok / cpc,Paid Social,mobile,874,746,55
+20260401,google / organic,Organic Search,mobile,803,640,55
+20260401,(direct) / (none),Direct,mobile,1713,1310,143
+20260402,google / cpc,Paid Search,mobile,1585,1285,99
+20260402,facebook / cpc,Paid Social,desktop,1262,1025,108
+20260402,tiktok / cpc,Paid Social,mobile,1049,803,43
+20260402,google / organic,Organic Search,mobile,1187,974,80
+20260402,(direct) / (none),Direct,desktop,843,692,73
+20260403,google / cpc,Paid Search,mobile,1113,943,79
+20260403,facebook / cpc,Paid Social,mobile,1045,897,71
+20260403,tiktok / cpc,Paid Social,desktop,1750,1399,123
+20260403,google / organic,Organic Search,mobile,1141,918,59
+20260403,(direct) / (none),Direct,tablet,1179,984,77
+20260404,google / cpc,Paid Search,mobile,1144,936,64
+20260404,facebook / cpc,Paid Social,tablet,1478,1182,70
+20260404,tiktok / cpc,Paid Social,mobile,932,786,40
+20260404,google / organic,Organic Search,mobile,1322,1131,94
+20260404,(direct) / (none),Direct,mobile,1194,911,47
+20260405,google / cpc,Paid Search,mobile,1312,1138,86
+20260405,facebook / cpc,Paid Social,desktop,1314,1053,118
+20260405,tiktok / cpc,Paid Social,mobile,1536,1330,118
+20260405,google / organic,Organic Search,mobile,1537,1213,117
+20260405,(direct) / (none),Direct,mobile,1741,1420,130
+20260406,google / cpc,Paid Search,mobile,937,729,65
+20260406,facebook / cpc,Paid Social,mobile,1005,775,53
+20260406,tiktok / cpc,Paid Social,tablet,1648,1373,144
+20260406,google / organic,Organic Search,mobile,954,769,69
+20260406,(direct) / (none),Direct,mobile,1410,1238,106
+20260407,google / cpc,Paid Search,desktop,1216,975,92
+20260407,facebook / cpc,Paid Social,mobile,1506,1210,76
+20260407,tiktok / cpc,Paid Social,mobile,1350,1187,67
+20260407,google / organic,Organic Search,mobile,1221,990,74
+20260407,(direct) / (none),Direct,mobile,1154,951,65
+20260408,google / cpc,Paid Search,mobile,1032,867,76
+20260408,facebook / cpc,Paid Social,desktop,1396,1194,85
+20260408,tiktok / cpc,Paid Social,mobile,1351,1118,63
+20260408,google / organic,Organic Search,mobile,1349,1111,72
+20260408,(direct) / (none),Direct,tablet,1776,1415,72
+20260409,google / cpc,Paid Search,desktop,1603,1366,75
+20260409,facebook / cpc,Paid Social,mobile,1109,950,80
+20260409,tiktok / cpc,Paid Social,mobile,1300,1055,92
+20260409,google / organic,Organic Search,mobile,1237,1080,71
+20260409,(direct) / (none),Direct,mobile,1071,927,93
+20260410,google / cpc,Paid Search,mobile,1095,955,91
+20260410,facebook / cpc,Paid Social,mobile,1065,893,66
+20260410,tiktok / cpc,Paid Social,desktop,862,731,40
+20260410,google / organic,Organic Search,mobile,1549,1312,102
+20260410,(direct) / (none),Direct,mobile,1441,1249,109
+20260411,google / cpc,Paid Search,desktop,1183,982,88
+20260411,facebook / cpc,Paid Social,mobile,1003,832,61
+20260411,tiktok / cpc,Paid Social,desktop,1409,1194,68
+20260411,google / organic,Organic Search,desktop,1123,933,49
+20260411,(direct) / (none),Direct,desktop,1680,1346,110
+20260412,google / cpc,Paid Search,desktop,1706,1400,110
+20260412,facebook / cpc,Paid Social,mobile,1295,992,67
+20260412,tiktok / cpc,Paid Social,mobile,1658,1386,122
+20260412,google / organic,Organic Search,mobile,1013,797,55
+20260412,(direct) / (none),Direct,desktop,899,691,61
+20260413,google / cpc,Paid Search,mobile,1024,864,60
+20260413,facebook / cpc,Paid Social,mobile,1711,1390,131
+20260413,tiktok / cpc,Paid Social,desktop,1345,1168,118
+20260413,google / organic,Organic Search,desktop,1798,1410,108
+20260413,(direct) / (none),Direct,mobile,874,691,51
+20260414,google / cpc,Paid Search,desktop,1308,1137,64
+20260414,facebook / cpc,Paid Social,mobile,1245,941,98
+20260414,tiktok / cpc,Paid Social,mobile,1563,1313,132
+20260414,google / organic,Organic Search,mobile,1557,1341,133
+20260414,(direct) / (none),Direct,mobile,1580,1226,125
+20260415,google / cpc,Paid Search,desktop,1654,1435,131
+20260415,facebook / cpc,Paid Social,mobile,1302,1117,80
+20260415,tiktok / cpc,Paid Social,desktop,812,692,39
+20260415,google / organic,Organic Search,desktop,1042,807,66
+20260415,(direct) / (none),Direct,mobile,1590,1242,140
+20260416,google / cpc,Paid Search,desktop,1234,1006,53
+20260416,facebook / cpc,Paid Social,desktop,1549,1250,89
+20260416,tiktok / cpc,Paid Social,desktop,1265,1035,65
+20260416,google / organic,Organic Search,desktop,1233,983,61
+20260416,(direct) / (none),Direct,mobile,1224,1033,82
+20260417,google / cpc,Paid Search,tablet,1437,1097,87
+20260417,facebook / cpc,Paid Social,mobile,1432,1146,88
+20260417,tiktok / cpc,Paid Social,mobile,1418,1130,77
+20260417,google / organic,Organic Search,tablet,892,740,74
+20260417,(direct) / (none),Direct,mobile,862,723,37
+20260418,google / cpc,Paid Search,mobile,1625,1289,76
+20260418,facebook / cpc,Paid Social,mobile,838,636,46
+20260418,tiktok / cpc,Paid Social,desktop,1008,847,82
+20260418,google / organic,Organic Search,mobile,1115,914,91
+20260418,(direct) / (none),Direct,desktop,1058,892,46
+20260419,google / cpc,Paid Search,mobile,1244,1067,96
+20260419,facebook / cpc,Paid Social,mobile,1416,1064,80
+20260419,tiktok / cpc,Paid Social,mobile,1727,1454,104
+20260419,google / organic,Organic Search,mobile,1323,1027,60
+20260419,(direct) / (none),Direct,desktop,1204,915,55
+20260420,google / cpc,Paid Search,mobile,1454,1194,101
+20260420,facebook / cpc,Paid Social,mobile,1373,1167,114
+20260420,tiktok / cpc,Paid Social,mobile,1410,1166,103
+20260420,google / organic,Organic Search,desktop,929,786,38
+20260420,(direct) / (none),Direct,desktop,1257,1064,90
+20260421,google / cpc,Paid Search,mobile,815,626,68
+20260421,facebook / cpc,Paid Social,desktop,1136,984,46
+20260421,tiktok / cpc,Paid Social,desktop,1104,947,67
+20260421,google / organic,Organic Search,mobile,1042,786,84
+20260421,(direct) / (none),Direct,tablet,1414,1131,118
+20260422,google / cpc,Paid Search,desktop,817,652,58
+20260422,facebook / cpc,Paid Social,mobile,954,721,64
+20260422,tiktok / cpc,Paid Social,desktop,1158,1004,47
+20260422,google / organic,Organic Search,mobile,1282,1117,103
+20260422,(direct) / (none),Direct,mobile,942,734,49
+20260423,google / cpc,Paid Search,desktop,1030,874,70
+20260423,facebook / cpc,Paid Social,mobile,1423,1146,126
+20260423,tiktok / cpc,Paid Social,desktop,1081,947,61
+20260423,google / organic,Organic Search,desktop,895,672,72
+20260423,(direct) / (none),Direct,mobile,1034,854,72
+20260424,google / cpc,Paid Search,mobile,1364,1175,74
+20260424,facebook / cpc,Paid Social,mobile,1230,967,109
+20260424,tiktok / cpc,Paid Social,desktop,1100,876,47
+20260424,google / organic,Organic Search,desktop,1510,1244,62
+20260424,(direct) / (none),Direct,mobile,1279,992,53
+20260425,google / cpc,Paid Search,mobile,1393,1205,109
+20260425,facebook / cpc,Paid Social,desktop,1090,911,52
+20260425,tiktok / cpc,Paid Social,desktop,1039,900,67
+20260425,google / organic,Organic Search,desktop,1593,1250,68
+20260425,(direct) / (none),Direct,desktop,1697,1309,91
+20260426,google / cpc,Paid Search,mobile,1409,1125,82
+20260426,facebook / cpc,Paid Social,desktop,1441,1244,94
+20260426,tiktok / cpc,Paid Social,mobile,1379,1113,120
+20260426,google / organic,Organic Search,desktop,1760,1347,146
+20260426,(direct) / (none),Direct,desktop,1032,903,73
+20260427,google / cpc,Paid Search,tablet,1539,1283,136
+20260427,facebook / cpc,Paid Social,mobile,1712,1474,109
+20260427,tiktok / cpc,Paid Social,desktop,982,852,69
+20260427,google / organic,Organic Search,mobile,1414,1142,72
+20260427,(direct) / (none),Direct,desktop,1371,1123,71
+20260428,google / cpc,Paid Search,mobile,1138,997,48
+20260428,facebook / cpc,Paid Social,mobile,1697,1479,81
+20260428,tiktok / cpc,Paid Social,mobile,1388,1130,79
+20260428,google / organic,Organic Search,tablet,1391,1186,80
+20260428,(direct) / (none),Direct,mobile,920,764,74
+20260429,google / cpc,Paid Search,tablet,1157,910,97
+20260429,facebook / cpc,Paid Social,mobile,1510,1304,68
+20260429,tiktok / cpc,Paid Social,mobile,1040,831,58
+20260429,google / organic,Organic Search,mobile,1462,1160,74
+20260429,(direct) / (none),Direct,mobile,1098,920,92
+20260430,google / cpc,Paid Search,mobile,1222,922,89
+20260430,facebook / cpc,Paid Social,desktop,1601,1394,121
+20260430,tiktok / cpc,Paid Social,mobile,1314,1002,116
+20260430,google / organic,Organic Search,mobile,1053,922,58
+20260430,(direct) / (none),Direct,desktop,1687,1456,100
+20260501,google / cpc,Paid Search,desktop,1292,1047,53
+20260501,facebook / cpc,Paid Social,mobile,1575,1304,126
+20260501,tiktok / cpc,Paid Social,mobile,846,670,55
+20260501,google / organic,Organic Search,mobile,1464,1256,115
+20260501,(direct) / (none),Direct,tablet,1109,846,52
+20260502,google / cpc,Paid Search,mobile,1433,1194,84
+20260502,facebook / cpc,Paid Social,mobile,1230,1037,54
+20260502,tiktok / cpc,Paid Social,mobile,1664,1267,87
+20260502,google / organic,Organic Search,mobile,1681,1385,74
+20260502,(direct) / (none),Direct,mobile,1672,1360,103
+20260503,google / cpc,Paid Search,mobile,1196,1042,90
+20260503,facebook / cpc,Paid Social,mobile,919,759,56
+20260503,tiktok / cpc,Paid Social,mobile,1001,856,68
+20260503,google / organic,Organic Search,mobile,1500,1171,79
+20260503,(direct) / (none),Direct,desktop,1139,860,92
+20260504,google / cpc,Paid Search,mobile,892,696,42
+20260504,facebook / cpc,Paid Social,mobile,1267,1000,78
+20260504,tiktok / cpc,Paid Social,mobile,1097,837,93
+20260504,google / organic,Organic Search,mobile,1660,1389,67
+20260504,(direct) / (none),Direct,desktop,1284,1123,57
+20260505,google / cpc,Paid Search,desktop,891,701,59
+20260505,facebook / cpc,Paid Social,mobile,839,710,43
+20260505,tiktok / cpc,Paid Social,mobile,865,664,36
+20260505,google / organic,Organic Search,desktop,891,709,39
+20260505,(direct) / (none),Direct,mobile,1538,1161,64
+20260506,google / cpc,Paid Search,mobile,1529,1295,109
+20260506,facebook / cpc,Paid Social,mobile,1055,867,80
+20260506,tiktok / cpc,Paid Social,mobile,1405,1106,94
+20260506,google / organic,Organic Search,tablet,1111,941,56
+20260506,(direct) / (none),Direct,mobile,1235,1004,84
+20260507,google / cpc,Paid Search,desktop,1642,1302,111
+20260507,facebook / cpc,Paid Social,mobile,1252,975,88
+20260507,tiktok / cpc,Paid Social,desktop,1540,1345,104
+20260507,google / organic,Organic Search,desktop,1500,1134,122
+20260507,(direct) / (none),Direct,desktop,1605,1328,115
+20260508,google / cpc,Paid Search,mobile,1775,1398,98
+20260508,facebook / cpc,Paid Social,mobile,1413,1234,96
+20260508,tiktok / cpc,Paid Social,mobile,1458,1209,115
+20260508,google / organic,Organic Search,mobile,1749,1334,133
+20260508,(direct) / (none),Direct,mobile,816,670,58
+20260509,google / cpc,Paid Search,mobile,1469,1221,69
+20260509,facebook / cpc,Paid Social,mobile,1669,1462,136
+20260509,tiktok / cpc,Paid Social,mobile,954,769,84
+20260509,google / organic,Organic Search,mobile,805,604,61
+20260509,(direct) / (none),Direct,mobile,1244,1045,72
+20260510,google / cpc,Paid Search,mobile,850,708,53
+20260510,facebook / cpc,Paid Social,mobile,933,813,51
+20260510,tiktok / cpc,Paid Social,mobile,1745,1308,87
+20260510,google / organic,Organic Search,mobile,948,717,51
+20260510,(direct) / (none),Direct,mobile,862,691,38
+20260511,google / cpc,Paid Search,mobile,1057,914,89
+20260511,facebook / cpc,Paid Social,mobile,1457,1172,86
+20260511,tiktok / cpc,Paid Social,desktop,1478,1181,104
+20260511,google / organic,Organic Search,mobile,1791,1537,138
+20260511,(direct) / (none),Direct,mobile,1515,1139,117
+20260512,google / cpc,Paid Search,mobile,977,749,81
+20260512,facebook / cpc,Paid Social,mobile,1163,911,60
+20260512,tiktok / cpc,Paid Social,mobile,1341,1109,118
+20260512,google / organic,Organic Search,desktop,1158,1011,81
+20260512,(direct) / (none),Direct,desktop,1162,959,82
+20260513,google / cpc,Paid Search,mobile,1326,1010,54
+20260513,facebook / cpc,Paid Social,tablet,1525,1223,120
+20260513,tiktok / cpc,Paid Social,mobile,1392,1089,66
+20260513,google / organic,Organic Search,mobile,1254,1022,88
+20260513,(direct) / (none),Direct,mobile,1348,1097,113
+20260514,google / cpc,Paid Search,mobile,1013,772,57
+20260514,facebook / cpc,Paid Social,tablet,1023,871,42
+20260514,tiktok / cpc,Paid Social,desktop,1407,1125,90
+20260514,google / organic,Organic Search,desktop,867,734,51
+20260514,(direct) / (none),Direct,mobile,1358,1131,58
+20260515,google / cpc,Paid Search,desktop,1658,1334,107
+20260515,facebook / cpc,Paid Social,mobile,1166,963,68
+20260515,tiktok / cpc,Paid Social,mobile,1359,1110,105
+20260515,google / organic,Organic Search,mobile,1097,929,67
+20260515,(direct) / (none),Direct,mobile,829,707,46
+20260516,google / cpc,Paid Search,tablet,1594,1285,103
+20260516,facebook / cpc,Paid Social,mobile,1639,1324,131
+20260516,tiktok / cpc,Paid Social,mobile,1327,1029,90
+20260516,google / organic,Organic Search,desktop,1718,1471,120
+20260516,(direct) / (none),Direct,desktop,1489,1209,91
+20260517,google / cpc,Paid Search,mobile,1275,1093,54
+20260517,facebook / cpc,Paid Social,mobile,927,737,78
+20260517,tiktok / cpc,Paid Social,mobile,1156,956,91
+20260517,google / organic,Organic Search,mobile,1115,918,74
+20260517,(direct) / (none),Direct,mobile,1446,1253,86
+20260518,google / cpc,Paid Search,desktop,1370,1138,62
+20260518,facebook / cpc,Paid Social,mobile,1261,1077,85
+20260518,tiktok / cpc,Paid Social,mobile,1159,922,74
+20260518,google / organic,Organic Search,mobile,1334,1029,113
+20260518,(direct) / (none),Direct,mobile,805,682,39
+20260519,google / cpc,Paid Search,desktop,1656,1245,126
+20260519,facebook / cpc,Paid Social,mobile,1636,1272,121
+20260519,tiktok / cpc,Paid Social,mobile,872,703,65
+20260519,google / organic,Organic Search,mobile,1550,1291,76
+20260519,(direct) / (none),Direct,mobile,851,655,45
+20260520,google / cpc,Paid Search,desktop,1753,1501,125
+20260520,facebook / cpc,Paid Social,desktop,1060,872,54
+20260520,tiktok / cpc,Paid Social,mobile,1609,1235,70
+20260520,google / organic,Organic Search,mobile,1148,1009,83
+20260520,(direct) / (none),Direct,mobile,1755,1400,142
+20260521,google / cpc,Paid Search,mobile,1197,939,96
+20260521,facebook / cpc,Paid Social,mobile,1263,962,71
+20260521,tiktok / cpc,Paid Social,mobile,1174,995,59
+20260521,google / organic,Organic Search,desktop,1126,955,57
+20260521,(direct) / (none),Direct,desktop,1574,1339,81
+20260522,google / cpc,Paid Search,mobile,1773,1338,114
+20260522,facebook / cpc,Paid Social,mobile,1679,1473,99
+20260522,tiktok / cpc,Paid Social,tablet,887,690,61
+20260522,google / organic,Organic Search,desktop,1297,983,101
+20260522,(direct) / (none),Direct,desktop,862,653,40
+20260523,google / cpc,Paid Search,mobile,1643,1332,85
+20260523,facebook / cpc,Paid Social,mobile,1353,1082,91
+20260523,tiktok / cpc,Paid Social,mobile,946,774,56
+20260523,google / organic,Organic Search,mobile,1613,1344,75
+20260523,(direct) / (none),Direct,mobile,939,823,54
+20260524,google / cpc,Paid Search,mobile,1517,1164,114
+20260524,facebook / cpc,Paid Social,mobile,1586,1379,142
+20260524,tiktok / cpc,Paid Social,desktop,1229,1079,64
+20260524,google / organic,Organic Search,desktop,1407,1166,87
+20260524,(direct) / (none),Direct,mobile,1751,1466,142
+20260525,google / cpc,Paid Search,mobile,1654,1289,75
+20260525,facebook / cpc,Paid Social,mobile,1795,1451,109
+20260525,tiktok / cpc,Paid Social,mobile,1622,1249,108
+20260525,google / organic,Organic Search,mobile,1174,963,101
+20260525,(direct) / (none),Direct,mobile,1364,1034,81
+20260526,google / cpc,Paid Search,mobile,1176,936,55
+20260526,facebook / cpc,Paid Social,mobile,1562,1295,95
+20260526,tiktok / cpc,Paid Social,mobile,1586,1392,79
+20260526,google / organic,Organic Search,mobile,1311,1064,77
+20260526,(direct) / (none),Direct,mobile,1127,874,62
+20260527,google / cpc,Paid Search,desktop,1148,882,79
+20260527,facebook / cpc,Paid Social,tablet,1395,1137,78
+20260527,tiktok / cpc,Paid Social,desktop,1057,855,70
+20260527,google / organic,Organic Search,mobile,839,671,37
+20260527,(direct) / (none),Direct,mobile,859,650,45
+20260528,google / cpc,Paid Search,mobile,1054,870,75
+20260528,facebook / cpc,Paid Social,desktop,1484,1159,79
+20260528,tiktok / cpc,Paid Social,mobile,1677,1297,116
+20260528,google / organic,Organic Search,desktop,1454,1221,70
+20260528,(direct) / (none),Direct,mobile,1101,954,78
+20260529,google / cpc,Paid Search,desktop,1555,1301,135
+20260529,facebook / cpc,Paid Social,mobile,940,712,44
+20260529,tiktok / cpc,Paid Social,desktop,1357,1122,82
+20260529,google / organic,Organic Search,desktop,974,830,48
+20260529,(direct) / (none),Direct,mobile,890,769,58
+20260530,google / cpc,Paid Search,mobile,1754,1369,125
+20260530,facebook / cpc,Paid Social,desktop,1139,986,53
+20260530,tiktok / cpc,Paid Social,mobile,1624,1280,84
+20260530,google / organic,Organic Search,mobile,1039,855,93
+20260530,(direct) / (none),Direct,mobile,1593,1323,69
+20260531,google / cpc,Paid Search,mobile,1530,1256,92
+20260531,facebook / cpc,Paid Social,mobile,933,746,58
+20260531,tiktok / cpc,Paid Social,desktop,1066,848,50
+20260531,google / organic,Organic Search,desktop,978,800,73
+20260531,(direct) / (none),Direct,mobile,1325,1008,101
+20260601,google / cpc,Paid Search,desktop,1486,1122,119
+20260601,facebook / cpc,Paid Social,mobile,1411,1228,126
+20260601,tiktok / cpc,Paid Social,mobile,1427,1093,62
+20260601,google / organic,Organic Search,desktop,1577,1194,68
+20260601,(direct) / (none),Direct,desktop,999,779,82
+20260602,google / cpc,Paid Search,desktop,942,745,50
+20260602,facebook / cpc,Paid Social,desktop,1423,1239,124
+20260602,tiktok / cpc,Paid Social,mobile,1584,1351,81
+20260602,google / organic,Organic Search,mobile,1542,1325,63
+20260602,(direct) / (none),Direct,mobile,1796,1542,141
+20260603,google / cpc,Paid Search,desktop,824,693,38
+20260603,facebook / cpc,Paid Social,tablet,1131,956,70
+20260603,tiktok / cpc,Paid Social,mobile,810,654,34
+20260603,google / organic,Organic Search,mobile,1040,846,42
+20260603,(direct) / (none),Direct,mobile,1717,1340,87
+20260604,google / cpc,Paid Search,desktop,1585,1195,111
+20260604,facebook / cpc,Paid Social,desktop,1532,1188,81
+20260604,tiktok / cpc,Paid Social,mobile,893,752,55
+20260604,google / organic,Organic Search,mobile,1276,1039,80
+20260604,(direct) / (none),Direct,mobile,1526,1170,95
+20260605,google / cpc,Paid Search,mobile,937,762,76
+20260605,facebook / cpc,Paid Social,mobile,1274,980,67
+20260605,tiktok / cpc,Paid Social,desktop,1441,1240,63
+20260605,google / organic,Organic Search,mobile,1615,1224,129
+20260605,(direct) / (none),Direct,mobile,888,731,72
+20260606,google / cpc,Paid Search,mobile,1689,1483,73
+20260606,facebook / cpc,Paid Social,mobile,1501,1304,96
+20260606,tiktok / cpc,Paid Social,desktop,1590,1369,77
+20260606,google / organic,Organic Search,mobile,1492,1217,99
+20260606,(direct) / (none),Direct,desktop,1715,1438,115
+20260607,google / cpc,Paid Search,mobile,1556,1190,106
+20260607,facebook / cpc,Paid Social,mobile,1341,1157,68
+20260607,tiktok / cpc,Paid Social,desktop,1058,863,83
+20260607,google / organic,Organic Search,tablet,1215,1051,106
+20260607,(direct) / (none),Direct,desktop,1683,1448,126
+20260608,google / cpc,Paid Search,desktop,1785,1352,72
+20260608,facebook / cpc,Paid Social,mobile,1797,1362,125
+20260608,tiktok / cpc,Paid Social,mobile,1626,1357,102
+20260608,google / organic,Organic Search,desktop,985,753,58
+20260608,(direct) / (none),Direct,mobile,830,659,39
+20260609,google / cpc,Paid Search,mobile,1268,1096,57
+20260609,facebook / cpc,Paid Social,mobile,1246,973,102
+20260609,tiktok / cpc,Paid Social,mobile,915,728,52
+20260609,google / organic,Organic Search,mobile,810,634,36
+20260609,(direct) / (none),Direct,desktop,859,665,70
+20260610,google / cpc,Paid Search,mobile,1286,1050,106
+20260610,facebook / cpc,Paid Social,mobile,874,725,55
+20260610,tiktok / cpc,Paid Social,mobile,1378,1168,82
+20260610,google / organic,Organic Search,mobile,923,773,57
+20260610,(direct) / (none),Direct,desktop,1695,1409,134
+20260611,google / cpc,Paid Search,mobile,1725,1483,99
+20260611,facebook / cpc,Paid Social,mobile,1638,1383,124
+20260611,tiktok / cpc,Paid Social,mobile,1227,1038,67
+20260611,google / organic,Organic Search,mobile,1765,1392,113
+20260611,(direct) / (none),Direct,mobile,1534,1272,70
+20260612,google / cpc,Paid Search,desktop,1281,1083,104
+20260612,facebook / cpc,Paid Social,mobile,1327,1024,73
+20260612,tiktok / cpc,Paid Social,mobile,1725,1336,147
+20260612,google / organic,Organic Search,mobile,836,717,45
+20260612,(direct) / (none),Direct,mobile,1716,1410,137
+20260613,google / cpc,Paid Search,mobile,1730,1377,133
+20260613,facebook / cpc,Paid Social,mobile,928,738,83
+20260613,tiktok / cpc,Paid Social,mobile,1235,971,56
+20260613,google / organic,Organic Search,desktop,1203,937,77
+20260613,(direct) / (none),Direct,desktop,869,696,66
+20260614,google / cpc,Paid Search,desktop,824,635,57
+20260614,facebook / cpc,Paid Social,desktop,1514,1287,134
+20260614,tiktok / cpc,Paid Social,desktop,1445,1106,93
+20260614,google / organic,Organic Search,mobile,1369,1063,103
+20260614,(direct) / (none),Direct,desktop,861,736,73
+20260615,google / cpc,Paid Search,mobile,1645,1291,115
+20260615,facebook / cpc,Paid Social,desktop,1232,996,89
+20260615,tiktok / cpc,Paid Social,desktop,968,828,50
+20260615,google / organic,Organic Search,mobile,1713,1345,136
+20260615,(direct) / (none),Direct,desktop,1347,1041,78
+20260616,google / cpc,Paid Search,mobile,1159,981,72
+20260616,facebook / cpc,Paid Social,mobile,1453,1170,75
+20260616,tiktok / cpc,Paid Social,mobile,1461,1137,73
+20260616,google / organic,Organic Search,mobile,1084,814,95
+20260616,(direct) / (none),Direct,mobile,1276,958,54
+20260617,google / cpc,Paid Search,desktop,1192,949,97
+20260617,facebook / cpc,Paid Social,desktop,1555,1260,125
+20260617,tiktok / cpc,Paid Social,desktop,823,723,55
+20260617,google / organic,Organic Search,mobile,1037,789,90
+20260617,(direct) / (none),Direct,desktop,1529,1204,72
+20260618,google / cpc,Paid Search,mobile,1491,1290,102
+20260618,facebook / cpc,Paid Social,tablet,1289,1034,54
+20260618,tiktok / cpc,Paid Social,mobile,1272,971,51
+20260618,google / organic,Organic Search,mobile,1117,872,59
+20260618,(direct) / (none),Direct,desktop,964,820,75
+20260619,google / cpc,Paid Search,mobile,1694,1414,83
+20260619,facebook / cpc,Paid Social,mobile,997,866,78
+20260619,tiktok / cpc,Paid Social,desktop,1064,846,79
+20260619,google / organic,Organic Search,desktop,1158,1010,79
+20260619,(direct) / (none),Direct,mobile,956,825,62
+20260620,google / cpc,Paid Search,mobile,1563,1317,131
+20260620,facebook / cpc,Paid Social,mobile,1460,1271,87
+20260620,tiktok / cpc,Paid Social,desktop,1588,1215,72
+20260620,google / organic,Organic Search,mobile,1068,885,91
+20260620,(direct) / (none),Direct,mobile,1643,1380,100
+20260621,google / cpc,Paid Search,desktop,1407,1216,60
+20260621,facebook / cpc,Paid Social,mobile,1520,1293,80
+20260621,tiktok / cpc,Paid Social,mobile,1392,1074,59
+20260621,google / organic,Organic Search,mobile,1180,905,95
+20260621,(direct) / (none),Direct,desktop,961,736,78
+20260622,google / cpc,Paid Search,desktop,1208,1026,91
+20260622,facebook / cpc,Paid Social,mobile,1250,1042,73
+20260622,tiktok / cpc,Paid Social,desktop,965,818,81
+20260622,google / organic,Organic Search,mobile,1782,1469,109
+20260622,(direct) / (none),Direct,desktop,1283,1062,103
+20260623,google / cpc,Paid Search,mobile,1571,1358,122
+20260623,facebook / cpc,Paid Social,mobile,1179,901,65
+20260623,tiktok / cpc,Paid Social,mobile,1166,875,71
+20260623,google / organic,Organic Search,mobile,963,780,42
+20260623,(direct) / (none),Direct,mobile,1787,1440,84
+20260624,google / cpc,Paid Search,mobile,1426,1097,106
+20260624,facebook / cpc,Paid Social,mobile,1391,1079,93
+20260624,tiktok / cpc,Paid Social,mobile,1048,810,44
+20260624,google / organic,Organic Search,desktop,1458,1230,71
+20260624,(direct) / (none),Direct,mobile,1029,794,41
+20260625,google / cpc,Paid Search,desktop,832,627,45
+20260625,facebook / cpc,Paid Social,desktop,1322,1112,101
+20260625,tiktok / cpc,Paid Social,desktop,1238,1050,94
+20260625,google / organic,Organic Search,mobile,1729,1430,113
+20260625,(direct) / (none),Direct,mobile,1746,1472,146
+20260626,google / cpc,Paid Search,mobile,876,697,41
+20260626,facebook / cpc,Paid Social,desktop,1015,848,90
+20260626,tiktok / cpc,Paid Social,mobile,852,641,44
+20260626,google / organic,Organic Search,mobile,1190,1030,67
+20260626,(direct) / (none),Direct,mobile,1754,1337,91
+20260627,google / cpc,Paid Search,mobile,1796,1508,151
+20260627,facebook / cpc,Paid Social,mobile,1657,1367,122
+20260627,tiktok / cpc,Paid Social,mobile,1475,1226,110
+20260627,google / organic,Organic Search,desktop,1371,1034,87
+20260627,(direct) / (none),Direct,mobile,1751,1481,128
+20260628,google / cpc,Paid Search,tablet,1369,1090,120
+20260628,facebook / cpc,Paid Social,mobile,1561,1307,128
+20260628,tiktok / cpc,Paid Social,mobile,971,829,83
+20260628,google / organic,Organic Search,mobile,1341,1149,101
+20260628,(direct) / (none),Direct,mobile,1543,1169,77
+20260629,google / cpc,Paid Search,desktop,1558,1258,68
+20260629,facebook / cpc,Paid Social,desktop,962,749,82
+20260629,tiktok / cpc,Paid Social,mobile,1583,1228,116
+20260629,google / organic,Organic Search,mobile,1184,1038,88
+20260629,(direct) / (none),Direct,desktop,1506,1299,65
+20260630,google / cpc,Paid Search,mobile,832,723,72
+20260630,facebook / cpc,Paid Social,desktop,1424,1128,90
+20260630,tiktok / cpc,Paid Social,desktop,1445,1111,88
+20260630,google / organic,Organic Search,mobile,1152,899,67
+20260630,(direct) / (none),Direct,desktop,1519,1332,90

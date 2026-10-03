@@ -1,0 +1,19 @@
+/* =========================================================================
+  E-Commerce Marketing & LTV Analytics
+  
+  03 Web Traffic and Funnel DAX Measures
+   ========================================================================= */
+
+Add to Cart Rate = DIVIDE([Total Add-to-Carts], [Total Web Sessions], 0)
+
+Observed Average Lifetime Orders = AVERAGE(dim_customers[total_observed_lifetime_orders])
+
+Returning Customer % = DIVIDE([Total Returning Customers], [Total Active Customer Base], 0)
+
+Total Active Customer Base = DISTINCTCOUNT(fact_sales_line_items[customer_key])
+
+Total New Customers Acquired = CALCULATE(DISTINCTCOUNT(dim_customers[customer_key]),TREATAS(VALUES(dim_calendar[full_date]), dim_customers[first_observed_order_date]))
+
+Total Web Sessions = sum(fact_web_traffic[sessions])
+
+Unique Site Visitors = sum(fact_web_traffic[total_users])

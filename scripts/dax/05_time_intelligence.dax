@@ -1,0 +1,54 @@
+/* =========================================================================
+  E-Commerce Marketing & LTV Analytics
+  
+  05 Time Intelligence DAX Measures
+   ========================================================================= */
+
+Attribution Match Rate Delta = [H2 Attribution Match Rate] - [H1 Attribution Match Rate]
+
+Baseline Net Sales = CALCULATE([Net Sales],REMOVEFILTERS(dim_calendar),DATESBETWEEN(dim_calendar[full_date], DATE(2025, 7, 1),DATE(2025, 12, 31)))
+
+Baseline Total Spend = CALCULATE([Total Ad Spend],REMOVEFILTERS(dim_calendar),DATESBETWEEN(dim_calendar[full_date], DATE(2025, 7, 1), DATE(2025, 12, 31)))
+
+Campaign Scaling Net Sales = CALCULATE([Net Sales],REMOVEFILTERS(dim_calendar),DATESBETWEEN(dim_calendar[full_date], DATE(2026, 1, 1), DATE(2026, 6, 30)))
+
+Campaign Scaling Total Spend = CALCULATE([Total Ad Spend],REMOVEFILTERS(dim_calendar),DATESBETWEEN(dim_calendar[full_date], DATE(2026, 1, 1), DATE(2026, 6, 30)))
+
+Cumulative Ad Spend = CALCULATE([Total Ad Spend],DATESYTD(dim_calendar[full_date]))
+
+Cumulative Net Sales = CALCULATE([Net Sales],DATESYTD(dim_calendar[full_date]))
+
+H1 Add to Carts = CALCULATE([Total Add-to-Carts],DATESBETWEEN(dim_calendar[full_date], DATE(2025, 7, 1), DATE(2025, 12, 31)))
+
+H1 ATC Rate = DIVIDE([H1 Add to Carts], [H1 Web Sessions], 0)
+
+H1 Attribution Match Rate = DIVIDE([H1 Reported Revenue], [H1 Gross Sales], 0)
+
+H1 Channel ROAS = CALCULATE([Channel ROAS],DATESBETWEEN(dim_calendar[full_date], DATE(2025, 7, 1), DATE(2025, 12, 31)))
+
+H1 Gross Sales = CALCULATE([Gross Sales], DATESBETWEEN(dim_calendar[full_date], DATE(2025, 7, 1), DATE(2025, 12, 31)))
+
+H1 Reported Revenue = CALCULATE([Channel Reported Revenue],DATESBETWEEN(dim_calendar[full_date], DATE(2025, 7, 1), DATE(2025, 12, 31)))
+
+H1 Spend = CALCULATE([Total Ad Spend],DATESBETWEEN(dim_calendar[full_date], DATE(2025, 7, 1), DATE(2025, 12, 31)))
+
+H1 Web Sessions = CALCULATE([Total Web Sessions],DATESBETWEEN(dim_calendar[full_date], DATE(2025, 7, 1), DATE(2025, 12, 31)))
+
+H2 Add to Carts = CALCULATE([Total Add-to-Carts],DATESBETWEEN(dim_calendar[full_date], DATE(2026, 1, 1), DATE(2026, 6, 30)))
+
+H2 ATC Rate = DIVIDE([H2 Add to Carts], [H2 Web Sessions], 0)
+
+H2 Attribution Match Rate = DIVIDE([H2 Reported Revenue], [H2 Gross Sales], 0)
+
+H2 Channel ROAS = CALCULATE([Channel ROAS],DATESBETWEEN(dim_calendar[full_date], DATE(2026, 1, 1), DATE(2026, 6, 30)))
+
+H2 Gross Sales = CALCULATE([Gross Sales],DATESBETWEEN(dim_calendar[full_date], DATE(2026, 1, 1), DATE(2026, 6, 30)))
+
+H2 Reported Revenue = CALCULATE([Channel Reported Revenue],DATESBETWEEN(dim_calendar[full_date], DATE(2026, 1, 1), DATE(2026, 6, 30)))
+
+H2 Reported vs Gross Delta = [H2 Reported Revenue] - [H2 Gross Sales]
+
+H2 Spend = CALCULATE([Total Ad Spend],DATESBETWEEN(dim_calendar[full_date], DATE(2026, 1, 1), DATE(2026, 6, 30)))
+
+H2 Web Sessions = CALCULATE([Total Web Sessions],DATESBETWEEN(dim_calendar[full_date], DATE(2026, 1, 1), DATE(2026, 6, 30)))
+

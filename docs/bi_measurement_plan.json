@@ -1,0 +1,1262 @@
+{
+    "metadata": {
+        "project_name": "E-Commerce Marketing & LTV Analytics",
+        "company_name": "Apex Gear Co.",
+        "department": "Marketing & Digital Revenue",
+        "prepared_by": "Alejandra Badia",
+        "project_version": "1.0.0",
+        "project_status": "draft",
+        "sensitivity_classification": "confidential",
+        "business_owners": "Chief Marketing Officer",
+        "technical_owner": "Lead BI Architect",
+        "generated_at": "2026-09-23T12:46:41+00:00"
+    },
+    "charter": {
+        "project_overview": "Apex Gear Co. is a Direct-to-Consumer (D2C) outdoor & performance e-commerce gear company operating across North America, Europe, and APAC with ~$15M in annual revenue. Over the past 2 quarters, executive leadership allocated a significant budget to scale marketing campaigns across Meta (Facebook/Instagram), Google Ads, and TikTok. While top-line site traffic increased, Gross Revenue remained flat, and overall Customer Acquisition Cost (CAC) surged by 28% YoY.",
+        "overall_objective": "Unify siloed data across ad platforms, web analytics, CRM, and e-commerce orders to evaluate true marketing performance against historical baselines. Specifically, analyze whether the expanded marketing investment increased or eroded overall Marketing ROI, identify performance shortfalls across channels, and establish a data-driven path forward to restore or surpass pre-scaling ROI efficiency through strategic budget reallocation.",
+        "in_scope": "\u2022 Channels & Platforms: Performance analysis of paid digital channels (Meta Ads, Google Ads, TikTok Ads), GA4 web traffic, CRM lead pipelines, and Shopify e-commerce transactions across North America, Europe, and APAC regions.\r\n\u2022 Core Metrics & ROI Analysis: Evaluation of historical marketing spend vs. pre-scaling baselines, Channel ROAS, Blended CAC, MER, Customer 12-Month LTV, and net margin contribution.\r\n\u2022 Customer & Order Analysis: Cohort analysis based on first-purchase date, product category performance, discount impact, and return rates.",
+        "out_of_scope": "\u2022 Real-Time Data Streaming: Analysis is based on a daily batch refresh schedule; real-time intra-day click/order streaming is excluded.\r\n\u2022 Offline & Traditional Marketing: Physical store sales, print/TV advertising, and offline event attribution are excluded.\r\n\u2022 Predictive ML Modeling: Advanced machine learning models (e.g., predictive churn or automated budget optimization algorithms) are excluded from this core stage.\r\n\r\n\u2022 Automated Campaign Bid Execution: The system provides decision-support analytics and recommendations; it will not execute automated API write-backs to adjust live campaign budgets inside Meta or Google Ads.",
+        "deliverables": [
+            "jsonSpec",
+            "dataDictionary",
+            "excelStaging",
+            "powerQueryScripts",
+            "biReport",
+            "presentation"
+        ]
+    },
+    "process_flow": [
+        {
+            "step_name": "1. Ad Exposure & Impression",
+            "description": "User views paid ad creative on social feed or search engine.",
+            "drivers_variables": "ad_id, campaign_id, placement",
+            "derived_metrics": "Ad Impressions, Total Ad Spend",
+            "system_owner": "Meta / Google / TikTok Ads"
+        },
+        {
+            "step_name": "2. Ad Click & Redirection",
+            "description": "User clicks ad link and is redirected to Apex Gear online store.",
+            "drivers_variables": "utm_source, utm_campaign, gclid",
+            "derived_metrics": "Ad Clicks, Outbound CTR",
+            "system_owner": "Ad Platforms / Traffic Engine"
+        },
+        {
+            "step_name": "3. Web Session & Product Browsing",
+            "description": "User navigates catalog, views product detail pages, and adds items to cart.",
+            "drivers_variables": "session_id, user_pseudo_id, device",
+            "derived_metrics": "Total Web Sessions, Add-to-Carts",
+            "system_owner": "Google Analytics 4 (GA4)"
+        },
+        {
+            "step_name": "4. Order Checkout & Payment",
+            "description": "User completes checkout payment and order is recorded.",
+            "drivers_variables": "order_id, customer_id, promo_code",
+            "derived_metrics": "Gross Order Value, Total Orders Count",
+            "system_owner": "Shopify E-Commerce"
+        },
+        {
+            "step_name": "5. Order Fulfillment & Returns",
+            "description": "Order is processed, shipped, or returned by customer.",
+            "drivers_variables": "tracking_number, return_reason",
+            "derived_metrics": "Net Revenue, Total Return Amount",
+            "system_owner": "Shopify / ERP"
+        },
+        {
+            "step_name": "6. Retention & Cohort LTV",
+            "description": "Customer engages in repeat purchases over a 12-month window.",
+            "drivers_variables": "customer_id, first_order_date",
+            "derived_metrics": "12-Month LTV, Repeat Order Rate",
+            "system_owner": "Shopify / CRM"
+        }
+    ],
+    "risks": [
+        {
+            "risk_description": "Currency Conversion Variances",
+            "impact_level": "medium",
+            "mitigation": "Establish a unified base reporting currency (USD) in the Star Schema using daily static exchange rate tables for EU and APAC sales"
+        },
+        {
+            "risk_description": "Ad Platform Over-Reporting",
+            "impact_level": "high",
+            "mitigation": "Prioritize Blended CAC and MER (Marketing Efficiency Ratio) as the executive primary metrics over single-platform reported ROAS"
+        },
+        {
+            "risk_description": "Attribution Overlap (Double-Counting)",
+            "impact_level": "high",
+            "mitigation": "Prioritize Shopify order IDs as the absolute ground truth for revenue. Calculate Blended MER and Blended CAC at the executive level, using channel-reported revenue strictly for secondary tactical insights"
+        },
+        {
+            "risk_description": "Inconsistent Customer Identifiers",
+            "impact_level": "low",
+            "mitigation": "Standardize and hash primary identifiers (customer_id, email) across GA4 web sessions, CRM leads, and Shopify sales tables during Power Query ETL"
+        },
+        {
+            "risk_description": "Ad Blocker / Tracking Opt-Out Loss",
+            "impact_level": "medium",
+            "mitigation": "Utilize GA4 blended web data alongside server-side Shopify transaction records to bridge tracking gaps caused by iOS 14.5+ privacy opt-outs and ad blockers"
+        },
+        {
+            "risk_description": "Multi-Currency Fluctuation",
+            "impact_level": "low",
+            "mitigation": "Apply a daily static exchange rate table in the Star Schema to normalize EUR and APAC transactions into USD at the point of sale"
+        },
+        {
+            "risk_description": "Discount & Return Distortion",
+            "impact_level": "low",
+            "mitigation": "Measure top-line performance using Net Revenue (Gross Revenue - Discounts - Returns) rather than raw platform-reported gross sales"
+        }
+    ],
+    "base_metrics": [
+        {
+            "metric_name": "Total Ad Spend",
+            "aggregation": "sum",
+            "data_type": "currency",
+            "target_fact_table": "fact_marketing_performance",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per day, per unique ad creative",
+            "primary_data_source": "Google Ads, Meta Ads, TikTok Ads"
+        },
+        {
+            "metric_name": "Ad Impressions",
+            "aggregation": "sum",
+            "data_type": "whole_number",
+            "target_fact_table": "fact_marketing_performance",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per day, per unique ad creative",
+            "primary_data_source": "Google Ads, Meta Ads, TikTok Ads"
+        },
+        {
+            "metric_name": "Ad Clicks",
+            "aggregation": "sum",
+            "data_type": "whole_number",
+            "target_fact_table": "fact_marketing_performance",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per day, per unique ad creative",
+            "primary_data_source": "Google Ads, Meta Ads, TikTok Ads"
+        },
+        {
+            "metric_name": "Total Web Sessions",
+            "aggregation": "sum",
+            "data_type": "whole_number",
+            "target_fact_table": "fact_web_traffic",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per day, per channel/traffic source",
+            "primary_data_source": "Google Analytics 4 (GA4)"
+        },
+        {
+            "metric_name": "Unique Site Visitors",
+            "aggregation": "distinctCount",
+            "data_type": "whole_number",
+            "target_fact_table": "fact_web_traffic",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per day, per channel/traffic source",
+            "primary_data_source": "Google Analytics 4 (GA4)"
+        },
+        {
+            "metric_name": "Total Add-to-Carts",
+            "aggregation": "sum",
+            "data_type": "whole_number",
+            "target_fact_table": "fact_web_traffic",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per day, per channel/traffic source",
+            "primary_data_source": "Google Analytics 4 (GA4)"
+        },
+        {
+            "metric_name": "Gross Order Value",
+            "aggregation": "sum",
+            "data_type": "currency",
+            "target_fact_table": "fact_sales_line_items",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per order line item",
+            "primary_data_source": "Shopify"
+        },
+        {
+            "metric_name": "Total Discount Amount",
+            "aggregation": "sum",
+            "data_type": "currency",
+            "target_fact_table": "fact_sales_line_items",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per order line item",
+            "primary_data_source": "Shopify"
+        },
+        {
+            "metric_name": "Total Return Amount",
+            "aggregation": "sum",
+            "data_type": "currency",
+            "target_fact_table": "fact_sales_line_items",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per order line item",
+            "primary_data_source": "Shopify"
+        },
+        {
+            "metric_name": "Total Orders Count",
+            "aggregation": "distinctCount",
+            "data_type": "whole_number",
+            "target_fact_table": "fact_sales_line_items",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per order line item",
+            "primary_data_source": "Shopify"
+        },
+        {
+            "metric_name": "Total New Customers Acquired",
+            "aggregation": "distinctCount",
+            "data_type": "whole_number",
+            "target_fact_table": "dim_customers",
+            "table_type": "dimension_table",
+            "table_grain": "One row per customer profile",
+            "primary_data_source": "Shopify"
+        },
+        {
+            "metric_name": "Total Active Customer Base",
+            "aggregation": "sum",
+            "data_type": "whole_number",
+            "target_fact_table": "dim_customers",
+            "table_type": "dimension_table",
+            "table_grain": "One row per customer profile",
+            "primary_data_source": "Shopify"
+        },
+        {
+            "metric_name": "Channel Reported Revenue",
+            "aggregation": "sum",
+            "data_type": "currency",
+            "target_fact_table": "fact_marketing_performance",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per day, per unique ad creative",
+            "primary_data_source": "Google Ads, Meta Ads, TikTok Ads"
+        },
+        {
+            "metric_name": "Average Order Value (AOV)",
+            "aggregation": "average",
+            "data_type": "currency",
+            "target_fact_table": "fact_sales_line_items",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per order line item",
+            "primary_data_source": "Shopify"
+        },
+        {
+            "metric_name": "Observed Average Lifetime Orders (LTV)",
+            "aggregation": "count",
+            "data_type": "whole_number",
+            "target_fact_table": "fact_sales_line_items",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per order line item",
+            "primary_data_source": "Shopify"
+        },
+        {
+            "metric_name": "Total Units Sold",
+            "aggregation": "sum",
+            "data_type": "whole_number",
+            "target_fact_table": "fact_sales_line_items",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per order line item",
+            "primary_data_source": "Shopify"
+        },
+        {
+            "metric_name": "Total COGS",
+            "aggregation": "sum",
+            "data_type": "currency",
+            "target_fact_table": "fact_sales_line_items",
+            "table_type": "transaction_fact",
+            "table_grain": "One row per order line item",
+            "primary_data_source": "Shopify"
+        }
+    ],
+    "kpis": [
+        {
+            "kpi_name": "Net Sales",
+            "business_definition": "Calculates true realized top-line revenue after all promo deductions and returned goods",
+            "dax_formula": "[Net Sales] = [Gross Order Value] - [Total Discount Amount] - [Total Return Amount]",
+            "target_benchmark": "$1.25M Monthly",
+            "owner_role": "CFO / Finance Operations"
+        },
+        {
+            "kpi_name": "Channel ROAS",
+            "business_definition": "Evaluates return on ad spend at the isolated ad network level for tactical campaign optimization",
+            "dax_formula": "[Channel ROAS] = DIVIDE([Channel Reported Revenue], [Total Ad Spend], 0)",
+            "target_benchmark": "3.5x",
+            "owner_role": "Paid Acquisition Lead"
+        },
+        {
+            "kpi_name": "Marketing Efficiency Ratio (MER)",
+            "business_definition": "Executive North Star metric measuring total marketing efficiency against bank account net revenue",
+            "dax_formula": "[MER] = DIVIDE([Net Revenue], [Total Ad Spend], 0)",
+            "target_benchmark": "4.0x Blended",
+            "owner_role": "CMO (Chief Marketing Officer)"
+        },
+        {
+            "kpi_name": "Blended CAC",
+            "business_definition": "Measures the fully-blended cost to acquire a single net-new paying customer",
+            "dax_formula": "[Blended CAC] = DIVIDE([Total Ad Spend], [Total New Customers Acquired], 0)",
+            "target_benchmark": "$45.00",
+            "owner_role": "Growth Marketing Director"
+        },
+        {
+            "kpi_name": "Observed Average Customer LTV",
+            "business_definition": "Establishes long-term customer monetization potential to validate allowable acquisition costs",
+            "dax_formula": "Observed Average Customer LTV = AVERAGE(dim_customers[total_observed_lifetime_spend])",
+            "target_benchmark": "$135.00 (3:1 LTV:CAC Ratio)",
+            "owner_role": "VP of Customer Retention"
+        },
+        {
+            "kpi_name": "Click-Through Rate (CTR)",
+            "business_definition": "Measures people who clicked on the ad compared to the amount of people who viewed it",
+            "dax_formula": "DIVIDE([Total Clicks], [Total Impressions], 0)",
+            "target_benchmark": ">1.5-3% Depending on Channel",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Cost Per Click (CPC)",
+            "business_definition": "Measures cost per click received",
+            "dax_formula": "DIVIDE([Total Spend], [Total Clicks], 0)",
+            "target_benchmark": "<$0.8-$2.50 Depending on Channel",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Marketing Profit",
+            "business_definition": "Profit generated during the data period (1 year data period)",
+            "dax_formula": "Marketing Profit = [Net Sales] - [Total Ad Spend]",
+            "target_benchmark": "> $0.00",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Baseline Marketing Profit",
+            "business_definition": "Profit generated during the baseline period prior to scaling the marketing campaigns",
+            "dax_formula": "Baseline Marketing Profit =CALCULATE(     [Marketing Profit],     DATESBETWEEN(dim_date[full_date], DATE(2025, 7, 1), DATE(2025, 12, 31)) )",
+            "target_benchmark": "> $0.00",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Campaign Scaling Marketing Profit",
+            "business_definition": "Profit generated during the period of scaling the marketing campaigns",
+            "dax_formula": "Campaign Scaling Marketing Profit =CALCULATE(     [Marketing Profit],     DATESBETWEEN(dim_date[full_date], DATE(2026, 1, 1), DATE(2026, 6, 30)) )",
+            "target_benchmark": "> $0.00",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Incremental Marketing Profit",
+            "business_definition": "Profit generated by scaling ad spend compared to historical pre-scaling baselines",
+            "dax_formula": "Incremental Marketing Profit =[Campaign Marketing Profit] - [Baseline Marketing Profit]",
+            "target_benchmark": "> $0.00",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Incremental Profit Growth %",
+            "business_definition": "Growth % due to marketing campaign scaling",
+            "dax_formula": "DIVIDE([Incremental Marketing Profit], [Baseline Profit (H1)], 0)",
+            "target_benchmark": "> 0%",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Total Returning Customers",
+            "business_definition": "Total Returning Customers",
+            "dax_formula": "[Total Active Customer Base] - [Total New Customers Acquired]",
+            "target_benchmark": "> 0",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "New Customer Acquisition %",
+            "business_definition": "New Customer Acquisition %",
+            "dax_formula": "DIVIDE([Total New Customers Acquired], [Total Active Customer Base], 0)",
+            "target_benchmark": "> 0%",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Returning Customer %",
+            "business_definition": "Percent customers returning to place orders",
+            "dax_formula": "DIVIDE([Total Returning Customers], [Total Active Customer Base], 0)",
+            "target_benchmark": ">0",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Gross Profit",
+            "business_definition": "Profit generated after subtracting discount amount, return amount, and COGS",
+            "dax_formula": "Gross Profit =  [Net Sales] - [Total COGS]",
+            "target_benchmark": "$0.9M Monthly",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Gross Margin",
+            "business_definition": "percentage of revenue (net sales) after subtracting cost of good sold",
+            "dax_formula": "Gross Margin % =  DIVIDE([Gross Profit], [Net Sales], 0)",
+            "target_benchmark": ">60%",
+            "owner_role": "CMO / CFO"
+        },
+        {
+            "kpi_name": "Marketing Profit Margin",
+            "business_definition": "Marketing profit generated as a percentage of net sales",
+            "dax_formula": "Marketing Profit Margin % =  DIVIDE([Marketing Contribution], [Net Sales], 0)",
+            "target_benchmark": ">30%",
+            "owner_role": "CMO / CFO"
+        }
+    ],
+    "dimensions": [
+        {
+            "dimension_name": "dim_customers",
+            "dimension_type": "standard",
+            "dimension_grain": "One row per unique customer profile",
+            "attributes": [
+                "customer_id",
+                "customer_email_hash",
+                "first_name",
+                "last_name",
+                "first_order_date",
+                "total_lifetime_orders",
+                "customer_segment",
+                "country",
+                "region"
+            ],
+            "example_values": "CUST-9012, e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855, Jane, Doe, 2025-11-14, 3, VIP, USA, North America"
+        },
+        {
+            "dimension_name": "dim_calendar",
+            "dimension_type": "time",
+            "dimension_grain": "One row per date",
+            "attributes": [
+                "date_key",
+                "full_date",
+                "day_of_week",
+                "day_name",
+                "week_of_year",
+                "month_number",
+                "month_name",
+                "quarter",
+                "fiscal_year",
+                "is_weekend",
+                "is_holiday"
+            ],
+            "example_values": "20260806, 2026-08-06, 4, Thursday, 32, 8, August, Q3, 2026, FALSE, FALSE"
+        },
+        {
+            "dimension_name": "dim_products",
+            "dimension_type": "standard",
+            "dimension_grain": "One row per unique product variation / SKU",
+            "attributes": [
+                "product_id",
+                "sku",
+                "product_name",
+                "category",
+                "subcategory",
+                "unit_cost",
+                "retail_price",
+                "color",
+                "size",
+                "is_active"
+            ],
+            "example_values": "PROD-104, APX-JKT-RED-M, Alpine Pro Shell Jacket, Apparel, Outerwear, 62.50, 189.00, Crimson Red, Medium, TRUE"
+        },
+        {
+            "dimension_name": "dim_ad_campaigns",
+            "dimension_type": "standard",
+            "dimension_grain": "One row per ad",
+            "attributes": [
+                "ad_id",
+                "ad_name",
+                "ad_set_id",
+                "ad_set_name",
+                "campaign_id",
+                "campaign_name",
+                "channel_name",
+                "ad_type",
+                "target_audience"
+            ],
+            "example_values": "AD-8842, Video_RedJacket_15s, SET-402, US_Lookalike_1%_Outdoor, CAMP-109, Q3_Winter_Gear_Launch, Meta Ads, Video, Outdoor Enthusiasts"
+        },
+        {
+            "dimension_name": "dim_channels",
+            "dimension_type": "standard",
+            "dimension_grain": "One row per channel",
+            "attributes": [
+                "channel_id",
+                "channel_name",
+                "channel_group",
+                "attribution_type",
+                "primary_platform_owner"
+            ],
+            "example_values": "CHAN-01, Meta Ads, Paid Social, Position-Based / Multi-Touch, Paid Acquisition Lead"
+        }
+    ],
+    "sources": [
+        {
+            "system_name": "Google Ads",
+            "source_format": "api",
+            "connection_mode": "import",
+            "refresh_schedule": "daily"
+        },
+        {
+            "system_name": "Meta Ads",
+            "source_format": "api",
+            "connection_mode": "import",
+            "refresh_schedule": "daily"
+        },
+        {
+            "system_name": "TikTok Ads",
+            "source_format": "api",
+            "connection_mode": "import",
+            "refresh_schedule": "daily"
+        },
+        {
+            "system_name": "Google Analytics 4 (GA4)",
+            "source_format": "api",
+            "connection_mode": "import",
+            "refresh_schedule": "daily"
+        },
+        {
+            "system_name": "Shopify",
+            "source_format": "api",
+            "connection_mode": "import",
+            "refresh_schedule": "daily"
+        }
+    ],
+    "mappings": [
+        {
+            "target_object": "fact_marketing_performance.Total Ad Spend",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "spend",
+            "cleaning_category": "currency_numeric",
+            "transformation_rules": "COALESCE(CAST(raw_field AS NUMERIC(18,2)), 0.00)",
+            "validation_rule": "Value >= 0.00"
+        },
+        {
+            "target_object": "fact_marketing_performance.Ad Impressions",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "impressions",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "fact_marketing_performance.Ad Clicks",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "clicks",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "fact_web_traffic.Total Web Sessions",
+            "source_system": "Google Analytics 4 (GA4)",
+            "raw_source_field_name": "sessions",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "fact_web_traffic.Unique Site Visitors",
+            "source_system": "Google Analytics 4 (GA4)",
+            "raw_source_field_name": "totalUsers",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "fact_web_traffic.Total Add-to-Carts",
+            "source_system": "Google Analytics 4 (GA4)",
+            "raw_source_field_name": "addToCarts",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "fact_sales_line_items.Gross Order Value",
+            "source_system": "Shopify",
+            "raw_source_field_name": "total_price",
+            "cleaning_category": "currency_numeric",
+            "transformation_rules": "COALESCE(CAST(raw_field AS NUMERIC(18,2)), 0.00)",
+            "validation_rule": "Value >= 0.00"
+        },
+        {
+            "target_object": "fact_sales_line_items.Total Discount Amount",
+            "source_system": "Shopify",
+            "raw_source_field_name": "total_discounts",
+            "cleaning_category": "currency_numeric",
+            "transformation_rules": "COALESCE(CAST(raw_field AS NUMERIC(18,2)), 0.00)",
+            "validation_rule": "Value >= 0.00"
+        },
+        {
+            "target_object": "fact_sales_line_items.Total Return Amount",
+            "source_system": "Shopify",
+            "raw_source_field_name": "refund_amount",
+            "cleaning_category": "currency_numeric",
+            "transformation_rules": "COALESCE(CAST(raw_field AS NUMERIC(18,2)), 0.00)",
+            "validation_rule": "Value >= 0.00"
+        },
+        {
+            "target_object": "fact_sales_line_items.Total Orders Count",
+            "source_system": "Shopify",
+            "raw_source_field_name": "id",
+            "cleaning_category": "primary_key",
+            "transformation_rules": "Text.Trim([raw_field]) | CAST(raw_field AS STRING)",
+            "validation_rule": "NOT NULL AND NOT BLANK"
+        },
+        {
+            "target_object": "dim_customers.Total New Customers Acquired",
+            "source_system": "Shopify",
+            "raw_source_field_name": "customer_id",
+            "cleaning_category": "primary_key",
+            "transformation_rules": "Text.Trim([raw_field]) | CAST(raw_field AS STRING)",
+            "validation_rule": "NOT NULL AND NOT BLANK"
+        },
+        {
+            "target_object": "dim_customers.Total Active Customer Base",
+            "source_system": "Shopify",
+            "raw_source_field_name": "customer_id",
+            "cleaning_category": "primary_key",
+            "transformation_rules": "Text.Trim([raw_field]) | CAST(raw_field AS STRING)",
+            "validation_rule": "NOT NULL AND NOT BLANK"
+        },
+        {
+            "target_object": "fact_marketing_performance.Channel Reported Revenue",
+            "source_system": "",
+            "raw_source_field_name": "",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "fact_sales_line_items.Average Order Value (AOV)",
+            "source_system": "",
+            "raw_source_field_name": "",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "fact_sales_line_items.Observed Average Lifetime Orders (LTV)",
+            "source_system": "",
+            "raw_source_field_name": "",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "fact_sales_line_items.Total Units Sold",
+            "source_system": "",
+            "raw_source_field_name": "",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "fact_sales_line_items.Total COGS",
+            "source_system": "",
+            "raw_source_field_name": "",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_customers.customer_id",
+            "source_system": "Shopify",
+            "raw_source_field_name": "id",
+            "cleaning_category": "primary_key",
+            "transformation_rules": "Text.Trim([raw_field]) | CAST(raw_field AS STRING)",
+            "validation_rule": "NOT NULL AND NOT BLANK"
+        },
+        {
+            "target_object": "dim_customers.customer_email_hash",
+            "source_system": "Shopify",
+            "raw_source_field_name": "email",
+            "cleaning_category": "pii_hash",
+            "transformation_rules": "LOWER(TRIM(raw_field)) -> SHA256 Hash",
+            "validation_rule": "Valid 64-Character String"
+        },
+        {
+            "target_object": "dim_customers.first_name",
+            "source_system": "Shopify",
+            "raw_source_field_name": "first_name",
+            "cleaning_category": "text_clean",
+            "transformation_rules": "TRIM(UPPER(raw_field))",
+            "validation_rule": "NOT NULL"
+        },
+        {
+            "target_object": "dim_customers.last_name",
+            "source_system": "Shopify",
+            "raw_source_field_name": "last_name",
+            "cleaning_category": "text_clean",
+            "transformation_rules": "TRIM(UPPER(raw_field))",
+            "validation_rule": "NOT NULL"
+        },
+        {
+            "target_object": "dim_customers.first_order_date",
+            "source_system": "Shopify",
+            "raw_source_field_name": "order_date",
+            "cleaning_category": "date_key",
+            "transformation_rules": "CAST(FORMAT_DATE('%Y%m%d', raw_field) AS INT64)",
+            "validation_rule": "Valid YYYYMMDD Integer Key"
+        },
+        {
+            "target_object": "dim_customers.total_lifetime_orders",
+            "source_system": "Shopify",
+            "raw_source_field_name": "orders_count",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_customers.customer_segment",
+            "source_system": "Shopify",
+            "raw_source_field_name": "tags",
+            "cleaning_category": "text_clean",
+            "transformation_rules": "TRIM(UPPER(raw_field))",
+            "validation_rule": "NOT NULL"
+        },
+        {
+            "target_object": "dim_customers.country",
+            "source_system": "Shopify",
+            "raw_source_field_name": "default_address.country",
+            "cleaning_category": "text_clean",
+            "transformation_rules": "TRIM(UPPER(raw_field))",
+            "validation_rule": "NOT NULL"
+        },
+        {
+            "target_object": "dim_customers.region",
+            "source_system": "Shopify",
+            "raw_source_field_name": "default_address.province",
+            "cleaning_category": "text_clean",
+            "transformation_rules": "TRIM(UPPER(raw_field))",
+            "validation_rule": "NOT NULL"
+        },
+        {
+            "target_object": "dim_calendar.date_key",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "date_key",
+            "transformation_rules": "CAST(FORMAT_DATE('%Y%m%d', raw_field) AS INT64)",
+            "validation_rule": "Valid YYYYMMDD Integer Key"
+        },
+        {
+            "target_object": "dim_calendar.full_date",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_calendar.day_of_week",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_calendar.day_name",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_calendar.week_of_year",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_calendar.month_number",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_calendar.month_name",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_calendar.quarter",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_calendar.fiscal_year",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_calendar.is_weekend",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_calendar.is_holiday",
+            "source_system": "Shopify",
+            "raw_source_field_name": "date",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_products.product_id",
+            "source_system": "Shopify",
+            "raw_source_field_name": "product_id",
+            "cleaning_category": "primary_key",
+            "transformation_rules": "Text.Trim([raw_field]) | CAST(raw_field AS STRING)",
+            "validation_rule": "NOT NULL AND NOT BLANK"
+        },
+        {
+            "target_object": "dim_products.sku",
+            "source_system": "Shopify",
+            "raw_source_field_name": "sku",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_products.product_name",
+            "source_system": "Shopify",
+            "raw_source_field_name": "title",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_products.category",
+            "source_system": "Shopify",
+            "raw_source_field_name": "product_type",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_products.subcategory",
+            "source_system": "Shopify",
+            "raw_source_field_name": "tags",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_products.unit_cost",
+            "source_system": "Shopify",
+            "raw_source_field_name": "cost",
+            "cleaning_category": "currency_numeric",
+            "transformation_rules": "COALESCE(CAST(raw_field AS NUMERIC(18,2)), 0.00)",
+            "validation_rule": "Value >= 0.00"
+        },
+        {
+            "target_object": "dim_products.retail_price",
+            "source_system": "Shopify",
+            "raw_source_field_name": "price",
+            "cleaning_category": "currency_numeric",
+            "transformation_rules": "COALESCE(CAST(raw_field AS NUMERIC(18,2)), 0.00)",
+            "validation_rule": "Value >= 0.00"
+        },
+        {
+            "target_object": "dim_products.color",
+            "source_system": "Shopify",
+            "raw_source_field_name": "option1",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_products.size",
+            "source_system": "Shopify",
+            "raw_source_field_name": "option2",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_products.is_active",
+            "source_system": "Shopify",
+            "raw_source_field_name": "status",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_ad_campaigns.ad_id",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "ad_id",
+            "cleaning_category": "primary_key",
+            "transformation_rules": "Text.Trim([raw_field]) | CAST(raw_field AS STRING)",
+            "validation_rule": "NOT NULL AND NOT BLANK"
+        },
+        {
+            "target_object": "dim_ad_campaigns.ad_name",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "ad_name",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_ad_campaigns.ad_set_id",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "adset_id",
+            "cleaning_category": "primary_key",
+            "transformation_rules": "Text.Trim([raw_field]) | CAST(raw_field AS STRING)",
+            "validation_rule": "NOT NULL AND NOT BLANK"
+        },
+        {
+            "target_object": "dim_ad_campaigns.ad_set_name",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "adset_name",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_ad_campaigns.campaign_id",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "campaign_id",
+            "cleaning_category": "primary_key",
+            "transformation_rules": "Text.Trim([raw_field]) | CAST(raw_field AS STRING)",
+            "validation_rule": "NOT NULL AND NOT BLANK"
+        },
+        {
+            "target_object": "dim_ad_campaigns.campaign_name",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "campaign_name",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_ad_campaigns.channel_name",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "publisher_platform",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_ad_campaigns.ad_type",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "objective",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_ad_campaigns.target_audience",
+            "source_system": "Meta Ads",
+            "raw_source_field_name": "targeting",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_channels.channel_id",
+            "source_system": "Google Analytics 4 (GA4)",
+            "raw_source_field_name": "sessionDefaultChannelGroup",
+            "cleaning_category": "primary_key",
+            "transformation_rules": "Text.Trim([raw_field]) | CAST(raw_field AS STRING)",
+            "validation_rule": "NOT NULL AND NOT BLANK"
+        },
+        {
+            "target_object": "dim_channels.channel_name",
+            "source_system": "Google Analytics 4 (GA4)",
+            "raw_source_field_name": "sessionSourceMedium",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_channels.channel_group",
+            "source_system": "Google Analytics 4 (GA4)",
+            "raw_source_field_name": "sessionDefaultChannelGroup",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_channels.attribution_type",
+            "source_system": "Google Analytics 4 (GA4)",
+            "raw_source_field_name": "attributionModel",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        },
+        {
+            "target_object": "dim_channels.primary_platform_owner",
+            "source_system": "Google Analytics 4 (GA4)",
+            "raw_source_field_name": "source",
+            "cleaning_category": "pass_through",
+            "transformation_rules": "Pass-Through / Direct Copy",
+            "validation_rule": "None / Direct Copy"
+        }
+    ],
+    "star_schema": [
+        {
+            "target_table_id": "fact_marketing_performance",
+            "table_grain": "One row per day, per unique ad creative",
+            "primary_key": "marketing_performance_key",
+            "key_composition": "date_key + ad_id",
+            "metrics": [
+                "Total Ad Spend",
+                "Ad Impressions",
+                "Ad Clicks"
+            ],
+            "dimensions": [
+                "dim_calendar",
+                "dim_ad_campaigns",
+                "dim_channels"
+            ],
+            "rls_logic": ""
+        },
+        {
+            "target_table_id": "fact_web_traffic",
+            "table_grain": "One row per day, per channel/traffic source",
+            "primary_key": "web_traffic_key",
+            "key_composition": "date_key + channel_id",
+            "metrics": [
+                "Total Web Sessions",
+                "Unique Site Visitors",
+                "Total Add-to-Carts"
+            ],
+            "dimensions": [
+                "dim_calendar",
+                "dim_channels"
+            ],
+            "rls_logic": ""
+        },
+        {
+            "target_table_id": "fact_sales_line_items",
+            "table_grain": "One row per order line item",
+            "primary_key": "sales_line_item_key",
+            "key_composition": "order_id + line_item_id",
+            "metrics": [
+                "Gross Order Value",
+                "Total Discount Amount",
+                "Total Return Amount",
+                "Total Orders Count"
+            ],
+            "dimensions": [
+                "dim_customers",
+                "dim_calendar",
+                "dim_products",
+                "dim_channels"
+            ],
+            "rls_logic": ""
+        }
+    ],
+    "business_rules": [
+        {
+            "associated_object": "Global (Entire Project)",
+            "governance_pattern": "exclusions",
+            "rule_description": "Exclude internal employee orders (@apexgear.com) and test orders ($0 total balance or 'TEST' in order tags).",
+            "business_justification": "Prevents revenue skewing and false conversion volume in executive reports.",
+            "freshness_sla_hours": 24
+        },
+        {
+            "associated_object": "Source: Shopify",
+            "governance_pattern": "timing",
+            "rule_description": "Recognize sales revenue at transaction authorization date; recognize returns on refund credit memo issuance date.",
+            "business_justification": "Aligns BI reporting directly with GAAP accounting financial ledgers.",
+            "freshness_sla_hours": 4
+        },
+        {
+            "associated_object": "KPI: MER",
+            "governance_pattern": "math",
+            "rule_description": "Calculate Marketing Efficiency Ratio strictly against bank-settled Net Revenue, using single-platform reported revenues for tactical sub-channel insights only.",
+            "business_justification": "Eliminates multi-touch attribution over-reporting across Meta, Google, and TikTok.",
+            "freshness_sla_hours": 24
+        }
+    ],
+    "ux_pages": [
+        {
+            "page_name": "Executive Marketing Efficiency",
+            "page_type": "standard",
+            "target_audience": "c-suite",
+            "slicers": [],
+            "visuals": [
+                {
+                    "select_metric": [
+                        "KPI: Net Sales",
+                        "KPI: Marketing Efficiency Ratio (MER)",
+                        "KPI: Blended CAC",
+                        "KPI: Incremental Marketing Profit",
+                        "Metric: Total Ad Spend"
+                    ],
+                    "breakdown_dimension": [],
+                    "display_type": "kpi_card"
+                },
+                {
+                    "select_metric": [
+                        "KPI: Net Sales",
+                        "KPI: Marketing Efficiency Ratio (MER)",
+                        "Metric: Total Ad Spend"
+                    ],
+                    "breakdown_dimension": [
+                        "dim_calendar.month_name"
+                    ],
+                    "display_type": "line_chart"
+                },
+                {
+                    "select_metric": [
+                        "KPI: Baseline Marketing Profit",
+                        "KPI: Campaign Scaling Marketing Profit",
+                        "KPI: Incremental Marketing Profit"
+                    ],
+                    "breakdown_dimension": [
+                        "dim_channels.channel_group"
+                    ],
+                    "display_type": "bar_chart"
+                },
+                {
+                    "select_metric": [
+                        "KPI: Net Sales",
+                        "KPI: Marketing Efficiency Ratio (MER)",
+                        "KPI: Blended CAC",
+                        "Metric: Total Ad Spend",
+                        "Metric: Total Orders Count",
+                        "Metric: Average Order Value (AOV)"
+                    ],
+                    "breakdown_dimension": [
+                        "dim_channels.channel_group"
+                    ],
+                    "display_type": "matrix"
+                }
+            ],
+            "layout_theme_notes": "KPI cards highlight Net Sales, Ad Spend, MER, CAC, and Incremental Profit. Middle tier shows monthly Net Sales vs Spend trend with an MER overlay line (left) and H1 Baseline vs H2 Campaign scaling comparison (right). Bottom matrix breaks down financial and acquisition efficiency across channel groups."
+        },
+        {
+            "page_name": "Paid Acquisition & Campaign Funnel",
+            "page_type": "standard",
+            "target_audience": "managers",
+            "slicers": [],
+            "visuals": [
+                {
+                    "select_metric": [
+                        "KPI: Channel ROAS",
+                        "KPI: Click-Through Rate (CTR)",
+                        "KPI: Cost Per Click (CPC)",
+                        "Metric: Ad Impressions",
+                        "Metric: Ad Clicks"
+                    ],
+                    "breakdown_dimension": [],
+                    "display_type": "kpi_card"
+                },
+                {
+                    "select_metric": [
+                        "KPI: Channel ROAS",
+                        "Metric: Total Ad Spend"
+                    ],
+                    "breakdown_dimension": [
+                        "dim_ad_campaigns.campaign_name"
+                    ],
+                    "display_type": "bar_chart"
+                },
+                {
+                    "select_metric": [
+                        "KPI: Channel ROAS",
+                        "Metric: Total Ad Spend",
+                        "Metric: Channel Reported Revenue"
+                    ],
+                    "breakdown_dimension": [
+                        "dim_ad_campaigns.campaign_name"
+                    ],
+                    "display_type": "bar_chart"
+                },
+                {
+                    "select_metric": [
+                        "KPI: Click-Through Rate (CTR)",
+                        "KPI: Cost Per Click (CPC)",
+                        "Metric: Total Ad Spend"
+                    ],
+                    "breakdown_dimension": [
+                        "dim_ad_campaigns.campaign_name"
+                    ],
+                    "display_type": "line_chart"
+                },
+                {
+                    "select_metric": [
+                        "KPI: Channel ROAS",
+                        "KPI: Click-Through Rate (CTR)",
+                        "KPI: Cost Per Click (CPC)",
+                        "Metric: Total Ad Spend",
+                        "Metric: Ad Impressions",
+                        "Metric: Ad Clicks",
+                        "Metric: Channel Reported Revenue"
+                    ],
+                    "breakdown_dimension": [
+                        "dim_ad_campaigns.campaign_name"
+                    ],
+                    "display_type": "matrix"
+                }
+            ],
+            "layout_theme_notes": "Tactical acquisition diagnostic page. Top row tracks reach and engagement volume. Middle tier evaluates campaign ROAS vs spend alongside a CTR vs CPC efficiency scatter plot. Bottom matrix provides a detailed performance scorecard per campaign."
+        },
+        {
+            "page_name": "Customer Cohort Retention & LTV",
+            "page_type": "standard",
+            "target_audience": "operational",
+            "slicers": [],
+            "visuals": [
+                {
+                    "select_metric": [
+                        "KPI: Observed Average Customer LTV",
+                        "KPI: Total Returning Customers",
+                        "KPI: New Customer Acquisition %",
+                        "Metric: Total New Customers Acquired",
+                        "Metric: Total Active Customer Base"
+                    ],
+                    "breakdown_dimension": [],
+                    "display_type": "kpi_card"
+                },
+                {
+                    "select_metric": [
+                        "KPI: Total Returning Customers",
+                        "Metric: Total New Customers Acquired"
+                    ],
+                    "breakdown_dimension": [
+                        "dim_calendar.month_name"
+                    ],
+                    "display_type": "stacked_bar"
+                },
+                {
+                    "select_metric": [
+                        "KPI: Net Sales"
+                    ],
+                    "breakdown_dimension": [
+                        "dim_customers.customer_segment"
+                    ],
+                    "display_type": "donut_chart"
+                },
+                {
+                    "select_metric": [
+                        "Metric: Total Web Sessions",
+                        "Metric: Total Add-to-Carts",
+                        "Metric: Total Orders Count"
+                    ],
+                    "breakdown_dimension": [],
+                    "display_type": "bar_chart"
+                },
+                {
+                    "select_metric": [
+                        "KPI: Net Sales",
+                        "Metric: Total Discount Amount",
+                        "Metric: Total Orders Count",
+                        "Metric: Average Order Value (AOV)"
+                    ],
+                    "breakdown_dimension": [
+                        "dim_customers.customer_segment"
+                    ],
+                    "display_type": "matrix"
+                }
+            ],
+            "layout_theme_notes": "Focuses on retention economics and site conversion. Top cards monitor customer volume and acquisition mix. Visuals track monthly new vs returning customer split, segment contribution, macro funnel conversion, and a detailed segment unit-economic matrix."
+        }
+    ]
+}

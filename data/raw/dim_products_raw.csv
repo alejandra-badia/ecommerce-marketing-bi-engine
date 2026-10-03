@@ -1,0 +1,5 @@
+product_id,sku,product_name,category,subcategory,unit_cost,retail_price,is_active
+PROD-101,APX-JKT-01,Alpine Pro Shell Jacket,Apparel,Outerwear,65.0,189.0,True
+PROD-102,APX-PAK-02,Summit 45L Backpack,Equipment,Packs,48.0,149.0,True
+PROD-103,APX-BOOT-03,Trekker Waterproof Boot,Footwear,Hiking,72.0,210.0,True
+PROD-104,APX-BOT-04,Insulated Vacuum Flask 1L,Accessories,Hydration,8.5,35.0,True

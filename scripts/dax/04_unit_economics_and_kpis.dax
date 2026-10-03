@@ -1,0 +1,43 @@
+/* =========================================================================
+  E-Commerce Marketing & LTV Analytics
+  
+  04 Unit Economics and KPIs DAX Measures
+   ========================================================================= */
+
+Blended CAC = DIVIDE([Total Ad Spend],[Total New Customers Acquired],0)
+
+Channel ROAS = divide([Channel Reported Revenue],[Total Ad Spend],0)
+
+Click-Through Rate (CTR) = DIVIDE([Total Ad Clicks],[Total Ad Impressions],0)
+
+Cost Per Click (CPC) = DIVIDE([Total Ad Clicks],[Total Ad Spend],0)
+
+Gross Margin % = DIVIDE([Gross Profit], [Net Sales], 0)
+
+Gross Profit = [Net Sales] - [Total COGS]
+
+Incremental Marketing Profit = [Marketing Profit - Campaign Scaling] - [Marketing Profit - Baseline]
+
+Incremental Profit Growth % = DIVIDE([Incremental Marketing Profit], [Marketing Profit - Baseline], 0)
+
+Marketing Efficiency Ratio (MER) = divide([Net Sales],[Total Ad Spend],0)
+
+Marketing Profit = [Gross Profit] - [Total Ad Spend]
+
+Marketing Profit - Baseline = CALCULATE([Marketing Profit],DATESBETWEEN(dim_calendar[full_date], DATE(2025, 7, 1), DATE(2025, 12, 31)))
+
+Marketing Profit - Campaign Scaling = CALCULATE([Marketing Profit],DATESBETWEEN(dim_calendar[full_date], DATE(2026, 1, 1), DATE(2026, 6, 30)))
+
+Marketing Profit Margin % = DIVIDE([Marketing Profit], [Net Sales], 0)
+
+Net Sales = [Gross Sales]-[Total Discount Amount]-[Total Return Amount]
+
+New Customer Acquisition % = DIVIDE([Total New Customers Acquired], [Total Active Customer Base], 0)
+
+Observed Average Customer LTV = AVERAGE(dim_customers[total_observed_lifetime_spend])
+
+Total Returning Customers = [Total Active Customer Base] - [Total New Customers Acquired]
+
+ROAS % Change = DIVIDE([ROAS Delta], [H1 Channel ROAS], 0)
+
+ROAS Delta = [H2 Channel ROAS] - [H1 Channel ROAS]
