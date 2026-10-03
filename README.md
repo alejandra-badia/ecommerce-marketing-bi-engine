@@ -15,12 +15,12 @@ During the first half of 2026, the company substantially increased its marketing
 The analysis combines sales, marketing performance, and web traffic data in Power BI to provide a consolidated view of business performance.
 
 ### Objectives
-* Evaluate whether revenue growth kept pace with increased marketing spend.
-* Compare blended marketing efficiency and channel-level ROAS across periods.
-* Examine whether higher traffic and Add-to-Cart (ATC) activity translated into stronger commercial outcomes.
-* Assess observed customer purchasing patterns and cohort composition.
-* Identify where additional campaign-level analysis is needed before making budget allocation decisions.
-* Develop evidence-based recommendations for improving acquisition efficiency and sustainable growth.
+* Evaluate whether revenue growth kept pace with increased marketing spend
+* Compare blended marketing efficiency and channel-level ROAS across periods
+* Examine whether higher traffic and Add-to-Cart (ATC) activity translated into stronger commercial outcomes
+* Assess observed customer purchasing patterns and cohort composition
+* Identify where additional campaign-level analysis is needed before making budget allocation decisions
+* Develop evidence-based recommendations for improving acquisition efficiency and sustainable growth
 
 ---
 
@@ -349,7 +349,7 @@ The immediate recommendation is to hold back from further aggressive marketing s
 
 These results indicate a substantial deterioration in observed revenue efficiency and profit remaining after COGS and advertising. Management should review the current investment level before committing to further expansion.
 
-The next step is to use campaign-level performance, contribution-margin analysis, and incrementality testing where feasible to refine channel and campaign allocation. The current analysis supports reassessing the pace of scaling, but does not identify a precise profit-maximizing budget or establish which individual channels should be reduced.
+The next step is to use campaign-level performance, contribution-margin analysis, and incrementality testing, where feasible, to refine channel and campaign allocation. The current analysis supports reassessing the pace of scaling, but does not identify a precise profit-maximizing budget or establish which individual channels should be reduced.
 
 ---
 
@@ -359,7 +359,7 @@ The Power BI model uses a **Kimball-style dimensional model implemented as a fac
 
 This structure supports analysis across sales, marketing performance, and web traffic while maintaining distinct fact-table grains.
 
-![Power BI Data Model](assets/data_model.png)
+![Power BI Data Model](assets/diagrams/data_model.png)
 
 ### Fact Tables
 
@@ -380,7 +380,15 @@ This structure supports analysis across sales, marketing performance, and web tr
 
 The shared dimensions provide consistent analytical context across the fact tables. An additional `_Measures` table was used to organize DAX measures and is not a business fact table or dimension.
 
-![Measures Table With Folder Organization](assets/measures_table.png)
+<table>
+  <tr>
+    <td>
+      <img src="assets/screenshots/dax_measures_organization.png" alt="Measures table"><br>
+      <b>Measures Table With Folder Organization</b><br>
+      <sub>Measures table architecture demonstrating domain-level folder segregation.</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
