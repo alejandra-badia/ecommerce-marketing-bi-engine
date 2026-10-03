@@ -623,14 +623,13 @@ This repository provides an analytics package encompassing strategic planning, d
 
 | Deliverable Artifact | Format / Location | Description |
 | :--- | :--- | :--- |
-| **Interactive Executive Dashboard** | [`/pbix/marketing_analytics_engine.pbix`](pbix/) | 3-page interactive Power BI report covering Executive Commercial Health, Channel Attribution & Ad Efficiency, and Customer Cohorts & Product Economics. |
-| **JSON Measurement Spec** | [`/docs/bi_measurement_plan.json`](docs/) | Structured requirements blueprint linking business user stories, metric lifecycles, and data-grain mappings built using the [BI Measurement Planner](https://github.com/alejandra-badia/bi-measurement-planner). |
-| **Kimball Dimensional Model Architecture** | [`/assets/model/data_model.png`](assets/model/) | Fact Constellation (Galaxy Schema) specification connecting 3 fact tables across 4 conformed dimensions via clean 1:N single-direction relationships. |
-| **DAX Scripts** | [`/scripts/dax`](scripts/dax/) | Centralized, documented DAX scripts containing all business calculations (MER, ROAS, Marginal MER, Attribution Match Rate, and Cohort logic) with divide-by-zero safeguards and . |
-| **Power Query Scripts** | [`/scripts/power_query`](scripts/power_query/) | Centralized, documented Power Query scripts containing all the data cleaning steps taken to generate the fact and dimension tables. |
-| **Data Dictionary** | [`/data/dictionary/data_dictionary.`](data/dictionary/) | Centralized, documented DAX script containing all business calculations (MER, ROAS, Marginal MER, Attribution Match Rate, and Cohort logic) with divide-by-zero safeguards. |
-| **Executive Presentation Deck** | [`/docs/executive_briefing.pdf`](docs/) | Slide deck briefing summarizing performance decay diagnostics, organic cannibalization risks, and capital reallocation recommendations. |
-
+| **Interactive Executive Dashboard** | [`pbix/marketing_analytics_engine.pbix`](pbix/) | 3-page interactive Power BI report covering Executive Commercial Health, Channel Attribution & Ad Efficiency, and Customer Cohorts & Product Economics. |
+| **JSON Measurement Spec** | [`docs/bi_measurement_plan.json`](docs/) | Structured requirements blueprint linking business user stories, metric lifecycles, and data-grain mappings built using the [BI Measurement Planner](https://github.com/alejandra-badia/bi-measurement-planner). |
+| **Kimball Dimensional Model Architecture** | [`assets/model/data_model.png`](assets/model/) | Fact Constellation (Galaxy Schema) specification connecting 3 fact tables across 4 conformed dimensions via clean 1:N single-direction relationships. |
+| **DAX Scripts** | [`scripts/dax/`](scripts/dax/) | Centralized, modular DAX script files covering financial, attribution, and cohort calculations formatted with `VAR`/`RETURN` syntax and divide-by-zero safeguards. |
+| **Power Query Scripts** | [`scripts/power_query/`](scripts/power_query/) | Centralized, documented Power Query scripts containing all the data cleaning and staging steps taken to generate the fact and dimension tables. |
+| **Data Dictionary & Spec** | [`data/dictionary/data_dictionary.md`](data/dictionary/) | End-to-end specification document generated from the BI Measurement Planner, defining process workflows, base metrics, executive KPIs, shared dimensions, and field-level ETL cleaning contracts. |
+| **Executive Presentation Deck** | [`docs/executive_briefing.pdf`](docs/) | Slide deck briefing summarizing performance decay diagnostics, organic cannibalization risks, and capital reallocation recommendations. |
 ---
 
 ## Conclusion
