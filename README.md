@@ -504,12 +504,12 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
       <b>Folder Architecture</b><br> 
       <sub>Data cleaning folder organization implemented for clear fact and dimension table generation.</sub> 
     </td> 
-    <td width="70%" valign="top"> 
-      <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+    <td width="70%"> 
+      <div>
         <div>
           <img src="assets/screenshots/append_queries_fact_marketing_table.png" alt="Fact Marketing Table">
         </div>
-        <div style="margin-top: auto; padding-top: 16px;">
+        <div valign="bottom">
           <b>Fact Marketing Append</b><br> 
           <sub>The fact_marketing_performance table built as an appended query from cleaned Google, Meta, and TikTok ad tables.</sub>
         </div>
