@@ -513,7 +513,7 @@ The Power BI report uses DAX measures to evaluate marketing efficiency, sales pe
 
 <table>
   <tr>
-    <th>Data Cleaning Example: Customer Key Map</th>
+    <th colspan="3">Data Cleaning Example: Customer Key Map</th>
   </tr>
   <tr>
     <td>
@@ -560,15 +560,15 @@ Marketing Profit Margin % = DIVIDE([Marketing Profit], [Net Sales], 0)
   <tr>
     <td>
       <img src="assets/screenshots/filter_panel.png" alt="Filter Panel"><br>
-      <sub>Utilizes bookmarks and selection panels to toggle visibility, saving valuable report real estate while maintaining slicer capabilities.</sub>
+      <sub>Utilizes bookmarks and selection panels to toggle visibility, saving space while maintaining slicer capabilities.</sub>
     </td>
     <td>
       <img src="assets/screenshots/custom_kpi_bar_tooltip.png" alt="Custom KPI Bar Tooltip"><br>
-      <sub>Custom KPI bar tooltip to provide period-over-period comparison for each KPI.</sub>
+      <sub>Custom KPI bar tooltip to provide period-over-period comparison for each KPI for the baseline and scaled marketing periods.</sub>
     </td>
     <td>
       <img src="assets/screenshots/channel_drill_through.png" alt="Channel Drill Through"><br>
-      <sub>Provides dynamic page filtering, allowing users to right-click a marketing channel and seamlessly dive into campaign and ad level details.</sub>
+      <sub>Provides dynamic page filtering, allowing users to dive into campaign and ad level details.</sub>
     </td>
   </tr>
 </table>
