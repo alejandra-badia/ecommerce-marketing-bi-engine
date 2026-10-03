@@ -136,7 +136,7 @@ A channel-level comparison of marketing performance, including reported revenue,
 
 An exploration of observed customer purchasing behavior, cohort composition, and product-level economics to support further investigation into customer value and commercial performance.
 
-![Customer & Product Economics](assets/_page_3_Cohort_and_Product_Performance.png)
+![Customer & Product Economics](assets/screenshots/_page_3_Cohort_and_Product_Performance.png)
 
 ---
 
@@ -359,7 +359,7 @@ The Power BI model uses a **Kimball-style dimensional model implemented as a fac
 
 This structure supports analysis across sales, marketing performance, and web traffic while maintaining distinct fact-table grains.
 
-![Power BI Data Model](assets/diagrams/data_model.png)
+![Power BI Data Model](assets/model/data_model.png)
 
 ### Fact Tables
 
@@ -376,7 +376,7 @@ This structure supports analysis across sales, marketing performance, and web tr
 | `dim_customers` | Customer attributes and customer-level analysis |
 | `dim_calendar` | Date-based analysis across the model |
 | `dim_channels` | Marketing channel attributes |
-| `dim_products` | Product attributes product-level analysis |
+| `dim_products` | Product catalog attributes for category and product-level analysis |
 
 The shared dimensions provide consistent analytical context across the fact tables. An additional `_Measures` table was used to organize DAX measures and is not a business fact table or dimension.
 
@@ -623,13 +623,14 @@ This repository provides an analytics package encompassing strategic planning, d
 
 | Deliverable Artifact | Format / Location | Description |
 | :--- | :--- | :--- |
-| **Interactive Executive Dashboard** | [`pbix/marketing_analytics_engine.pbix`](pbix/) | 3-page interactive Power BI report covering Executive Commercial Health, Channel Attribution & Ad Efficiency, and Customer Cohorts & Product Economics. |
-| **JSON Measurement Spec** | [`docs/bi_measurement_plan.json`](docs/) | Structured requirements blueprint linking business user stories, metric lifecycles, and data-grain mappings built using the [BI Measurement Planner](https://github.com/alejandra-badia/bi-measurement-planner). |
-| **Kimball Dimensional Model Architecture** | [`assets/model/data_model.png`](assets/model/) | Fact Constellation (Galaxy Schema) specification connecting 3 fact tables across 4 conformed dimensions via clean 1:N single-direction relationships. |
+| **Interactive Executive Dashboard** | [`pbix/marketing_analytics_engine.pbix`](pbix/marketing_analytics_engine.pbix) | 3-page interactive Power BI report covering Executive Commercial Health, Channel Attribution & Ad Efficiency, and Customer Cohorts & Product Economics. |
+| **JSON Measurement Spec** | [`docs/bi_measurement_plan.json`](docs/bi_measurement_plan.json) | Structured requirements blueprint linking business user stories, metric lifecycles, and data-grain mappings built using the [BI Measurement Planner](https://github.com/alejandra-badia/bi-measurement-planner). |
+| **Kimball Dimensional Model Architecture** | [`assets/model/data_model.png`](assets/model/data_model.png) | Fact Constellation (Galaxy Schema) specification connecting 3 fact tables across 4 conformed dimensions via clean 1:N single-direction relationships. |
 | **DAX Scripts** | [`scripts/dax/`](scripts/dax/) | Centralized, modular DAX script files covering financial, attribution, and cohort calculations formatted with `VAR`/`RETURN` syntax and divide-by-zero safeguards. |
 | **Power Query Scripts** | [`scripts/power_query/`](scripts/power_query/) | Centralized, documented Power Query scripts containing all the data cleaning and staging steps taken to generate the fact and dimension tables. |
-| **Data Dictionary & Spec** | [`data/dictionary/data_dictionary.md`](data/dictionary/) | End-to-end specification document generated from the BI Measurement Planner, defining process workflows, base metrics, executive KPIs, shared dimensions, and field-level ETL cleaning contracts. |
-| **Executive Presentation Deck** | [`docs/executive_briefing.pdf`](docs/) | Slide deck briefing summarizing performance decay diagnostics, organic cannibalization risks, and capital reallocation recommendations. |
+| **Data Dictionary & Spec** | [`data/dictionary/data_dictionary.md`](data/dictionary/data_dictionary.md) | End-to-end specification document generated from the BI Measurement Planner, defining process workflows, base metrics, executive KPIs, shared dimensions, and field-level ETL cleaning contracts. |
+| **Executive Presentation Deck** | [`docs/executive_briefing.pdf`](docs/executive_briefing.pdf) | Strategic slide deck briefing summarizing performance decay diagnostics, organic cannibalization risks, and capital reallocation recommendations. |
+
 ---
 
 ## Conclusion
