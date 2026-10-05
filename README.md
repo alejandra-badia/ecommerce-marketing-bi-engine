@@ -5,7 +5,7 @@
 A Power BI analytics project examining marketing efficiency, channel attribution, customer purchasing behavior, and customer lifetime value (LTV) for a fictional direct-to-consumer (D2C) e-commerce brand.
 
 The project investigates a critical business question:
-> **Did a significant increase in marketing investment translate into sustainable revenue growth, efficient customer acquisition, and long-term customer value?**
+> **Did a significant increase in marketing investment translate into sustainable revenue growth?**
 
 ---
 
